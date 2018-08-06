@@ -1,0 +1,18 @@
+---
+title: IRC Foundation Developer Docs
+layout: default
+---
+
+Commands galore! Etc!
+
+<h2>Commands</h2>
+{% assign cmds = "" | split: "" %}
+{% for p in site.pages %}
+    {% if p.layout == "command" %}
+        {% assign cmds = cmds | push: p.command %}
+    {% endif %}
+{% endfor %}
+
+{% for cmd in cmds %}
+    <p><a href="refs/commands/{{ cmd | downcase }}">{{ cmd }}</a></p>
+{% endfor %}

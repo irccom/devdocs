@@ -1,0 +1,5 @@
+{% if site.mode == "dev" %}
+    {% include layouts/dev-default.html %}
+{% else %}
+    {% include layouts/prod-default.html %}
+{% endif %}
