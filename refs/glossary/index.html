@@ -1,0 +1,19 @@
+---
+title: "IRC Glossary"
+layout: default
+---
+<h1>Glossary</h1>
+
+<p>There are lots of terms used during IRC. Here they are:</p>
+
+{% assign terms = "" | split: "" %}
+{% for t in site.data.glossary.terms %}
+    {% assign terms = terms | push: t[0] %}
+{% endfor %}
+{% assign terms = terms | sort %}
+
+{% for term in terms %}
+    {% assign tinfo = site.data.glossary.terms[term] %}
+    <h2 name="{{ term | slugify }}">{{ term }}</h2>
+    {{ tinfo.description | markdownify }}
+{% endfor %}

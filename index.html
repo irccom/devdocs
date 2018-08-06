@@ -12,6 +12,7 @@ Commands galore! Etc!
         {% assign cmds = cmds | push: p.command %}
     {% endif %}
 {% endfor %}
+{% assign cmds = cmds | sort %}
 
 {% for cmd in cmds %}
     <p><a href="refs/commands/{{ cmd | downcase }}">{{ cmd }}</a></p>

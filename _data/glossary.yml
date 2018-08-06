@@ -1,0 +1,23 @@
+terms:
+  "Operator":
+    description: |
+      This term can refer to either a <a href="#server-operator">Server Operator</a> or a <a href="#channel-operator">Channel Operator</a>. Knowing those two terms helps figure out which is being used with context.
+
+  "Oper":
+    description: |
+      Short for <a href="#operator">Operator</a>, but typically means <a href="#server-operator">Server Operator</a> on its own because of the <a href="../commands/oper"><tt>OPER</tt></a> command.
+
+  "Server Operator":
+    preferred: true
+    description: |
+      User who administrates one or more servers on an IRC network.
+
+  "Channel Operator":
+    preferred: true
+    description: |
+      User who administrates a <a href="#channel">channel</a>.
+
+  "Channel":
+    preferred: true
+    description: |
+      Room where one or more users can talk with each other.
