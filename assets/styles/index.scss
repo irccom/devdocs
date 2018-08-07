@@ -473,7 +473,8 @@ header {
 
 .full-width-page-header {
     width: 100%;
-    min-height: 300px;
+    min-height: 230px; //(dan): I think this combo of min-height and max-height look a lot better than the page-covering stock one. if we do have a massive header we should make sure it's justified in some way (I think this constrained one is)
+    max-height: 260px; //(dan): ^
     height: 35vh;
     display: flex;
     justify-content: center;
