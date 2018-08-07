@@ -4,3 +4,27 @@
 h1 .fa-link, h2 .fa-link, h3 .fa-link, h4 .fa-link {
     opacity: 0.35;
 }
+
+.h1sub {
+    opacity: 0.65;
+    font-size: 1.2em;
+    margin-top: -15px !important;
+}
+
+header .logo .logospecific {
+    color: #7eaed4;
+}
+header .logo:hover .logospecific {
+    color: #007bff;
+}
+
+.alert.experimental {
+    display: flex;
+    > .icon {
+        flex: 0 0 none;
+        padding-right: 10px;
+    }
+    > .description {
+        flex: 1 1 auto;
+    }
+}

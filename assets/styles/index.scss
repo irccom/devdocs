@@ -631,9 +631,9 @@ header {
         }
     }
     .main-content .content {
-        //(dan): because otherwise if the content's the first thing it looks really weird and off
+        //(dan): because otherwise if the content's the first thing on the page it looks really weird and off-balance
         &:first-child{
-            padding-top: 20px;
+            padding-top: 30px;
         }
         background-color: #fff;
         padding-bottom: 40px;
@@ -641,7 +641,9 @@ header {
             padding: 5px 10px;
         }
         pre {
-            height: 150px;
+            // height: 150px; //(dan): same as below with .example's forced min-height. if this should be a max-height with an overflow-y: scroll though then I can see it
+            max-height: 150px; //(dan): do what I think the height above was trying to do in a better way
+            overflow-y: scroll; //(dan): ^
             overflow-x: scroll;
             border-radius: 2px;
             min-height: 0px;
@@ -652,7 +654,8 @@ header {
             }
 
             &.example {
-                min-height: 200px;
+                // min-height: 100px; //(dan): no reason for this to be the case, particularly if the example _is_ very small. appears to be padding for no reason if the example is e.g. one or two lines
+                padding: 20px 0 20px 30px; //(dan): necessary to indent and display properly
             }
         }
 
@@ -663,6 +666,9 @@ header {
             border-left: 4px solid #007bff;
             padding-left: 20px;
             margin: 0 0 10px 0;
+            pre {
+                background: none;
+            }
         }
 
         a code {

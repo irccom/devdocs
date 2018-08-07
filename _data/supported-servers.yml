@@ -1,0 +1,13 @@
+shortlist:
+  - id: unreal
+    name: Unreal
+  - id: inspircd
+    name: InspIRCd
+  - id: ircd-seven
+    name: ircd-seven
+  - id: charybdis
+    name: Charybdis
+  - id: undernetircd
+    name: UndernetIRCd
+  - id: bahamut
+    name: Bahamut

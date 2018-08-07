@@ -196,6 +196,19 @@ ol.breadcrumb {
         }
         pre {
             background-color: $brandPrimary;
+            //(dan): make pre.code because multi-line <code> displays isn't possible otherwise, and I really want that sorta styling
+            &.code {
+                background: #f1f1f1;
+                // line-height: 40px;
+                display: block;
+                border-left: 4px solid #007bff;
+                color: #e83e8c;
+                padding: 10px 0 10px 20px;
+                margin: 0 0 10px 0;
+                pre {
+                    background: none;
+                }
+            }
             code {
                 color: #fff;
                 background: none;
