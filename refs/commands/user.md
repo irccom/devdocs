@@ -1,5 +1,6 @@
 ---
-title: "USER IRC Command"
+^title: "USER IRC Command"
+ntitle: "USER"
 layout: command
 notstarted: true
 

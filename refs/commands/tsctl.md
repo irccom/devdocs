@@ -1,5 +1,6 @@
 ---
-title: "TSCTL IRC Command"
+^title: "TSCTL IRC Command"
+ntitle: "TSCTL"
 layout: command
 notstarted: true
 

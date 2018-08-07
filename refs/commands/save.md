@@ -1,5 +1,6 @@
 ---
-title: "SAVE IRC Command"
+^title: "SAVE IRC Command"
+ntitle: "SAVE"
 layout: command
 notstarted: true
 

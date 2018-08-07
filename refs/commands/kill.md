@@ -1,5 +1,6 @@
 ---
-title: "KILL IRC Command"
+^title: "KILL IRC Command"
+ntitle: "KILL"
 layout: command
 notstarted: true
 

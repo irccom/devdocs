@@ -1,5 +1,6 @@
 ---
-title: "ACCEPT IRC Command"
+^title: "ACCEPT IRC Command"
+ntitle: "ACCEPT"
 layout: command
 notstarted: true
 

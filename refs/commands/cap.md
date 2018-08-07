@@ -1,5 +1,6 @@
 ---
-title: "CAP IRC Command"
+^title: "CAP IRC Command"
+ntitle: "CAP"
 layout: command
 notstarted: true
 

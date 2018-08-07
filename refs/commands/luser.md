@@ -1,5 +1,6 @@
 ---
-title: "LUSER IRC Command"
+^title: "LUSER IRC Command"
+ntitle: "LUSER"
 layout: command
 notstarted: true
 

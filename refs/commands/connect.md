@@ -1,5 +1,6 @@
 ---
-title: "CONNECT IRC Command"
+^title: "CONNECT IRC Command"
+ntitle: "CONNECT"
 layout: command
 notstarted: true
 

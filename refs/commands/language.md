@@ -1,5 +1,6 @@
 ---
-title: "LANGUAGE IRC Command"
+^title: "LANGUAGE IRC Command"
+ntitle: "LANGUAGE"
 layout: command
 notstarted: true
 

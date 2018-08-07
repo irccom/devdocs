@@ -1,5 +1,6 @@
 ---
-title: "SETNAME IRC Command"
+^title: "SETNAME IRC Command"
+ntitle: "SETNAME"
 layout: command
 notstarted: true
 

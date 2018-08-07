@@ -1,5 +1,6 @@
 ---
-title: "TIME IRC Command"
+^title: "TIME IRC Command"
+ntitle: "TIME"
 layout: command
 notstarted: true
 

@@ -1,5 +1,6 @@
 ---
-title: "FINDFORWARDS IRC Command"
+^title: "FINDFORWARDS IRC Command"
+ntitle: "FINDFORWARDS"
 layout: command
 notstarted: true
 

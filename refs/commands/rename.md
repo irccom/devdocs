@@ -1,5 +1,6 @@
 ---
-title: "RENAME IRC Command"
+^title: "RENAME IRC Command"
+ntitle: "RENAME"
 layout: command
 notstarted: true
 

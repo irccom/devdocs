@@ -1,5 +1,6 @@
 ---
-title: "WHOWAS IRC Command"
+^title: "WHOWAS IRC Command"
+ntitle: "WHOWAS"
 layout: command
 notstarted: true
 

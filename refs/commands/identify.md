@@ -1,5 +1,6 @@
 ---
-title: "IDENTIFY IRC Command"
+^title: "IDENTIFY IRC Command"
+ntitle: "IDENTIFY"
 layout: command
 notstarted: true
 

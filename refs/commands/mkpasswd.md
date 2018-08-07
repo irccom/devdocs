@@ -1,5 +1,6 @@
 ---
-title: "MKPASSWD IRC Command"
+^title: "MKPASSWD IRC Command"
+ntitle: "MKPASSWD"
 layout: command
 notstarted: true
 

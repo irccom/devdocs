@@ -1,5 +1,6 @@
 ---
-title: "TRACE IRC Command"
+^title: "TRACE IRC Command"
+ntitle: "TRACE"
 layout: command
 notstarted: true
 

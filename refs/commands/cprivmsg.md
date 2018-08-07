@@ -1,5 +1,6 @@
 ---
-title: "CPRIVMSG IRC Command"
+^title: "CPRIVMSG IRC Command"
+ntitle: "CPRIVMSG"
 layout: command
 notstarted: true
 

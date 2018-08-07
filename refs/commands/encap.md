@@ -1,5 +1,6 @@
 ---
-title: "ENCAP IRC Command"
+^title: "ENCAP IRC Command"
+ntitle: "ENCAP"
 layout: command
 notstarted: true
 

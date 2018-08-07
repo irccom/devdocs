@@ -1,5 +1,6 @@
 ---
-title: "GLOBOPS IRC Command"
+^title: "GLOBOPS IRC Command"
+ntitle: "GLOBOPS"
 layout: command
 notstarted: true
 

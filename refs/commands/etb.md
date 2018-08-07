@@ -1,5 +1,6 @@
 ---
-title: "ETB IRC Command"
+^title: "ETB IRC Command"
+ntitle: "ETB"
 layout: command
 notstarted: true
 

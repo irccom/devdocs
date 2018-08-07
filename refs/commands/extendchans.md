@@ -1,5 +1,6 @@
 ---
-title: "EXTENDCHANS IRC Command"
+^title: "EXTENDCHANS IRC Command"
+ntitle: "EXTENDCHANS"
 layout: command
 notstarted: true
 

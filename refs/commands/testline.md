@@ -1,5 +1,6 @@
 ---
-title: "TESTLINE IRC Command"
+^title: "TESTLINE IRC Command"
+ntitle: "TESTLINE"
 layout: command
 notstarted: true
 

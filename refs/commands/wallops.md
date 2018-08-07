@@ -1,5 +1,6 @@
 ---
-title: "WALLOPS IRC Command"
+^title: "WALLOPS IRC Command"
+ntitle: "WALLOPS"
 layout: command
 notstarted: true
 

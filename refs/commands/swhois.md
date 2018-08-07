@@ -1,5 +1,6 @@
 ---
-title: "SWHOIS IRC Command"
+^title: "SWHOIS IRC Command"
+ntitle: "SWHOIS"
 layout: command
 notstarted: true
 

@@ -1,5 +1,6 @@
 ---
-title: "CHALLENGE IRC Command"
+^title: "CHALLENGE IRC Command"
+ntitle: "CHALLENGE"
 layout: command
 notstarted: true
 

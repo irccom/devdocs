@@ -1,5 +1,6 @@
 ---
-title: "UNLOADMODULE IRC Command"
+^title: "UNLOADMODULE IRC Command"
+ntitle: "UNLOADMODULE"
 layout: command
 notstarted: true
 

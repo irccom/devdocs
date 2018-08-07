@@ -1,5 +1,6 @@
 ---
-title: "OPERMOTD IRC Command"
+^title: "OPERMOTD IRC Command"
+ntitle: "OPERMOTD"
 layout: command
 notstarted: true
 

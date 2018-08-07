@@ -1,5 +1,6 @@
 ---
-title: "ADDMOTD IRC Command"
+^title: "ADDMOTD IRC Command"
+ntitle: "ADDMOTD"
 layout: command
 notstarted: true
 

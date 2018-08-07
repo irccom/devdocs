@@ -1,5 +1,6 @@
 ---
-title: "USERIP IRC Command"
+^title: "USERIP IRC Command"
+ntitle: "USERIP"
 layout: command
 notstarted: true
 

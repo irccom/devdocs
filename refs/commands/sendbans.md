@@ -1,5 +1,6 @@
 ---
-title: "SENDBANS IRC Command"
+^title: "SENDBANS IRC Command"
+ntitle: "SENDBANS"
 layout: command
 notstarted: true
 

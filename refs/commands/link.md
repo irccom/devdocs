@@ -1,5 +1,6 @@
 ---
-title: "LINK IRC Command"
+^title: "LINK IRC Command"
+ntitle: "LINK"
 layout: command
 notstarted: true
 

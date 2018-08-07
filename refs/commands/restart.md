@@ -1,5 +1,6 @@
 ---
-title: "RESTART IRC Command"
+^title: "RESTART IRC Command"
+ntitle: "RESTART"
 layout: command
 notstarted: true
 

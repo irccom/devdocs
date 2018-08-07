@@ -1,5 +1,6 @@
 ---
-title: "GZLINE IRC Command"
+^title: "GZLINE IRC Command"
+ntitle: "GZLINE"
 layout: command
 notstarted: true
 

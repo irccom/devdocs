@@ -1,9 +1,8 @@
 ---
 title: IRC Foundation Developer Docs
 layout: default
+ntitle: IRC Foundation Developer Docs
 ---
-
-Commands galore! Etc!
 
 <h2>Commands</h2>
 {% assign cmds = "" | split: "" %}
@@ -15,5 +14,18 @@ Commands galore! Etc!
 {% assign cmds = cmds | sort %}
 
 {% for cmd in cmds %}
-    <p><a href="refs/commands/{{ cmd | downcase }}">{{ cmd }}</a></p>
+    <p><a href="refs/commands/{{ cmd | slugify }}">{{ cmd }}</a></p>
+{% endfor %}
+
+<h2>Numerics</h2>
+{% assign nums = "" | split: "" %}
+{% for p in site.pages %}
+    {% if p.layout == "numeric" %}
+        {% assign nums = nums | push: p.numeric %}
+    {% endif %}
+{% endfor %}
+{% assign nums = nums | sort %}
+
+{% for num in nums %}
+    <p><a href="refs/numerics/{{ num }}">{{ num }}</a></p>
 {% endfor %}

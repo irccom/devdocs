@@ -1,5 +1,6 @@
 ---
-title: "PROXY IRC Command"
+^title: "PROXY IRC Command"
+ntitle: "PROXY"
 layout: command
 notstarted: true
 

@@ -1,5 +1,6 @@
 ---
-title: "SILENCE IRC Command"
+^title: "SILENCE IRC Command"
+ntitle: "SILENCE"
 layout: command
 notstarted: true
 

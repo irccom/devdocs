@@ -1,8 +1,147 @@
 ---
 layout: default
 ---
-<h1>{{ page.command }} Command</h1>
+<div class="container page-content">
+        <div class="row">
+            <div class="col-sm-3 sidebar">
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a href="">IRC Technology</a> ></li>
+                        <li><a href="">Commands</a> ></li>
+                        <li><b>{{ page.command }}</b></li>
+                    </ul>
+                </div>
+                {% if page.related-commands %}
+                <hr>
+                <p class="title">Related Commands:</p>
+                    {% for cmd in page.related-commands %}
+                    <a href="{{ cmd | slugify }}"><code>{{ cmd }}</code></a>
+                    {% endfor %}
+                {% endif %}
+                <hr>
+                <div class="dropdown-list-container active">
+                    <p class="title">Username commands:</p>
+                    <ul class="documentation-items">
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown-list-container">
+                    <p class="title">Example 2:</p>
+                    <ul class="documentation-items">
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown-list-container">
+                    <p class="title">Example 3:</p>
+                    <ul class="documentation-items">
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                        <li><a href="">Example UL Link</a></li>
+                    </ul>
+                </div>
 
-{% if page.notstarted %}
-<p>This command is not documented</p>
-{% endif %}
+                <hr>
+                <div class="sidebar-content-block">
+                    <p class="title">An information block!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor!</p>
+                    <a href="btn">Example Link Name!</a>
+                </div>
+            </div>
+            <div class="col-sm-9 main-content">
+                <div class="content">
+                    {% if page.notstarted %}
+                    <p>This command is not documented</p>
+                    {% endif %}
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+                    <br><code>sunt in culpa qui officia deserunt mollit anim id est laborum.</code></p>
+                    <pre class="example">
+                    <code>
+    "plugins": [
+        {"name": "myplugin", "url": "/static/plugins/myplugin.js"}
+    ]
+
+    "plugins": [
+        {"name": "myplugin", "url": "/static/plugins/myplugin.js"}
+    ]
+                    </code>
+                    </pre>
+                    <hr>
+                    <h3 id="referenceThisIDinURl">Link Title<a href="/#referneceThisDivinURl" class="link-icon"><i class="fas fa-link"></i></a></h3>
+                    <code class="full-width">An example of a full width block</code>
+                    <p>An example of some componenets we might need on pages such as docs / faq / contact etc </p>
+                    <hr>
+                    <h3 id="referenceThisIDinURl">Compatability<a href="/#referneceThisDivinURl" class="link-icon"><i class="fas fa-link"></i></a></h3>
+                    <div class="alert alert-warning">
+                        Example text regarding that this may or may not work on the IRC client
+                    </div>
+                    <table class="supported-table">
+                        <thead>
+                            <th style="min-width:120px"></th>
+                            <th>Unreal</th>
+                            <th>InspIRCd</th>
+                            <th>Ircd-seven</th>
+                            <th>Charybdis</th>
+                            <th>UndernetIRCd</th>
+                            <th>Bahamut</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Supported:</td>
+                                <td class="supported"><i class="fas fa-check"></i></td>
+                                <td class="not-supported"><i class="fas fa-times"></i></td>
+                                <td class="supported"><i class="fas fa-check"></i></td>
+                                <td class="not-supported"><i class="fas fa-times"></i></td>
+                                <td class="supported"><i class="fas fa-check"></i></td>
+                                <td class="supported"><i class="fas fa-check"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                    <h3 id="referenceThisIDinURl">See Also:<a href="/#referneceThisDivinURl" class="link-icon"><i class="fas fa-link"></i></a></h3>
+                    <a href="#"><code>> This interesting function();</code></a><br>
+                    <a href="#"><code>> This interesting function();</code></a><br>
+            </div>
+            </div>
+        </div>
+    </div>

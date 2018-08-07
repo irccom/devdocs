@@ -1,5 +1,6 @@
 ---
-title: "SVSSILENCE IRC Command"
+^title: "SVSSILENCE IRC Command"
+ntitle: "SVSSILENCE"
 layout: command
 notstarted: true
 

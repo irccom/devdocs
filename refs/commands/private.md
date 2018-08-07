@@ -1,5 +1,6 @@
 ---
-title: "PRIVATE IRC Command"
+^title: "PRIVATE IRC Command"
+ntitle: "PRIVATE"
 layout: command
 notstarted: true
 

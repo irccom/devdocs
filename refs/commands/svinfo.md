@@ -1,5 +1,6 @@
 ---
-title: "SVINFO IRC Command"
+^title: "SVINFO IRC Command"
+ntitle: "SVINFO"
 layout: command
 notstarted: true
 

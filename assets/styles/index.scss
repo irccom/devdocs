@@ -1,0 +1,778 @@
+---
+---
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    background: #ececec;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+//Main content
+h1,h2,h3,h4,h5 {
+    cursor: default;
+    margin: 0 0 20px 0;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 3em;
+}
+h2 {
+    font-size: 2.4em;
+}
+h3 {
+    font-size: 2em;
+}
+h4 {
+    font-size: 1.6em;
+}
+h5 {
+    font-size: 1.2em;
+}
+
+p {
+    font-size: 1em;
+    line-height: 2em;
+    margin-bottom: 20px;
+}
+
+ul, ol {
+    display: inline-block;
+    padding-left: 1em;
+    li {
+        margin: 0 0 10px 0;
+        cursor: default;
+    }
+
+    &.breadcrumb li {
+        margin-bottom: 0;
+    }
+}
+
+
+//Helpers
+img {
+    max-width: 100%;
+}
+
+.align-text-center {
+    text-align: center;
+}
+
+
+
+//Header
+header {
+    background-color: #213442; //(dan): for when floating at top of page while scrolling
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    padding: 20px 0;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    a.logo {
+        float: left;
+        font-weight: 900;
+        font-size: 2em;
+    }
+
+    nav {
+        float: right;
+        width: auto;
+        line-height: 48px;
+
+        a {
+            display: inline-block;
+            // margin: 0 0 10px 0; //(dan) this makes the navheader uneven when scrolling down. is it intended only for the in-menu links displayed on hover?
+        }
+
+        //(dan) specifically the first menu title, because the margin throws off the nav's height
+        > ul > li {
+            margin: 0;
+        }
+
+        ul {
+            display: inline-block;
+            position: relative;
+            list-style: none;
+
+            ul {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+            }
+
+            &:hover {
+                ul {
+                    width: 200px;
+                }
+            }
+        }
+    }
+}
+
+.intro-container {
+    display: flex;
+    height: 90vh;
+    min-height: 400px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    //The content
+    .intro-container-content {
+        max-width: 800px;
+        z-index: 3;
+        position: relative;
+        margin: 0 auto;
+        h1 {
+            margin: 0 0 20px 0;
+        }
+        p {
+            margin: 0 0 25px 0;
+        }
+    }
+
+    //Gradient
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        top: 0;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-image: url('/assets/images/introContainerGradient.png');
+        opacity: 0.2;
+    }
+
+    &.has-call-to-action-blocks {
+        margin-bottom: 100px;
+    }
+}
+
+//Into Call to action blocks
+.intro-call-to-action-container {
+    position: absolute;
+    bottom: -75px;
+    left: 0;
+    width: 100%;
+
+    .into-call-to-action-block{
+        h2 {
+            font-size: 1.2em;
+            font-weight: 600;
+            padding: 10px 20px;
+            margin: 0 ;
+        }
+        p {
+            padding: 20px;
+            height: 130px;
+        }
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+//Call To Action Blocks
+.call-to-action-block-container {
+    padding: 50px 0;
+    text-align: center;
+    .call-to-action-icon {
+        text-align: center;
+        margin-top: 20px;
+        cursor: default;
+        i {
+            font-size: 4.5em;
+            margin: 0 0 10px 0;
+        }
+        p.title {
+            font-size: 1.4em;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+        }
+        p {
+            margin: 0 0 10px 0;
+        }
+        a {
+            text-decoration: underline;
+            &.button {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+//Form Container
+.form-container {
+    background: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    label, legend {
+        margin: 0 0 5px 0;
+        font-weight: 600;
+    }
+
+    .form-check label {
+        font-weight: normal;
+    }
+
+    small {
+        font-size: 0.8em;
+    }
+
+    //Style the inputs to be more IRC like
+    .form-control {
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid #c1c1c1;
+        transition: border-bottom 0.2s;
+        &:focus {
+            box-shadow: none;
+            border-color: #213442;
+            transition: all 0.3s;
+        }
+    }
+
+    //Give form backgrounds a colour
+    textarea.form-control,
+    select.form-control[multiple]{
+        border: 1px solid #c1c1c1
+    }
+}
+
+
+//Screenshot section
+.screenshot-container {
+    text-align: center;
+    padding: 50px 0;
+
+    .screenshot {
+        display: inline-block;
+        margin: 0 auto 20px auto;
+        border-radius: 6px;
+        width: 100%;
+        background-color: #eee;
+        transition: all 0.1s;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.2s;
+        }
+    }
+}
+
+// Documentation
+.documentation {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    h1, h2, h3, h4, h5 {
+        margin: 0;
+    }
+
+    a{
+        text-decoration: underline;
+    }
+
+    p , table,  ul{
+        code {
+            padding: 2px 8px;
+            display: inline-block;
+            background-color: #f6f8fa;
+            margin: 0 2px;
+        }
+    }
+
+    pre {
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        background-color: #f6f8fa;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        code {
+            display: inline;
+            margin: 0;
+
+        }
+    }
+
+    ul {
+        display: block;
+        padding: 10px 0 10px 1.5em;
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        overflow: auto;
+        tr {
+            background-color: #fff;
+            border-top: 1px solid #c6cbd1;
+        }
+        tr:nth-child(2n){
+            background: #f5f5f5;
+        }
+        td, th {
+            padding: 15px;
+            border: 1px solid #dfe2e5;
+        }
+    }
+}
+
+
+// IRC Courses container
+.course-container {
+    margin-bottom: 40px;
+
+    .course {
+        width: 100%;
+        margin: 0 0 20px 0;
+
+        .title {
+            width: 100%;
+            line-height: 60px;
+            padding: 0 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+
+            i {
+                float: right;
+                margin-top: 22px;
+                font-size: 1.5em;
+            }
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        .videos {
+            display: none;
+        }
+        &.open {
+            .title {
+                i {
+                    line-height: 50px;
+                    margin: 0;
+                }
+            }
+            .videos {
+                list-style: none;
+                display: block;
+                li {
+                    width: 100%;
+                    margin: 0 0 10px 0;
+                    line-height: 40px;
+                    padding: 0 10px 0 20px;
+                    .watch, .locked{
+                        float: right;
+                        line-height: 21px;
+                        padding: 2px 10px;
+                        border-radius: 4px;
+                        font-size: 0.8em;
+                        margin: 7px 0 0 0;
+                        transition: all 0.3s;
+                        i {
+                            margin-left: 5px;
+                            font-size: 0.8em;
+                        }
+                        &:hover{
+                            transition: all 0.1s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Team section
+.team-member {
+    margin-bottom: 20px;
+    .team-member-avatar {
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        background-color: #eee;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 50%;
+        border: 1px solid #fff;
+    }
+    .team-member-name {
+        margin-bottom: 0;
+        font-size: 1.2em;
+    }
+    p {
+        margin: 0 0 10px 0;
+    }
+}
+
+//Box content container
+.box-content-container {
+    .box-content {
+        p.title {
+            width: 100%;
+            line-height: 40px;
+            border-bottom: 1px solid #fff;
+            font-size: 1.4em;
+            padding: 10px 20px;
+            margin: 0;
+        }
+        .content {
+            display: block;
+            padding: 10px 20px;
+
+            p {
+                font-size: 0.9em;
+            }
+
+            a {
+                display: block;
+                width: 100%;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.full-width-page-header {
+    width: 100%;
+    min-height: 300px;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 0 40px 0;
+    p{
+        margin: 0;
+    }
+}
+
+//Example of a sub page
+.page-content {
+    background: #fff;
+    margin-bottom: 40px;
+
+    .sidebar {
+        display: block;
+        background-color: #f7f7f7;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        min-height: 100%;
+
+        p.title{
+            font-weight: 600;
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .breadcrumbs {
+            ul {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                li {
+                    margin: 0 0 5px 0;
+                    display: inline-block;
+                    list-style: none;
+                    font-weight: 600;
+                    a {
+                        font-weight: normal;
+                        // text-decoration: underline; //(dan): I think the underline here looks very distracting. also, no other link in the sidebar has it (removing the underline makes it match the other links here style-wise)
+                    }
+                }
+            }
+        }
+
+        .icon-link {
+            display: block;
+            width: 100%;
+            font-size: 1.2em;
+            margin: 0 0 20px 0;
+            transition: all 0.3s;
+
+            span {
+                display: inline-block;
+                width: 40px;
+                line-height: 40px;
+                text-align: center;
+                margin-right: 10px;
+                border-radius: 50%;
+            }
+
+            &:hover {
+                transition: all 0.3s;
+                span {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        ul {
+            li {
+                ul {
+                    margin: 10px 0 0 0;
+                    li:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .dropdown-list-container {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0 0 10px 0;
+            .title {
+                width: 100%;
+                display: block;
+                margin: 0 0 10px 0;
+                padding-right: 30px;
+                position: relative;
+                cursor: pointer;
+                &:after {
+                    content: "\f0dd";
+                    position: absolute;
+                    font-family: "Font Awesome 5 Free";
+                    right: 5px;
+                    top: 4px;
+                    line-height: normal;
+                }
+            }
+            ul {
+                display: none;
+            }
+            &.active {
+                .title:after{
+                    content: "\f0de";
+                    top: 14px;
+                }
+                ul {
+                    display: block;
+                    padding-left: 20px;
+                }
+            }
+        }
+
+        .sidebar-content-block {
+            padding: 20px;
+            text-align: center;
+            p {
+                font-size: 0.8em;
+                margin: 0;
+                &.title {
+                    font-size: 1em;
+                }
+            }
+            a {
+                display: block;
+                line-height: 30px;
+                padding: 2px 10px;
+                border-radius: 4px;
+                margin: 7px 0 0 0;
+                transition: all 0.3s;
+                i {
+                    margin-left: 5px;
+                    font-size: 0.8em;
+                }
+                &:hover{
+                    transition: all 0.1s;
+                }
+            }
+        }
+    }
+    .main-content .heading {
+        background-color: #fff;
+        padding: 20px 0;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #f1f1f1;
+        h1,h2,h3,h4,h5 {
+            margin-bottom: 0;
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .main-content .content {
+        //(dan): because otherwise if the content's the first thing it looks really weird and off
+        &:first-child{
+            padding-top: 20px;
+        }
+        background-color: #fff;
+        padding-bottom: 40px;
+        code {
+            padding: 5px 10px;
+        }
+        pre {
+            height: 150px;
+            overflow-x: scroll;
+            border-radius: 2px;
+            min-height: 0px;
+            line-height: 1.4em;
+            code {
+                margin: 0;
+                padding: 0;
+            }
+
+            &.example {
+                min-height: 200px;
+            }
+        }
+
+        code.full-width {
+            line-height: 40px;
+            width: 100%;
+            display: block;
+            border-left: 4px solid #007bff;
+            padding-left: 20px;
+            margin: 0 0 10px 0;
+        }
+
+        a code {
+            margin: 0 0 10px 0;
+            display: inline-block;
+            clear: both;
+        }
+
+        h3 a {
+            float: right;
+            color: #000;
+            text-decoration: none;
+            font-size: 0.8em;
+            margin-right: 10px;
+            transition: all 0.3s;
+            &:hover{
+                color: #007bff;
+            }
+        }
+
+        .supported-table {
+            width: 100%;
+            background: #f1f1f1;
+
+            thead th {
+                text-align: center;
+                padding: 10px;
+                border-right: 1px solid #f1f1f1;
+                border-bottom: 1px solid #f1f1f1;
+            }
+
+            td {
+                padding: 10px 20px;
+                text-align: center;
+                border-right: 1px solid #f1f1f1;
+            }
+
+            .supported {
+                background: #5ea92f;
+                color: #fff;
+            }
+            .not-supported {
+                background: #a92f2f;
+                color: #fff;
+            }
+        }
+
+        hr {
+            background: #007bff;
+            height: 2px;
+            margin: 40px 0;
+            display: block;
+            opacity: 0.4;
+        }
+    }
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+
+}
+
+
+//Reuseable content
+.video-container {
+    display: block;
+    width: 100%;
+    iframe {
+        width: 100%;
+    }
+    .content {
+        width: 100%;
+        padding: 10px 20px;
+        .title {
+            font-weight: 900;
+            margin: 0;
+        }
+        p:last-of-type {
+            margin: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//Buttons - Links etc ( These are for non 'button' buttons - I.E only styled to look like a button link, non form submitting )
+.button {
+    width: auto;
+    display: inline-block;
+    margin: 0 auto;
+    border: 2px solid;
+    text-align: center;
+    padding: 10px 25px 10px 25px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: all 0.2s;
+    cursor: pointer;
+    //Background colours for hover are within the theme files
+}
+
+//We import our themes at the end of the stylesheet
+// @import './chat.scss';

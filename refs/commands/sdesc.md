@@ -1,5 +1,6 @@
 ---
-title: "SDESC IRC Command"
+^title: "SDESC IRC Command"
+ntitle: "SDESC"
 layout: command
 notstarted: true
 

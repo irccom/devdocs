@@ -1,5 +1,6 @@
 ---
-title: "BAN IRC Command"
+^title: "BAN IRC Command"
+ntitle: "BAN"
 layout: command
 notstarted: true
 

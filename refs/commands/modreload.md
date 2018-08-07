@@ -1,5 +1,6 @@
 ---
-title: "MODRELOAD IRC Command"
+^title: "MODRELOAD IRC Command"
+ntitle: "MODRELOAD"
 layout: command
 notstarted: true
 

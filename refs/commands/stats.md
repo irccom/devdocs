@@ -1,5 +1,6 @@
 ---
-title: "STATS IRC Command"
+^title: "STATS IRC Command"
+ntitle: "STATS"
 layout: command
 notstarted: true
 

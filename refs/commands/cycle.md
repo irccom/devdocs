@@ -1,5 +1,6 @@
 ---
-title: "CYCLE IRC Command"
+^title: "CYCLE IRC Command"
+ntitle: "CYCLE"
 layout: command
 notstarted: true
 

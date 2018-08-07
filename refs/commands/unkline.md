@@ -1,5 +1,6 @@
 ---
-title: "UNKLINE IRC Command"
+^title: "UNKLINE IRC Command"
+ntitle: "UNKLINE"
 layout: command
 notstarted: true
 

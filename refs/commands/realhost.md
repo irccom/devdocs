@@ -1,5 +1,6 @@
 ---
-title: "REALHOST IRC Command"
+^title: "REALHOST IRC Command"
+ntitle: "REALHOST"
 layout: command
 notstarted: true
 

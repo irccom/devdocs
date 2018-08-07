@@ -1,5 +1,6 @@
 ---
-title: "MLOCK IRC Command"
+^title: "MLOCK IRC Command"
+ntitle: "MLOCK"
 layout: command
 notstarted: true
 

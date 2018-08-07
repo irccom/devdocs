@@ -1,5 +1,6 @@
 ---
-title: "DALINFO IRC Command"
+^title: "DALINFO IRC Command"
+ntitle: "DALINFO"
 layout: command
 notstarted: true
 

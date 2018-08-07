@@ -1,5 +1,6 @@
 ---
-title: "OPERSPY IRC Command"
+^title: "OPERSPY IRC Command"
+ntitle: "OPERSPY"
 layout: command
 notstarted: true
 

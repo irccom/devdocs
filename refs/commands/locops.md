@@ -1,5 +1,6 @@
 ---
-title: "LOCOPS IRC Command"
+^title: "LOCOPS IRC Command"
+ntitle: "LOCOPS"
 layout: command
 notstarted: true
 

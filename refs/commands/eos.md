@@ -1,5 +1,6 @@
 ---
-title: "EOS IRC Command"
+^title: "EOS IRC Command"
+ntitle: "EOS"
 layout: command
 notstarted: true
 

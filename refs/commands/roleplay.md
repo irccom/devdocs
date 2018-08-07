@@ -1,5 +1,6 @@
 ---
-title: "ROLEPLAY IRC Command"
+^title: "ROLEPLAY IRC Command"
+ntitle: "ROLEPLAY"
 layout: command
 notstarted: true
 

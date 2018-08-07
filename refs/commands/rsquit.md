@@ -1,5 +1,6 @@
 ---
-title: "RSQUIT IRC Command"
+^title: "RSQUIT IRC Command"
+ntitle: "RSQUIT"
 layout: command
 notstarted: true
 

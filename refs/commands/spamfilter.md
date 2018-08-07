@@ -1,5 +1,6 @@
 ---
-title: "SPAMFILTER IRC Command"
+^title: "SPAMFILTER IRC Command"
+ntitle: "SPAMFILTER"
 layout: command
 notstarted: true
 

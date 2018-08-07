@@ -1,5 +1,6 @@
 ---
-title: "CREDITS IRC Command"
+^title: "CREDITS IRC Command"
+ntitle: "CREDITS"
 layout: command
 notstarted: true
 

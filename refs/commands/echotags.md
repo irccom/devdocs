@@ -1,5 +1,6 @@
 ---
-title: "ECHOTAGS IRC Command"
+^title: "ECHOTAGS IRC Command"
+ntitle: "ECHOTAGS"
 layout: command
 notstarted: true
 

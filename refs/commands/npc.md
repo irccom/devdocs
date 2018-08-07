@@ -1,5 +1,6 @@
 ---
-title: "NPC IRC Command"
+^title: "NPC IRC Command"
+ntitle: "NPC"
 layout: command
 notstarted: true
 

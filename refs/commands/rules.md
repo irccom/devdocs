@@ -1,5 +1,6 @@
 ---
-title: "RULES IRC Command"
+^title: "RULES IRC Command"
+ntitle: "RULES"
 layout: command
 notstarted: true
 

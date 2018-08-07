@@ -1,5 +1,6 @@
 ---
-title: "XLINE IRC Command"
+^title: "XLINE IRC Command"
+ntitle: "XLINE"
 layout: command
 notstarted: true
 

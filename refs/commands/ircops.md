@@ -1,5 +1,6 @@
 ---
-title: "IRCOPS IRC Command"
+^title: "IRCOPS IRC Command"
+ntitle: "IRCOPS"
 layout: command
 notstarted: true
 

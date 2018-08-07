@@ -1,0 +1,211 @@
+---
+---
+$brandPrimary: #213442;
+$brandPrimaryHover: #3f5565;
+
+
+.intro-container {
+    background: $brandPrimary;
+    .intro-container-content {
+        color: #fff;
+    }
+}
+
+
+//Buttons
+
+//Bootstrap
+.btn {
+    border-color: $brandPrimary;
+    background-color: $brandPrimary;
+    &:hover{
+        background-color: $brandPrimaryHover;
+    }
+
+    &.btn-success {
+        background: #27a54e;
+        border-color: #27a54e;
+        &:hover{
+          background-color: #52c776;
+        }
+    }
+
+    &.btn-info {
+        background: #3490b3;
+        border-color: #3490b3;
+        &:hover{
+          background-color: #52a7c7;
+        }
+    }
+
+    &.btn-danger {
+        background: #b33434;
+        border-color: #b33434;
+        &:hover{
+          background-color: #ca5252;
+        }
+    }
+
+
+
+
+}
+
+//Custom
+a.button {
+    color: #fff;
+    border-color: #fff;
+    &:hover {
+        background-color: #fff;
+        color: $brandPrimary;
+    }
+    &.button-inverted {
+        background-color: $brandPrimary;
+        color: #fff;
+        &:hover{
+            background-color: #fff;
+            color: $brandPrimary;
+        }
+    }
+}
+
+
+.documentation {
+    h1, h2, h3, h4, h5 {
+        color: $brandPrimary;
+    }
+
+    p , table, ul{
+        code {
+            color:  #ff3f3e;
+        }
+    }
+}
+
+//Breadcrumbs
+ol.breadcrumb {
+    background: #fff;
+}
+
+//Intro call to action blocks
+.into-call-to-action-block {
+    h2 {
+        background: #fff;
+        color: $brandPrimary;
+        border-bottom: 1px solid $brandPrimary;
+    }
+    p {
+        background: #fff;
+        color: #000;
+    }
+    a {
+        color: $brandPrimary;
+    }
+}
+
+//Course Container
+.course-container {
+    .course {
+        background: #fff;
+        .title {
+            background: $brandPrimary;
+            color: #fff;
+            margin: 0;
+        }
+        ul.videos{
+            width: 100%;
+            padding: 20px;
+            background: #fff;
+            li {
+                width: 100%;
+                background: #ebebeb;
+                a {
+                    color: $brandPrimary;
+                    &.watch {
+                        border: 1px solid $brandPrimary;
+                        &:hover{
+                            background: $brandPrimary;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.box-content-container .box-content {
+    color: #fff;
+    background-color: $brandPrimary;
+    margin: 0 0 20px 0;
+    a {
+        color: #fff;
+        text-decoration: underline;
+    }
+}
+
+
+//Full page header
+.full-width-page-header {
+    background-color: $brandPrimary;
+    color: #fff;
+}
+
+//Example of a sub page
+.page-content {
+    background: #fff;
+    .sidebar {
+        background-color: #f7f7f7;
+        .icon-link {
+            color: $brandPrimary;
+            span {
+                background: $brandPrimary;
+                color: #fff;
+            }
+            &:hover {
+                color: $brandPrimaryHover;
+                span {
+                    background-color: $brandPrimaryHover;
+                }
+            }
+        }
+
+        ul a {
+            color: $brandPrimary;
+            &:hover {
+                color: $brandPrimaryHover;
+            }
+        }
+        .sidebar-content-block {
+            background: $brandPrimary;
+            color: #fff;
+            a {
+                border: 1px solid #fff;
+                color: #fff;
+            }
+        }
+    }
+    .main-content .heading {
+        background-color: #fff;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    .main-content .content {
+        background-color: #fff;
+        code {
+            background: #f1f1f1;
+        }
+        pre {
+            background-color: $brandPrimary;
+            code {
+                color: #fff;
+                background: none;
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+//Reusebale Components
+.main-content .video-container .content{
+    background: #f7f7f7;
+}

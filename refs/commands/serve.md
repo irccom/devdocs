@@ -1,5 +1,6 @@
 ---
-title: "SERVE IRC Command"
+^title: "SERVE IRC Command"
+ntitle: "SERVE"
 layout: command
 notstarted: true
 

@@ -1,5 +1,6 @@
 ---
-title: "UHELP IRC Command"
+^title: "UHELP IRC Command"
+ntitle: "UHELP"
 layout: command
 notstarted: true
 

@@ -1,5 +1,6 @@
 ---
-title: "UNDCCDENY IRC Command"
+^title: "UNDCCDENY IRC Command"
+ntitle: "UNDCCDENY"
 layout: command
 notstarted: true
 

@@ -1,5 +1,6 @@
 ---
-title: "SAMODE IRC Command"
+^title: "SAMODE IRC Command"
+ntitle: "SAMODE"
 layout: command
 notstarted: true
 

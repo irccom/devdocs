@@ -1,5 +1,6 @@
 ---
-title: "SVSFLINE IRC Command"
+^title: "SVSFLINE IRC Command"
+ntitle: "SVSFLINE"
 layout: command
 notstarted: true
 
