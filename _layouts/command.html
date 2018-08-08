@@ -14,9 +14,29 @@ layout: default
         <hr>
         <p class="title">Related Commands:</p>
             {% for cmd in page.related-commands %}
-            <a href="{{ cmd | slugify }}"><code>{{ cmd }}</code></a>
+            <a class="sidebar-page-link" href="{{ cmd | slugify }}"><code>{{ cmd }}</code></a>
             {% endfor %}
         {% endif %}
+
+        {% for group in page.command-groups %}
+        {% if site.data.command-groups.groups[group] %}
+        {% assign gdata = site.data.command-groups.groups[group] %}
+        {% assign cmds = "" | split: "" %}
+        {% for p in site.pages %}
+            {% if p.layout == "command" %}{% if p.command-groups contains group %}{% if p.command != page.command %}
+                {% assign cmds = cmds | push: p.command %}
+            {% endif %}{% endif %}{% endif %}
+        {% endfor %}
+        {% assign cmds = cmds | sort %}
+        {% if cmds.size > 0 %}
+        <hr>
+        <p class="title">{{ gdata.name }}</p>
+            {% for cmd in cmds %}
+            <a class="sidebar-page-link" href="{{ cmd | slugify }}"><code>{{ cmd }}</code></a>
+            {% endfor %}
+        {% endif %}
+        {% endif %}
+        {% endfor %}
         <hr>
         <div class="dropdown-list-container active">
             <p class="title">Username commands:</p>

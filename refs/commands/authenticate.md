@@ -7,4 +7,6 @@ notstarted: true
 command: AUTHENTICATE
 related-commands:
     - ACC
+command-groups:
+    - account
 ---

@@ -2,12 +2,15 @@
 ^title: "ACC IRC Command"
 ntitle: "ACC"
 nsub: "Register and validate new user accounts"
+index-desc: "The *IRC `ACC` command* lets users register and validate new accounts"
 layout: command
 experimental: true
 
 command: ACC
 related-commands:
     - AUTHENTICATE
+command-groups:
+    - account
 
 examples: |
     ACC REGISTER dan mailto:dan@example.com passphrase :testpassphrase123
