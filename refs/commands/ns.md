@@ -1,5 +1,5 @@
 ---
-^title: "NS IRC Command"
+title: "NS IRC Command"
 ntitle: "NS"
 nsub: "The short alias of /NICKSERV"
 layout: command

@@ -1,5 +1,5 @@
 ---
-^title: "SHUN IRC Command"
+title: "SHUN IRC Command"
 ntitle: "SHUN"
 layout: command
 notstarted: true

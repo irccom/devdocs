@@ -1,5 +1,5 @@
 ---
-^title: "CHGIDENT IRC Command"
+title: "CHGIDENT IRC Command"
 ntitle: "CHGIDENT"
 layout: command
 notstarted: true

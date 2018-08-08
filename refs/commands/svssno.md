@@ -1,5 +1,5 @@
 ---
-^title: "SVSSNO IRC Command"
+title: "SVSSNO IRC Command"
 ntitle: "SVSSNO"
 layout: command
 notstarted: true

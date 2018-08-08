@@ -1,5 +1,5 @@
 ---
-^title: "REMOVE IRC Command"
+title: "REMOVE IRC Command"
 ntitle: "REMOVE"
 layout: command
 notstarted: true

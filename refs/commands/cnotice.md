@@ -1,5 +1,5 @@
 ---
-^title: "CNOTICE IRC Command"
+title: "CNOTICE IRC Command"
 ntitle: "CNOTICE"
 layout: command
 notstarted: true

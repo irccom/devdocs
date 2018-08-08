@@ -1,5 +1,5 @@
 ---
-^title: "PONG IRC Command"
+title: "PONG IRC Command"
 ntitle: "PONG"
 layout: command
 notstarted: true

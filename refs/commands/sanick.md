@@ -1,5 +1,5 @@
 ---
-^title: "SANICK IRC Command"
+title: "SANICK IRC Command"
 ntitle: "SANICK"
 layout: command
 notstarted: true

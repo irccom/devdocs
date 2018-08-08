@@ -1,5 +1,5 @@
 ---
-^title: "SID IRC Command"
+title: "SID IRC Command"
 ntitle: "SID"
 layout: command
 notstarted: true

@@ -1,5 +1,5 @@
 ---
-^title: "DCCDENY IRC Command"
+title: "DCCDENY IRC Command"
 ntitle: "DCCDENY"
 layout: command
 notstarted: true

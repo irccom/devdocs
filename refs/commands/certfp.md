@@ -1,5 +1,5 @@
 ---
-^title: "CERTFP IRC Command"
+title: "CERTFP IRC Command"
 ntitle: "CERTFP"
 layout: command
 notstarted: true

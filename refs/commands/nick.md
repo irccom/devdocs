@@ -1,8 +1,10 @@
 ---
-^title: "NICK IRC Command"
+title: "NICK IRC Command"
 ntitle: "NICK"
 layout: command
 notstarted: true
 
 command: NICK
+command-groups:
+    - connection
 ---

@@ -1,5 +1,5 @@
 ---
-^title: "KNOCK IRC Command"
+title: "KNOCK IRC Command"
 ntitle: "KNOCK"
 layout: command
 notstarted: true

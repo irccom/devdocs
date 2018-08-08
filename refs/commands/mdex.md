@@ -1,5 +1,5 @@
 ---
-^title: "MDEX IRC Command"
+title: "MDEX IRC Command"
 ntitle: "MDEX"
 layout: command
 notstarted: true

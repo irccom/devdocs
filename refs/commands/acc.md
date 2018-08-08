@@ -1,5 +1,5 @@
 ---
-^title: "ACC IRC Command"
+title: "ACC IRC Command"
 ntitle: "ACC"
 nsub: "Register and validate new user accounts"
 index-desc: "The *IRC `ACC` command* lets users register and validate new accounts"

@@ -1,5 +1,5 @@
 ---
-^title: "HELPOP IRC Command"
+title: "HELPOP IRC Command"
 ntitle: "HELPOP"
 layout: command
 notstarted: true

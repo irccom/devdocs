@@ -1,5 +1,5 @@
 ---
-^title: "POST IRC Command"
+title: "POST IRC Command"
 ntitle: "POST"
 layout: command
 notstarted: true

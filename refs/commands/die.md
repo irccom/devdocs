@@ -1,5 +1,5 @@
 ---
-^title: "DIE IRC Command"
+title: "DIE IRC Command"
 ntitle: "DIE"
 layout: command
 notstarted: true

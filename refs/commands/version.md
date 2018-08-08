@@ -1,5 +1,5 @@
 ---
-^title: "VERSION IRC Command"
+title: "VERSION IRC Command"
 ntitle: "VERSION"
 layout: command
 notstarted: true

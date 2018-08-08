@@ -1,5 +1,5 @@
 ---
-^title: "PRIVMSG IRC Command"
+title: "PRIVMSG IRC Command"
 ntitle: "PRIVMSG"
 layout: command
 notstarted: true

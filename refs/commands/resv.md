@@ -1,5 +1,5 @@
 ---
-^title: "RESV IRC Command"
+title: "RESV IRC Command"
 ntitle: "RESV"
 layout: command
 notstarted: true

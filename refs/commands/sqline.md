@@ -1,5 +1,5 @@
 ---
-^title: "SQLINE IRC Command"
+title: "SQLINE IRC Command"
 ntitle: "SQLINE"
 layout: command
 notstarted: true

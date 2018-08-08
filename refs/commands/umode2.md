@@ -1,5 +1,5 @@
 ---
-^title: "UMODE2 IRC Command"
+title: "UMODE2 IRC Command"
 ntitle: "UMODE2"
 layout: command
 notstarted: true

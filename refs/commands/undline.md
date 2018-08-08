@@ -1,5 +1,5 @@
 ---
-^title: "UNDLINE IRC Command"
+title: "UNDLINE IRC Command"
 ntitle: "UNDLINE"
 layout: command
 notstarted: true

@@ -1,5 +1,5 @@
 ---
-^title: "TGINFO IRC Command"
+title: "TGINFO IRC Command"
 ntitle: "TGINFO"
 layout: command
 notstarted: true

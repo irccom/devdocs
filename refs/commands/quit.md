@@ -1,8 +1,10 @@
 ---
-^title: "QUIT IRC Command"
+title: "QUIT IRC Command"
 ntitle: "QUIT"
 layout: command
 notstarted: true
 
 command: QUIT
+command-groups:
+    - connection
 ---

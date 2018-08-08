@@ -1,5 +1,5 @@
 ---
-^title: "DEHELPER IRC Command"
+title: "DEHELPER IRC Command"
 ntitle: "DEHELPER"
 layout: command
 notstarted: true

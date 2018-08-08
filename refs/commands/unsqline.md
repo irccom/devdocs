@@ -1,5 +1,5 @@
 ---
-^title: "UNSQLINE IRC Command"
+title: "UNSQLINE IRC Command"
 ntitle: "UNSQLINE"
 layout: command
 notstarted: true

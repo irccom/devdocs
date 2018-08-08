@@ -1,5 +1,5 @@
 ---
-^title: "INVITE IRC Command"
+title: "INVITE IRC Command"
 ntitle: "INVITE"
 layout: command
 notstarted: true

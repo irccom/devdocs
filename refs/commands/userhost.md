@@ -1,5 +1,5 @@
 ---
-^title: "USERHOST IRC Command"
+title: "USERHOST IRC Command"
 ntitle: "USERHOST"
 layout: command
 notstarted: true

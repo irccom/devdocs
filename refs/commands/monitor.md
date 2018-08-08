@@ -1,5 +1,5 @@
 ---
-^title: "MONITOR IRC Command"
+title: "MONITOR IRC Command"
 ntitle: "MONITOR"
 layout: command
 notstarted: true

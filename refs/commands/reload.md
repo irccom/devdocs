@@ -1,5 +1,5 @@
 ---
-^title: "RELOAD IRC Command"
+title: "RELOAD IRC Command"
 ntitle: "RELOAD"
 layout: command
 notstarted: true

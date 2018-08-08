@@ -1,5 +1,5 @@
 ---
-^title: "LOADMODULE IRC Command"
+title: "LOADMODULE IRC Command"
 ntitle: "LOADMODULE"
 layout: command
 notstarted: true

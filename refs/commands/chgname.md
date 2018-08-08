@@ -1,5 +1,5 @@
 ---
-^title: "CHGNAME IRC Command"
+title: "CHGNAME IRC Command"
 ntitle: "CHGNAME"
 layout: command
 notstarted: true

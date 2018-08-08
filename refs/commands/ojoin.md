@@ -1,5 +1,5 @@
 ---
-^title: "OJOIN IRC Command"
+title: "OJOIN IRC Command"
 ntitle: "OJOIN"
 layout: command
 notstarted: true

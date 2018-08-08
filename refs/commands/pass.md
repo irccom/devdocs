@@ -1,5 +1,5 @@
 ---
-^title: "PASS IRC Command"
+title: "PASS IRC Command"
 ntitle: "PASS"
 layout: command
 notstarted: true

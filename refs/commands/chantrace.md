@@ -1,5 +1,5 @@
 ---
-^title: "CHANTRACE IRC Command"
+title: "CHANTRACE IRC Command"
 ntitle: "CHANTRACE"
 layout: command
 notstarted: true

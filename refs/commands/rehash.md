@@ -1,5 +1,5 @@
 ---
-^title: "REHASH IRC Command"
+title: "REHASH IRC Command"
 ntitle: "REHASH"
 layout: command
 notstarted: true

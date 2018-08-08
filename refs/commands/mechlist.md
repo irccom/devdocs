@@ -1,5 +1,5 @@
 ---
-^title: "MECHLIST IRC Command"
+title: "MECHLIST IRC Command"
 ntitle: "MECHLIST"
 layout: command
 notstarted: true

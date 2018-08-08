@@ -1,5 +1,5 @@
 ---
-^title: "ETRACE IRC Command"
+title: "ETRACE IRC Command"
 ntitle: "ETRACE"
 layout: command
 notstarted: true

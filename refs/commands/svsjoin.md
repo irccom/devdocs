@@ -1,5 +1,5 @@
 ---
-^title: "SVSJOIN IRC Command"
+title: "SVSJOIN IRC Command"
 ntitle: "SVSJOIN"
 layout: command
 notstarted: true

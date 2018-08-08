@@ -1,5 +1,5 @@
 ---
-^title: "UNREJECT IRC Command"
+title: "UNREJECT IRC Command"
 ntitle: "UNREJECT"
 layout: command
 notstarted: true

@@ -1,5 +1,5 @@
 ---
-^title: "HURT IRC Command"
+title: "HURT IRC Command"
 ntitle: "HURT"
 layout: command
 notstarted: true

@@ -1,5 +1,5 @@
 ---
-^title: "TKL IRC Command"
+title: "TKL IRC Command"
 ntitle: "TKL"
 layout: command
 notstarted: true

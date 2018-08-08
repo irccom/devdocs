@@ -1,5 +1,5 @@
 ---
-^title: "OPME IRC Command"
+title: "OPME IRC Command"
 ntitle: "OPME"
 layout: command
 notstarted: true

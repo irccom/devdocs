@@ -1,5 +1,5 @@
 ---
-^title: "WEBIRC IRC Command"
+title: "WEBIRC IRC Command"
 ntitle: "WEBIRC"
 layout: command
 notstarted: true

@@ -1,5 +1,5 @@
 ---
-^title: "SMO IRC Command"
+title: "SMO IRC Command"
 ntitle: "SMO"
 layout: command
 notstarted: true

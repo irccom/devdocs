@@ -1,5 +1,5 @@
 ---
-^title: "NICKDELAY IRC Command"
+title: "NICKDELAY IRC Command"
 ntitle: "NICKDELAY"
 layout: command
 notstarted: true

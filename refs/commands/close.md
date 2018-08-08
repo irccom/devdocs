@@ -1,5 +1,5 @@
 ---
-^title: "CLOSE IRC Command"
+title: "CLOSE IRC Command"
 ntitle: "CLOSE"
 layout: command
 notstarted: true

@@ -1,5 +1,5 @@
 ---
-^title: "DCCALLOW IRC Command"
+title: "DCCALLOW IRC Command"
 ntitle: "DCCALLOW"
 layout: command
 notstarted: true

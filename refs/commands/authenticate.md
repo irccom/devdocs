@@ -1,5 +1,5 @@
 ---
-^title: "AUTHENTICATE IRC Command"
+title: "AUTHENTICATE IRC Command"
 ntitle: "AUTHENTICATE"
 layout: command
 notstarted: true
@@ -9,4 +9,5 @@ related-commands:
     - ACC
 command-groups:
     - account
+    - connection
 ---

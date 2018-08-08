@@ -1,5 +1,5 @@
 ---
-^title: "RESUME IRC Command"
+title: "RESUME IRC Command"
 ntitle: "RESUME"
 layout: command
 notstarted: true

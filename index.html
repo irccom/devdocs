@@ -2,20 +2,10 @@
 title: IRC Foundation Developer Docs
 layout: default
 ntitle: Developer Documentation
+nsub: For developers of servers, clients, and everything inbetween
 ---
 
-<h2>Commands</h2>
-{% assign cmds = "" | split: "" %}
-{% for p in site.pages %}
-    {% if p.layout == "command" %}
-        {% assign cmds = cmds | push: p.command %}
-    {% endif %}
-{% endfor %}
-{% assign cmds = cmds | sort %}
-
-{% for cmd in cmds %}
-    <p><a href="refs/commands/{{ cmd | slugify }}">{{ cmd }}</a></p>
-{% endfor %}
+<a href="/refs/commands/">Commands</a>
 
 <h2>Numerics</h2>
 {% assign nums = "" | split: "" %}

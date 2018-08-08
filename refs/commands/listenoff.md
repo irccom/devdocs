@@ -1,5 +1,5 @@
 ---
-^title: "LISTENOFF IRC Command"
+title: "LISTENOFF IRC Command"
 ntitle: "LISTENOFF"
 layout: command
 notstarted: true

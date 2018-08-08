@@ -1,5 +1,5 @@
 ---
-^title: "CLEARCACHE IRC Command"
+title: "CLEARCACHE IRC Command"
 ntitle: "CLEARCACHE"
 layout: command
 notstarted: true

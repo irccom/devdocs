@@ -1,5 +1,5 @@
 ---
-^title: "WHO IRC Command"
+title: "WHO IRC Command"
 ntitle: "WHO"
 layout: command
 notstarted: true

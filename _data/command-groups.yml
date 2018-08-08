@@ -1,4 +1,5 @@
 index-order:
+  - connection
   - account
 
 groups:
@@ -6,3 +7,8 @@ groups:
     name: User Accounts
     description: |
       These commands lets a user register, authenticate to, and manage their account.
+
+  connection:
+    name: Connection
+    description: |
+      These commands are used when connecting to and disconnecting from IRC.

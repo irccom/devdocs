@@ -1,5 +1,5 @@
 ---
-^title: "GCAP IRC Command"
+title: "GCAP IRC Command"
 ntitle: "GCAP"
 layout: command
 notstarted: true

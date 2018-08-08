@@ -1,5 +1,5 @@
 ---
-^title: "MODLIST IRC Command"
+title: "MODLIST IRC Command"
 ntitle: "MODLIST"
 layout: command
 notstarted: true

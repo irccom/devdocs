@@ -1,5 +1,5 @@
 ---
-^title: "SCAN IRC Command"
+title: "SCAN IRC Command"
 ntitle: "SCAN"
 layout: command
 notstarted: true

@@ -1,5 +1,5 @@
 ---
-^title: "DLINE IRC Command"
+title: "DLINE IRC Command"
 ntitle: "DLINE"
 layout: command
 notstarted: true

@@ -1,5 +1,5 @@
 ---
-^title: "MODULE IRC Command"
+title: "MODULE IRC Command"
 ntitle: "MODULE"
 layout: command
 notstarted: true

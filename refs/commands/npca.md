@@ -1,5 +1,5 @@
 ---
-^title: "NPCA IRC Command"
+title: "NPCA IRC Command"
 ntitle: "NPCA"
 layout: command
 notstarted: true

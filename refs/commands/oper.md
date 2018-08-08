@@ -1,5 +1,5 @@
 ---
-^title: "OPER IRC Command"
+title: "OPER IRC Command"
 ntitle: "OPER"
 layout: command
 notstarted: true

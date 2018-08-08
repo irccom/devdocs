@@ -1,5 +1,5 @@
 ---
-^title: "JUMPSERVER IRC Command"
+title: "JUMPSERVER IRC Command"
 ntitle: "JUMPSERVER"
 layout: command
 notstarted: true

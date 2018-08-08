@@ -1,5 +1,5 @@
 ---
-^title: "DNS IRC Command"
+title: "DNS IRC Command"
 ntitle: "DNS"
 layout: command
 notstarted: true
