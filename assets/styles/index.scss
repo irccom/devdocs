@@ -136,12 +136,14 @@ header {
 
 .intro-container {
     display: flex;
-    height: 90vh;
-    min-height: 400px;
+    height: 80vh;
+    min-height: 500px;
+    max-height: 625px;
     position: relative;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin: 0 0 50px 0;
 
     //The content
     .intro-container-content {
@@ -151,9 +153,72 @@ header {
         margin: 0 auto;
         h1 {
             margin: 0 0 20px 0;
+            font-weight: 100;
+            text-transform: uppercase;
         }
         p {
             margin: 0 0 25px 0;
+            &.small {
+                font-size: 0.8em;
+            }
+        }
+        a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+
+    form {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 550px;
+        .input-container{
+            display: block;
+            width: 100%;
+            margin: 0 0 10px 0;
+            position: relative;
+            input[type="text"]{
+                width: 100%;
+                line-height: 40px;
+                padding: 0 20px;
+            }
+            &:after {
+                content: "\f002";
+                font-weight: 600;
+                position: absolute;
+                font-family: "Font Awesome 5 Free";
+                right: 10px;
+                top: 0;
+                font-size: 1.4em;
+                line-height: 44px;
+                color: #000;
+                opacity: 0.6;
+            }
+        }
+    }
+
+    .foundation-information-block {
+        display: block;
+        margin: 80px auto 0 auto;
+        border: 1px solid #fff;
+        text-align: left;
+        max-width: 550px;
+        .title {
+            width: 100%;
+            padding:  20px;
+            border-bottom: 1px solid #fff;
+            i {
+                margin-right: 10px;
+            }
+        }
+        .content {
+            width: 100%;
+            padding: 20px;
+            p {
+                font-size: 0.8em;
+                margin: 0;
+            }
         }
     }
 
@@ -446,6 +511,7 @@ header {
 //Box content container
 .box-content-container {
     .box-content {
+        text-align: center;
         p.title {
             width: 100%;
             line-height: 40px;
@@ -453,6 +519,10 @@ header {
             font-size: 1.4em;
             padding: 10px 20px;
             margin: 0;
+
+            i {
+                margin-right: 10px;
+            }
         }
         .content {
             display: block;
@@ -460,12 +530,16 @@ header {
 
             p {
                 font-size: 0.9em;
+                margin: 0 0 10px 0;
             }
 
             a {
-                display: block;
+                display: inline-block;
+                padding: 10px 20px;
                 width: 100%;
-                text-align: right;
+                margin: 0 0 5px 0;
+                text-decoration: none;
+                text-transform: none;
             }
         }
     }
@@ -729,7 +803,49 @@ header {
         height: auto;
         max-width: 100%;
     }
+}
 
+.news-container {
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    .news-post {
+        width: 100%;
+        margin-bottom: 20px;
+        .title {
+            width: 100%;
+            padding: 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+            h4 {
+                width: 100%;
+                font-weight: 600;
+                padding: 0;
+                margin: 0;
+                span {
+                    float: right;
+                    opacity: 0.8;
+                    font-size: 0.6em;
+                    line-height: 2.5em;
+                }
+            }
+        }
+        .content {
+            padding: 20px;
+        }
+        .read-more {
+            display: inline-block;
+            width: 100%;
+            text-align: right;
+            font-weight: 600;
+            i {
+                margin-left: 10px;
+            }
+        }
+    }
 }
 
 
@@ -754,16 +870,6 @@ header {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 //Buttons - Links etc ( These are for non 'button' buttons - I.E only styled to look like a button link, non form submitting )
 .button {
     width: auto;
@@ -782,4 +888,5 @@ header {
 }
 
 //We import our themes at the end of the stylesheet
+// @import './documentation.scss';
 // @import './chat.scss';

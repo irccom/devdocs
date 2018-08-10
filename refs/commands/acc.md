@@ -11,6 +11,9 @@ related-commands:
     - AUTHENTICATE
 command-groups:
     - account
+numerics:
+    - "920"
+    - "927"
 
 examples: |
     ACC REGISTER dan mailto:dan@example.com passphrase :testpassphrase123

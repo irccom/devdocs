@@ -5,9 +5,57 @@ ntitle: Developer Documentation
 nsub: For developers of servers, clients, and everything inbetween
 ---
 
-<a href="/refs/commands/">Commands</a>
+<div class="intro-container">
+    <div class="container intro-container-content">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>The IRC Foundation</h1>
+                <p>The indepth documentation for IRC on the web.</p>
+                <form class="" action="index.html" method="post">
+                    <div class="input-container">
+                        <input type="text" name="foundation_search" placeholder="Search The Foundation Documentation">
+                    </div>
+                </form>
+                <p class="small">For help see <a href="">Help</a> or learn <a href="">how to contribute</a></p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<h2>Numerics</h2>
+<div class="container box-content-container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="box-content">
+                <p class="title"><i class="fas fa-beer"></i> Commands</p>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="/refs/commands/" class="button">Find out more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="box-content">
+                <p class="title"><i class="fas fa-bed"></i> Numerics</p>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="refs/numerics/" class="button">Find out more</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="box-content">
+                <p class="title"><i class="fas fa-blind"></i> Other</p>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="/" class="button">Find out more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <h2>Numerics</h2>
 {% assign nums = "" | split: "" %}
 {% for p in site.pages %}
     {% if p.layout == "numeric" %}
@@ -18,4 +66,4 @@ nsub: For developers of servers, clients, and everything inbetween
 
 {% for num in nums %}
     <p><a href="refs/numerics/{{ num }}">{{ num }}</a></p>
-{% endfor %}
+{% endfor %} -->

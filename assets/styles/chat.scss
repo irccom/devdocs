@@ -13,8 +13,6 @@ $brandPrimaryHover: #3f5565;
 
 
 //Buttons
-
-//Bootstrap
 .btn {
     border-color: $brandPrimary;
     background-color: $brandPrimary;
@@ -45,10 +43,6 @@ $brandPrimaryHover: #3f5565;
           background-color: #ca5252;
         }
     }
-
-
-
-
 }
 
 //Custom
@@ -214,6 +208,17 @@ ol.breadcrumb {
                 background: none;
                 opacity: 0.9;
             }
+        }
+    }
+}
+
+.news-container .news-post {
+    background: #fff;
+    .title a,
+    .read-more {
+        color: $brandPrimary;
+        &:hover {
+            color: $brandPrimaryHover;
         }
     }
 }
