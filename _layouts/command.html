@@ -2,11 +2,11 @@
 layout: short-header
 ---
 <div class="row">
-    <div class="col-sm-3 sidebar">
+    <div class="col-sm-4 col-xs-12 sidebar">
         <div class="breadcrumbs">
             <ul>
-                <li><a href="">IRC Technology</a> ></li>
-                <li><a href="">Commands</a> ></li>
+                <li><a href="">IRC Technology</a> &gt;</li>
+                <li><a href="">Commands</a> &gt;</li>
                 <li><b>{{ page.command }}</b></li>
             </ul>
         </div>
@@ -14,7 +14,7 @@ layout: short-header
         <hr>
         <p class="title">Related Commands:</p>
             {% for cmd in page.related-commands %}
-            <a class="sidebar-page-link" href="{{ cmd | slugify }}"><code>{{ cmd }}</code></a>
+            <a class="sidebar-page-link" href="{{ cmd | slugify }}.html"><code>{{ cmd }}</code></a>
             {% endfor %}
         {% endif %}
 
@@ -32,7 +32,7 @@ layout: short-header
         <hr>
         <p class="title">{{ gdata.name }}</p>
             {% for cmd in cmds %}
-            <a class="sidebar-page-link" href="{{ cmd | slugify }}"><code>{{ cmd }}</code></a>
+            <a class="sidebar-page-link" href="{{ cmd | slugify }}.html"><code>{{ cmd }}</code></a>
             {% endfor %}
         {% endif %}
         {% endif %}
@@ -106,7 +106,7 @@ layout: short-header
             <a href="btn">Example Link Name!</a>
         </div>
     </div>
-    <div class="col-sm-9 main-content">
+    <div class="col-sm-8 col-xs-12 main-content">
         <div class="content">
             {% if page.experimental %}
             <div class="alert alert-warning experimental">
@@ -137,26 +137,30 @@ layout: short-header
             <div class="alert alert-warning">
                 Your IRC client may or may not have in-built support for this command.
             </div>
-            <table class="supported-table">
-                <thead>
-                    <th style="min-width:120px"></th>
-                    {% for server in site.data.supported-servers.shortlist %}
-                    <th>{{ server.name }}</th>
-                    {% endfor %}
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Supported:</td>
-                        {% for server in site.data.supported-servers.shortlist %}
-                        {% if page.supported-by[server.id] %}
-                        <td class="supported"><i class="fas fa-check"></i></td>
-                        {% else %}
-                        <td class="not-supported"><i class="fas fa-times"></i></td>
-                        {% endif %}
-                        {% endfor %}
-                    </tr>
-                </tbody>
-            </table>
+            <div class="comptability-table-wrapper">
+                <table class="supported-table">
+                    <thead>
+                        <tr>
+                            <th style="min-width:120px"></th>
+                            {% for server in site.data.supported-servers.shortlist %}
+                            <th>{{ server.name }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Supported:</td>
+                            {% for server in site.data.supported-servers.shortlist %}
+                            {% if page.supported-by[server.id] %}
+                            <td class="supported"><i class="fas fa-check"></i></td>
+                            {% else %}
+                            <td class="not-supported"><i class="fas fa-times"></i></td>
+                            {% endif %}
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <hr>
 
             <h3 id="numerics">Related Numerics<a href="/#numerics" class="link-icon"><i class="fas fa-link"></i></a></h3>
@@ -180,8 +184,8 @@ layout: short-header
             <hr>
 
             <h3 id="referenceThisIDinURl">See Also:<a href="/#referneceThisDivinURl" class="link-icon"><i class="fas fa-link"></i></a></h3>
-            <a href="#"><code>> This interesting function();</code></a><br>
-            <a href="#"><code>> This interesting function();</code></a><br>
+            <a href="#"><code>&gt; This interesting function();</code></a><br>
+            <a href="#"><code>&gt; This interesting function();</code></a><br>
     </div>
     </div>
 </div>
