@@ -1,0 +1,24 @@
+---
+---
+{
+    "commands": [
+        {% assign cmds = "" | split: "" %}
+        {% for p in site.pages %}
+            {% if p.layout == "command" %}
+                {% assign cmds = cmds | push: p %}
+            {% endif %}
+        {% endfor %}
+        {% for cmd in cmds %}
+        {
+            "relative_url": {{ cmd.url | jsonify }},
+            "title": {{ cmd.title | jsonify }},{% if cmd.index-desc %}
+            "desc": {{ cmd.index-desc | jsonify }},{% endif %}
+            "tags": [
+                "command"{% if 0 < cmd.command-groups.size %},{% endif %}
+                {% for group in cmd.command-groups %}{{ group | jsonify }}{% if forloop.last == false %},{% endif %}{% endfor %}
+            ],
+            "content": {{ cmd.content | jsonify }}
+        }{% if forloop.last == false %},{% endif %}
+        {% endfor %}
+    ]
+}
