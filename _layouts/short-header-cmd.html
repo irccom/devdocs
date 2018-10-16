@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="full-width-page-header">
+    {% if page.ntitle %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>{{ page.ntitle }} Command</h1>
+                {% if page.nsub %}<p class="h1sub">{{ page.nsub }}</p>{% endif %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<div class="container page-content">
+    {{ content }}
+</div>
