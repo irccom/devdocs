@@ -9,44 +9,58 @@ nsub: For developers of servers, clients, and everything inbetween
     <div class="container intro-container-content">
         <div class="row">
             <div class="col-sm-12">
-                <h1>The IRC Foundation</h1>
-                <p>The indepth documentation for IRC on the web.</p>
+                <h1>The IRC Foundation<br>Protocol Documentation</h1>
+                <p class="subtitle">The in-depth documentation for IRC on the web.</p>
                 <form class="" action="index.html" method="post">
                     <div class="input-container">
                         <input type="text" name="foundation_search" placeholder="Search The Foundation Documentation">
                     </div>
                 </form>
-                <p class="small">For help see <a href="">Help</a> or learn <a href="">how to contribute</a></p>
+                <p class="small">For assistance see <a href="">Help</a> or learn <a href="">how to contribute</a></p>
             </div>
         </div>
+        <!--
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="foundation-information-block">
+                    <div class="title">
+                        <i class="fas fa-question"></i> What is the IRC Foundation?
+                    </div>
+                    <div class="content">
+                        <p>Et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>  -->
     </div>
 </div>
 
+<!-- Box content -->
 <div class="container box-content-container">
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-xs-12 col-sm-4">
             <div class="box-content">
-                <p class="title"><i class="fas fa-beer"></i> Commands</p>
+                <p class="title"><i class="fas fa-play-circle"></i> Introduction</p>
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="/refs/commands/" class="button">Find out more</a>
+                    <p>For those unfamiliar with IRC development, or simply wanting a refresher, this introduction lays out how to get started.</p>
+                    <a href="/" class="button">Find out more</a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-xs-12 col-sm-4">
             <div class="box-content">
-                <p class="title"><i class="fas fa-bed"></i> Numerics</p>
+                <p class="title"><i class="fas fa-file-alt"></i> References</p>
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="refs/numerics/" class="button">Find out more</a>
+                    <p>These references include information about IRC commands, numerics, and all sorts of other information useful to developers.</p>
+                    <a href="/" class="button">Find out more</a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-xs-12 col-sm-4">
             <div class="box-content">
-                <p class="title"><i class="fas fa-blind"></i> Other</p>
+                <p class="title"><i class="fas fa-hands-helping"></i> Dev Guides</p>
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>These guides help you build software, making use of IRC protocol documents and references like those listed on this site and others.</p>
                     <a href="/" class="button">Find out more</a>
                 </div>
             </div>
@@ -55,15 +69,67 @@ nsub: For developers of servers, clients, and everything inbetween
 </div>
 
 
-<!-- <h2>Numerics</h2>
-{% assign nums = "" | split: "" %}
-{% for p in site.pages %}
-    {% if p.layout == "numeric" %}
-        {% assign nums = nums | push: p.numeric %}
-    {% endif %}
-{% endfor %}
-{% assign nums = nums | sort %}
-
-{% for num in nums %}
-    <p><a href="refs/numerics/{{ num }}">{{ num }}</a></p>
-{% endfor %} -->
+<div class="container news-container">
+    <div class="row">
+        <div class="col-sm-12 news-title-container">
+            <h2>IRC News:</h2>
+            <p>The most recent news about IRC and it's evolving standards, <a href="/news">View All Posts</a>.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-sm-7">
+            <div class="news-post">
+                <div class="title">
+                    <h4><a href="/" title="Example of news post name here">Example of news post name here <span>20/07/2018 - AllanOcelot</span></a></h4>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit...</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+            <div class="news-post">
+                <div class="title">
+                    <h4><a href="/" title="Example of news post name here">Example of news post name here <span>20/07/2018 - AllanOcelot</span></a></h4>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit...</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+            <div class="news-post">
+                <div class="title">
+                    <h4><a href="/" title="Example of news post name here">Example of news post name here <span>20/07/2018 - AllanOcelot</span></a></h4>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit...</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+            <div class="news-post">
+                <div class="title">
+                    <h4><a href="/" title="Example of news post name here">Example of news post name here <span>20/07/2018 - AllanOcelot</span></a></h4>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit...</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-5 sidebar">
+            <div class="contribute-container">
+                <div class="title">
+                    Lorem Ipsom
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <ul>
+                        <li class="icon-link"><span><i class="fas fa-pencil-alt"></i></span>Example Link</li>
+                        <li class="icon-link"><span><i class="fas fa-pencil-alt"></i></span>Example Link</li>
+                        <li class="icon-link"><span><i class="fas fa-pencil-alt"></i></span>Example Link</li>
+                        <li class="icon-link"><span><i class="fas fa-pencil-alt"></i></span>Example Link</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

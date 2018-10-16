@@ -1,0 +1,50 @@
+---
+---
+// Internal page colour scheme is grey: #dadada
+
+// Global
+header.fixed {
+    background: #dadada;
+}
+
+footer {
+    background: #dadada;
+}
+
+// Contact page
+.contact_page_banner {
+    background-image: none;
+    background-position: center;
+    background-size: cover;
+    background: #dadada;
+    
+    .alert {
+        margin-bottom: 50px;
+    }
+    
+    .call-to-action-block {
+        h2 i {
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
+
+        .content {
+            padding: 0 10px 10px 10px;
+            p {
+                text-shadow: none;
+            }
+        }
+
+        a {
+            background: transparent;
+            border: none;
+            color: #3ec4e4;
+            text-decoration: underline;
+            text-shadow: none;
+            &:hover {
+                color: #5ddefd;
+                background: none;
+            }
+        }
+    }
+}

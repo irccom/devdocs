@@ -25,6 +25,7 @@ body {
 
 //Main content
 h1,h2,h3,h4,h5 {
+    font-family: 'Noto Serif', serif;
     cursor: default;
     margin: 0 0 20px 0;
     font-weight: 900;
@@ -79,13 +80,19 @@ img {
 
 //Header
 header {
-    background-color: #213442; //(dan): for when floating at top of page while scrolling
-    position: fixed;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    padding: 20px 0;
     left: 0;
     top: 0;
-    width: 100%;
-    z-index: 3;
-    padding: 20px 0;
+    &.fixed {
+        position: fixed;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+    }
 
     a {
         color: #fff;
@@ -96,6 +103,32 @@ header {
         float: left;
         font-weight: 900;
         font-size: 2em;
+        font-family: 'Noto Serif', serif;
+        img {
+            display: inline-block;
+            width: 40px;
+            margin-bottom: -7px;
+        }
+        .logo-text {
+            display: inline-block;
+            line-height: 40px;
+        }
+        .sub-title {
+            float: left;
+            padding-left: 48px;
+            width: 100%;
+            margin-top: -5px;
+            font-size: 0.4em;
+            line-height: normal;
+        }
+        &:hover {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+
+    .mobile-nav-button {
+        display: none;
     }
 
     nav {
@@ -106,6 +139,23 @@ header {
         a {
             display: inline-block;
             // margin: 0 0 10px 0; //(dan) this makes the navheader uneven when scrolling down. is it intended only for the in-menu links displayed on hover?
+            line-height: 48px;
+            margin-left: 10px;
+            font-size: 0.85em;
+            &:hover {
+                color: #81acce;
+            }
+            &.get-app {
+                border: 1px solid #fff;
+                padding: 5px 10px;
+                border-radius: 4px;
+                line-height: 20px;
+                transition: all 0.1s;
+            }
+            &.get-app:hover {
+                background: #fff;
+                color: #81acce;
+            }
         }
 
         //(dan) specifically the first menu title, because the margin throws off the nav's height
@@ -132,32 +182,48 @@ header {
             }
         }
     }
+
+    &.active {
+        position: fixed;
+    }
 }
 
 .intro-container {
     display: flex;
-    height: 80vh;
-    min-height: 500px;
-    max-height: 625px;
+    height: auto;
+    min-height: 80vh;
+    max-height: none;
     position: relative;
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow: hidden;
     margin: 0 0 50px 0;
+    padding-top: 110px;
+    z-index: 0;
+
+    &.full-height {
+        max-height: 100vh;
+        height: 100vh;
+        min-height: 600px;
+        margin: 0;
+    }
 
     //The content
     .intro-container-content {
         max-width: 800px;
         z-index: 3;
+        padding-top: 50px;
+        padding-bottom: 50px;
         position: relative;
         margin: 0 auto;
         h1 {
-            margin: 0 0 20px 0;
+            margin: 0 0 30px 0;
             font-weight: 100;
             text-transform: uppercase;
         }
         p {
-            margin: 0 0 25px 0;
+            margin: 0 0 20px 0;
             &.small {
                 font-size: 0.8em;
             }
@@ -165,6 +231,66 @@ header {
         a {
             color: #fff;
             text-decoration: underline;
+        }
+    }
+
+    .container {
+        z-index: 10;
+    }
+
+
+    .call-to-action-block {
+        display: block;
+        text-align: center;
+
+        .title {
+            width: 100%;
+            display: block;
+            padding: 10px 10px;
+            i {
+                line-height: 50px;
+                width: 50px;
+                background-color: #fff;
+                color: #000;
+                border-radius: 50%;
+            }
+            h2 {
+                font-size: 1.4em;
+                margin: 5px 0 5px 0;
+
+                i {
+                    margin-right: 10px;
+                }
+            }
+        }
+        .content {
+            display: block;
+            padding: 10px;
+            p {
+                font-weight: 600;
+                text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+            }
+        }
+        a {
+            display: inline-block;
+            clear: both;
+            color: #000;
+            background: #fff;
+            font-weight: 600;
+            border-radius: 3px;
+            line-height: 40px;
+            max-width: 200px;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+            text-decoration: none;
+            border: 1px solid #fff;
+            transition: all 0.1s;
+            &:hover {
+                text-decoration: underline;
+                background: #fff;
+                color: #81acce;
+            }
         }
     }
 
@@ -222,22 +348,48 @@ header {
         }
     }
 
+    //The phone display
+    .phone-screenshot-container {
+        display: block;
+        margin: 20px auto 20px auto;
+        height: 400px;
+        width: 220px;
+        border-radius: 6px;
+        background-color: #eee;
+    }
+
+    .button.social-call-to-action {
+        margin-bottom: 50px;
+        text-decoration: none;
+        font-weight: normal;
+        line-height: normal;
+        border-radius: 2px;
+        padding: 10px 20px 8px 20px;
+    }
+
     //Gradient
     &::after {
         content: '';
         position: absolute;
         z-index: 1;
-        width: 100%;
-        top: 0;
-        height: 100%;
+        width: 1920px;
+        top: 50%;
+        left: 50%;
+        height: 1520px;
+        margin-left: -999px;
+        margin-top: -500px;
         background-size: cover;
         background-position: center center;
-        background-image: url('/assets/images/introContainerGradient.png');
-        opacity: 0.2;
+        background-image: url('../../assets/images/introContainerGradient.png');
+        opacity: 0.1;
     }
 
     &.has-call-to-action-blocks {
         margin-bottom: 100px;
+    }
+
+    &.margin-top {
+        margin-top: 100px;
     }
 }
 
@@ -268,8 +420,11 @@ header {
 
 //Call To Action Blocks
 .call-to-action-block-container {
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: center;
+    margin-top: -50px;
+
     .call-to-action-icon {
         text-align: center;
         margin-top: 20px;
@@ -339,7 +494,8 @@ header {
 //Screenshot section
 .screenshot-container {
     text-align: center;
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     .screenshot {
         display: inline-block;
@@ -595,30 +751,6 @@ header {
             }
         }
 
-        .icon-link {
-            display: block;
-            width: 100%;
-            font-size: 1.2em;
-            margin: 0 0 20px 0;
-            transition: all 0.3s;
-
-            span {
-                display: inline-block;
-                width: 40px;
-                line-height: 40px;
-                text-align: center;
-                margin-right: 10px;
-                border-radius: 50%;
-            }
-
-            &:hover {
-                transition: all 0.3s;
-                span {
-                    text-decoration: none;
-                }
-            }
-        }
-
         ul {
             li {
                 ul {
@@ -805,7 +937,9 @@ header {
     }
 }
 
-.news-container {
+.news-container ,
+.project-container ,
+.documentation-latest-container {
     margin-top: 60px;
     margin-bottom: 60px;
 
@@ -813,7 +947,9 @@ header {
         margin-bottom: 0;
     }
 
-    .news-post {
+    .news-post,
+    .project-post,
+    .documentation-post {
         width: 100%;
         margin-bottom: 20px;
         .title {
@@ -845,7 +981,70 @@ header {
                 margin-left: 10px;
             }
         }
+
+        .project-links {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: right;
+            li {
+                display: inline-block;
+                margin: 0 0 0 20px;
+                padding: 0;
+                a {
+                    text-decoration: none;
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        .project-post {
+            .content {
+                padding-bottom: 0;
+            }
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
+
+    .sidebar-container {
+        position: relative;
+        .contribute-container {
+            position: sticky;
+            top: 120px;
+            ul .icon-link {
+                margin-bottom: 10px;
+            }
+            .button {
+                font-size: 1em;
+                display: block;
+                margin: 0 auto 20px auto;
+            }
+        }
+    }
+
+    .contribute-container {
+        .title {
+            padding: 23px 20px;
+            font-weight: 600;
+        }
+        .content {
+            padding: 10px 20px;
+
+            ul {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+}
+
+.project-container {
+    margin-top: 130px;
 }
 
 
@@ -869,6 +1068,52 @@ header {
     }
 }
 
+// For your team section
+.for-your-team {
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+
+    .for-your-team-block {
+        .image {
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 200px;
+            margin: 0 0 20px 0;
+            display: block;
+        }
+        .content {
+            font-size: 0.8em;
+        }
+    }
+}
+
+.icon-link {
+    display: block;
+    width: 100%;
+    font-size: 1em;
+    margin: 0 0 20px 0;
+    transition: all 0.3s;
+
+    span {
+        display: inline-block;
+        width: 40px;
+        line-height: 40px;
+        text-align: center;
+        margin-right: 10px;
+        border-radius: 50%;
+        font-size: 1.4em;
+    }
+
+    &:hover {
+        transition: all 0.3s;
+        span {
+            text-decoration: none;
+        }
+    }
+}
 
 //Buttons - Links etc ( These are for non 'button' buttons - I.E only styled to look like a button link, non form submitting )
 .button {
@@ -877,16 +1122,232 @@ header {
     margin: 0 auto;
     border: 2px solid;
     text-align: center;
-    padding: 10px 25px 10px 25px;
+    padding: 10px 20px 8px 20px;
     text-transform: uppercase;
-    border-radius: 6px;
-    font-size: 1.2em;
-    font-weight: 600;
+    border-radius: 2px;
+    font-size: 1em;
+    font-weight: normal;
     transition: all 0.2s;
     cursor: pointer;
     //Background colours for hover are within the theme files
 }
 
-//We import our themes at the end of the stylesheet
-// @import './documentation.scss';
-// @import './chat.scss';
+footer {
+    width: 100%;
+    padding: 60px 0 20px 0;
+    text-align: center;
+
+    .footer-logo {
+        float: left;
+        font-weight: 900;
+        font-size: 2em;
+        width: 100%;
+        margin: 0 0 10px 0;
+        img {
+            display: inline;
+            width: 40px;
+            margin: 0;
+        }
+        span {
+            display: inline-block;
+            line-height: normal;
+       }
+    }
+
+    ul {
+        width: 100%;
+        padding: 0;
+        li {
+            display: inline-block;
+            list-style: none;
+            margin: 0 20px 5px 0;
+        }
+    }
+
+    p.copyright {
+        width: 100%;
+        margin: 40px 0 0 0;
+        font-size: 0.8em;
+        opacity: 0.6;
+    }
+
+}
+
+.comptability-table-wrapper {
+    display: block;
+    width: 100%;
+}
+
+/* Responsve Code */
+/* Breakpoint: 990px */
+@media screen and (max-width: 990px){
+
+    header {
+      padding: 10px 0;
+    }
+    header .desktop-nav {
+        display: none;
+    }
+    header .mobile-nav-button {
+        display: block;
+        float: right;
+        color: #fff;
+        font-size: 2em;
+        line-height: 65px;
+    }
+
+    .intro-container.margin-top {
+      padding-top: 100px;
+    }
+
+    .button {
+        font-size: 15px;
+    }
+    .call-to-action-block-container .call-to-action-icon p{
+        font-size: 14px;
+    }
+    footer p.copyright {
+        margin-top: 20px;
+    }
+
+    /* Docs */
+    .full-width-page-header h1 {
+        font-size: 2.2em;
+    }
+    .comptability-table-wrapper {
+        overflow-x: scroll;
+    }
+    .page-content .sidebar p.title {
+        font-size: 1em;
+        line-height: normal;
+    }
+    .documentation-items li {
+        font-size: 0.8em;
+    }
+    .page-content .sidebar {
+        font-size: 0.8em;
+    }
+    .page-content .main-content .content {
+        font-size: 0.8em;
+    }
+    .page-content .main-content .content h3 {
+        font-size: 1.2em;
+    }
+    .page-content .sidebar .sidebar-content-block {
+        padding: 10px;
+    }
+
+    .page-content .main-content .content hr {
+        margin: 20px 0;
+    }
+
+    /* Foundation Docs Homepage */
+    .box-content-container .box-content p.title {
+        font-size: 1em;
+        padding: 15px 10px 5px 10px;
+        font-weight: 900;
+    }
+    .box-content-container .box-content p.title i {
+        display: block;
+        margin: 0 auto;
+        clear: both;
+    }
+    .box-content-container .box-content .content {
+        padding: 10px;
+    }
+    .box-content-container .box-content .button {
+        font-size: 0.8em;
+    }
+    .news-title-container {
+        text-align: center;
+    }
+    .container.news-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .news-container .news-post .title {
+        float: left;
+        padding: 0 10px;
+        margin: 0 0 10px 0;
+    }
+    .news-container .news-post .content {
+        padding: 20px 10px 10px 10px;
+    }
+    .news-container .news-post .content p {
+        font-size: 0.8em;
+    }
+    .news-post .title span {
+        float: right;
+        width: 100%;
+        margin-bottom: 0;
+    }
+    /* Sidebar */
+    .news-container .contribute-container .title {
+        padding: 10px;
+    }
+    .news-container .contribute-container .content {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+    .news-container .contribute-container .icon-link {
+        margin: 0 0 5px 0;
+        line-height: normal;
+    }
+    .news-container .contribute-container .icon-link span {
+        font-size: 1em;
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .screenshot-container .screenshot {
+        max-width: 180px;
+    }
+    .call-to-action-block-container {
+        border-bottom: 2px solid #203342;
+    }
+    .call-to-action-block-container .call-to-action-icon {
+        margin-top: 0;
+        margin-bottom: 60px;
+    }
+    .call-to-action-block-container .call-to-action-icon p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .call-to-action-block-container .call-to-action-icon:last-of-type {
+        margin-bottom: 0;
+    }
+    .for-your-team {
+      padding: 50px 0 0 0;
+    }
+    .for-your-team-block {
+        margin-bottom: 60px;
+    }
+    /* Foundation Docs home */
+    .intro-container .intro-container-content h1 {
+        font-size: 2em;
+        line-height: normal;
+        margin: 0;
+    }
+    .container.news-container .sidebar {
+        margin-top: 20px;
+    }
+    .news-container .contribute-container .title {
+        text-align: center;
+    }
+    .news-container .contribute-container .content p {
+        text-align: center;
+    }
+    footer {
+        padding: 20px 0;
+    }
+    footer p.copyright {
+        margin-top: 0;
+    }
+    footer ul li {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+}
