@@ -1,0 +1,8 @@
+index-order:
+  - irc-dev
+
+series:
+  irc-dev:
+    name: Introduction to IRC Development
+    description: |
+      This series gives a good introduction to IRC development, from explaining what IRC is through to building a bot, client, and server.

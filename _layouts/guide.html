@@ -2,134 +2,140 @@
 layout: short-header-guide
 ---
 <div class="row">
-        <div class="col-sm-4 col-xs-12 sidebar">
-            <div class="breadcrumbs">
-                <ul>
-                    <li><a href="">IRC Technology</a> &gt;</li>
-                    <li><a href="">Guides</a> &gt;</li>
-                    <li><b>{{ page.title }}</b></li>
-                </ul>
-            </div>
-            {% if page.related-guides %}
-            <hr>
-            <p class="title">Related Guides:</p>
-                {% for guide in page.related-guides %}
-                <a class="sidebar-page-link" href="{{ guide[0] | slugify }}.html">{{ guide[1] }}</a>
-                {% endfor %}
-            {% endif %}
-    
-            {% for group in page.command-groups %}
-            {% if site.data.command-groups.groups[group] %}
-            {% assign gdata = site.data.command-groups.groups[group] %}
-            {% assign cmds = "" | split: "" %}
-            {% for p in site.pages %}
-                {% if p.layout == "command" %}{% if p.command-groups contains group %}{% if p.command != page.command %}
-                    {% assign cmds = cmds | push: p.command %}
-                {% endif %}{% endif %}{% endif %}
-            {% endfor %}
-            {% assign cmds = cmds | sort %}
-            {% if cmds.size > 0 %}
-            <hr>
-            <p class="title">{{ gdata.name }}</p>
-                {% for cmd in cmds %}
-                <a class="sidebar-page-link" href="{{ cmd | slugify }}.html"><code>{{ cmd }}</code></a>
-                {% endfor %}
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-            <hr>
-            <div class="dropdown-list-container active">
-                <p class="title">Username commands:</p>
-                <ul class="documentation-items">
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                </ul>
-            </div>
-            <div class="dropdown-list-container">
-                <p class="title">Example 2:</p>
-                <ul class="documentation-items">
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                </ul>
-            </div>
-            <div class="dropdown-list-container">
-                <p class="title">Example 3:</p>
-                <ul class="documentation-items">
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                    <li><a href="">Example UL Link</a></li>
-                </ul>
-            </div>
-    
-            <hr>
-            <div class="sidebar-content-block">
-                <p class="title">An information block!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor!</p>
-                <a href="btn">Example Link Name!</a>
-            </div>
-        </div>
-        <div class="col-sm-8 col-xs-12 main-content">
-            <div class="content">
-                {% if page.wip %}
-                <div class="alert alert-warning experimental">
-                    <div class="icon">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <div class="description">
-                        This guide is still being written.
-                    </div>
-                </div>
+    <div class="col-sm-4 col-xs-12 sidebar">
+        <div class="breadcrumbs">
+            <ul>
+                <li><a href="">IRC Technology</a> &gt;</li>
+                <li><a href="">Guides</a> &gt;</li>
+                {% if page.series and 0 < page.series-page %}
+                <li><a href="">{{ site.data.guides.series[page.series].name }}</a> &gt;</li>
                 {% endif %}
-    
-                {% if page.notstarted %}
-                <p>This guide has not yet been started.</p>
-                {% endif %}
-    
-                {{ content }}
-    
-                <hr>
-    
-                <h3 id="referenceThisIDinURl">See Also:<a href="/#referneceThisDivinURl" class="link-icon"><i class="fas fa-link"></i></a></h3>
-                <a href="#"><code>&gt; This interesting function();</code></a><br>
-                <a href="#"><code>&gt; This interesting function();</code></a><br>
+                <li><b>{{ page.title }}</b></li>
+            </ul>
         </div>
+        {% if page.series %}
+        <!-- show guide series here -->
+        {% endif %}
+        {% if page.related-guides %}
+        <hr>
+        <p class="title">Related Guides:</p>
+            {% for guide in page.related-guides %}
+            <a class="sidebar-page-link" href="{{ guide[0] | slugify }}.html">{{ guide[1] }}</a>
+            {% endfor %}
+        {% endif %}
+
+        {% for group in page.command-groups %}
+        {% if site.data.command-groups.groups[group] %}
+        {% assign gdata = site.data.command-groups.groups[group] %}
+        {% assign cmds = "" | split: "" %}
+        {% for p in site.pages %}
+            {% if p.layout == "command" %}{% if p.command-groups contains group %}{% if p.command != page.command %}
+                {% assign cmds = cmds | push: p.command %}
+            {% endif %}{% endif %}{% endif %}
+        {% endfor %}
+        {% assign cmds = cmds | sort %}
+        {% if cmds.size > 0 %}
+        <hr>
+        <p class="title">{{ gdata.name }}</p>
+            {% for cmd in cmds %}
+            <a class="sidebar-page-link" href="{{ cmd | slugify }}.html"><code>{{ cmd }}</code></a>
+            {% endfor %}
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+        <hr>
+        <div class="dropdown-list-container active">
+            <p class="title">Username commands:</p>
+            <ul class="documentation-items">
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+            </ul>
+        </div>
+        <div class="dropdown-list-container">
+            <p class="title">Example 2:</p>
+            <ul class="documentation-items">
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+            </ul>
+        </div>
+        <div class="dropdown-list-container">
+            <p class="title">Example 3:</p>
+            <ul class="documentation-items">
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+            </ul>
+        </div>
+
+        <hr>
+        <div class="sidebar-content-block">
+            <p class="title">An information block!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor!</p>
+            <a href="btn">Example Link Name!</a>
         </div>
     </div>
+    <div class="col-sm-8 col-xs-12 main-content">
+        <div class="content">
+            {% if page.wip %}
+            <div class="alert alert-warning experimental">
+                <div class="icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <div class="description">
+                    This guide is still being written.
+                </div>
+            </div>
+            {% endif %}
+
+            {% if page.notstarted %}
+            <p>This guide has not yet been started.</p>
+            {% endif %}
+
+            {{ content }}
+
+            <hr>
+
+            <h3 id="referenceThisIDinURl">See Also:<a href="/#referneceThisDivinURl" class="link-icon"><i class="fas fa-link"></i></a></h3>
+            <a href="#"><code>&gt; This interesting function();</code></a><br>
+            <a href="#"><code>&gt; This interesting function();</code></a><br>
+    </div>
+    </div>
+</div>
