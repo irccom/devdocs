@@ -1,6 +1,9 @@
 # mode is either dev or prod
 mode: prod
 
+# baseurl for prod is where they'll be stored
+baseurl: '/foundation/docs'
+
 # Files/Folders to exclude from the final output
 exclude:
   - .sass-cache

@@ -1,6 +1,9 @@
 # mode is either dev or prod
 mode: dev
 
+# baseurl for dev is the root
+baseurl: '/'
+
 # Files/Folders to exclude from the final output
 exclude:
   - .sass-cache
