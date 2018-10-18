@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: Introduction to IRC Development
+sidebar-title: Welcome
 author: Daniel Oakley
 
 series: irc-dev
@@ -8,7 +9,7 @@ series-page: 0
 ---
 Welcome to the IRC Foundation developer documentation!
 
-Whether you're new to IRC development or you've been around for decades, thanks for checkout out this documentation. We'll do our best to guide your through what we've made here, to other useful documents online, and through to building real software.
+Whether you're new to IRC development or you've been around for decades, thanks for checking out this documentation. We'll do our best to guide your through what we've made here, to other useful documents online, and through to building real software.
 
 First off, what is the IRC Foundation? Well, the Foundation is a group inside IRC.com whose job is supporting IRC projects and developers. While that can take the form of [project funding](/foundation/funding), we're also building up this base of documentation that developers can use and refer back to. Along with this, we're also very intentionally releasing the documentation itself [openly](https://github.com/irccom) so that others can use it and help us build it up. We're always open to new ways of helping IRC developers, so [reach out anytime](/contact) if you have any suggestions!
 
