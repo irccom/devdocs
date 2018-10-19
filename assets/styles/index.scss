@@ -66,6 +66,11 @@ ul, ol {
     }
 }
 
+tt {
+    font-size: 87.5%;
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
 
 //Helpers
 img {
@@ -860,9 +865,16 @@ header {
                 padding: 0;
             }
 
-            &.example {
+            &.example, &.format {
                 // min-height: 100px; //(dan): no reason for this to be the case, particularly if the example _is_ very small. appears to be padding for no reason if the example is e.g. one or two lines
                 padding: 20px 0 20px 30px; //(dan): necessary to indent and display properly
+            }
+            // make format use just the standard colours
+            &.format {
+                background-color: #f1f1f1;
+                code {
+                    color: #e83e8c;
+                }
             }
         }
 
