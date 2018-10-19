@@ -1,6 +1,7 @@
 ---
 layout: guide
 title: Introduction to IRC Development
+nsub: From getting connected to writing bots, clients, and servers
 sidebar-title: Welcome
 author: Daniel Oakley
 

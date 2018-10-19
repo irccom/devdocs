@@ -30,3 +30,5 @@ permalink: none
 
 highlighter: rouge
 markdown: kramdown
+
+ghrepo: "https://github.com/irccom/devdocs/blob/master/"
