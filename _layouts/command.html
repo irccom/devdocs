@@ -128,12 +128,12 @@ layout: short-header-cmd
             <hr>
 
             {% if page.examples %}
-            <h3 id="examples">Examples<a href="/#examples" class="link-icon"><i class="fas fa-link"></i></a></h3>
-<pre class="example"><code>{{ page.examples }}</code></pre>
+            <h3 id="examples">Examples<a href="#examples" class="link-icon"><i class="fas fa-link"></i></a></h3>
+<pre class="example"><code>{{ page.examples | escape }}</code></pre>
             <hr>
             {% endif %}
 
-            <h3 id="compatibility">Compatibility<a href="/#compatibility" class="link-icon"><i class="fas fa-link"></i></a></h3>
+            <h3 id="compatibility">Compatibility<a href="#compatibility" class="link-icon"><i class="fas fa-link"></i></a></h3>
             <div class="alert alert-warning">
                 Your IRC client may or may not have in-built support for this command.
             </div>
