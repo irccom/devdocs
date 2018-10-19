@@ -31,4 +31,4 @@ This Intro to IRC Development guide is presented in a few parts, which I'll run 
 
 While there has been an attempt to explain things in order, feel free to skip and jump around sections to find what interests you. Particularly if you've been doing this for a while already.
 
-From myself (Daniel) and the whole IRC.com team, thanks very much for checking out our documentation. And best of luck on your IRC development journey, no matter how deep or shallow you dive into it.
+From myself (Daniel) and the whole IRC.com team, thanks very much for checking out our documentation. Best of luck on your IRC development journey, no matter how deep or shallow you dive into it.
