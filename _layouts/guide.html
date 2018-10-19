@@ -9,9 +9,9 @@ layout: short-header-guide
                 <li><a href="{{ site.baseurl | relative_url }}">IRC Technology</a> &gt;</li>
                 <li><a href="{{ '/guides' | relative_url }}">Guides</a> &gt;</li>
                 {% if series %}
-                <li><b>{% if series.sidebar-name %}{{ series.sidebar-name }}{% else %}{{ series.name }}{% endif %}</b></li>
+                <li class="breadcrumb-block" style="display: block; todo: 'move this to css'"><b>{% if series.sidebar-name %}{{ series.sidebar-name }}{% else %}{{ series.name }}{% endif %}</b></li>
                 {% else %}
-                <li><b>{{ page.title }}</b></li>
+                <li class="breadcrumb-block" style="display: block; todo: 'move this to css'"><b>{{ page.title }}</b></li>
                 {% endif %}
             </ul>
         </div>

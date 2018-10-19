@@ -1,8 +1,191 @@
 ---
-layout: short-header
+layout: short-header-num
 ---
-<h1>{{ page.numeric }}</h1>
+<div class="row">
+    <div class="col-sm-3 col-xs-12 sidebar">
+        <div class="breadcrumbs">
+            <ul>
+                <li><a href="{{ site.baseurl | relative_url }}">IRC Technology</a> &gt;</li>
+                <li><a href="{{ '/refs/numerics' | relative_url }}">Numerics</a> &gt;</li>
+                <li class="breadcrumb-block" style="display: block; todo: 'move this to css'"><b>{{ page.numeric }}</b></li>
+            </ul>
+        </div>
+        {% if page.related-numerics %}
+        <hr>
+        <p class="title">Related numerics:</p>
+            {% for num in page.related-numerics %}
+            <a class="sidebar-page-link" href="{{ num | slugify }}.html"><code>{{ site.data.numerics.names[num] }} ({{ num }})</code></a>{% if forloop.last == false %}<br>{% endif %}
+            {% endfor %}
+        {% endif %}
 
-{% if page.notstarted %}
-<p>This numeric is not documented</p>
-{% endif %}
+        {% for group in page.numeric-groups %}
+        {% if site.data.numeric-groups.groups[group] %}
+        {% assign gdata = site.data.numeric-groups.groups[group] %}
+        {% assign nums = "" | split: "" %}
+        {% for p in site.pages %}
+            {% if p.layout == "numeric" %}{% if p.numeric-groups contains group %}{% if p.numeric != page.numeric %}
+                {% assign nums = nums | push: p.numeric %}
+            {% endif %}{% endif %}{% endif %}
+        {% endfor %}
+        {% assign nums = nums | sort %}
+        {% if nums.size > 0 %}
+        <hr>
+        <p class="title">{{ gdata.name }}</p>
+            {% for num in nums %}
+            <a class="sidebar-page-link" href="{{ num | slugify }}.html"><code>{{ site.data.numerics.names[num] }} ({{ num }})</code></a>{% if forloop.last == false %}<br>{% endif %}
+            {% endfor %}
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+        <hr>
+        <div class="dropdown-list-container active">
+            <p class="title">Username commands:</p>
+            <ul class="documentation-items">
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+            </ul>
+        </div>
+        <div class="dropdown-list-container">
+            <p class="title">Example 2:</p>
+            <ul class="documentation-items">
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+            </ul>
+        </div>
+        <div class="dropdown-list-container">
+            <p class="title">Example 3:</p>
+            <ul class="documentation-items">
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+                <li><a href="">Example UL Link</a></li>
+            </ul>
+        </div>
+
+        <hr>
+        <div class="sidebar-content-block">
+            <p class="title">An information block!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor!</p>
+            <a href="btn">Example Link Name!</a>
+        </div>
+    </div>
+    <div class="col-sm-9 col-xs-12 main-content">
+        <div class="content">
+            {% if page.experimental %}
+            <div class="alert alert-warning experimental">
+                <div class="icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <div class="description">
+                    This numeric is <b>experimental</b>. Check the <a href="#compatibility">compatibility table</a> before using this in production.
+                </div>
+            </div>
+            {% endif %}
+
+            {% if page.notstarted %}
+            <p>This command is not documented</p>
+            {% endif %}
+
+            {{ content }}
+
+            <hr>
+
+            {% if page.examples %}
+            <h3 id="examples">Examples<a href="/#examples" class="link-icon"><i class="fas fa-link"></i></a></h3>
+<pre class="example"><code>{{ page.examples }}</code></pre>
+            <hr>
+            {% endif %}
+
+            <h3 id="compatibility">Compatibility<a href="/#compatibility" class="link-icon"><i class="fas fa-link"></i></a></h3>
+            <div class="alert alert-warning">
+                Your IRC client may or may not support this numeric.
+            </div>
+            <div class="comptability-table-wrapper">
+                <table class="supported-table">
+                    <thead>
+                        <tr>
+                            <th style="min-width:120px"></th>
+                            {% for server in site.data.supported-servers.shortlist %}
+                            <th>{{ server.name }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Used by:</td>
+                            {% for server in site.data.supported-servers.shortlist %}
+                            {% if page.used-by[server.id] or page.used-by-default %}
+                            <td class="supported"><i class="fas fa-check"></i></td>
+                            {% else %}
+                            <td class="not-supported"><i class="fas fa-times"></i></td>
+                            {% endif %}
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+
+            <h3 id="numerics">Related Numerics<a href="/#numerics" class="link-icon"><i class="fas fa-link"></i></a></h3>
+            <ul>
+            {% for num in page.numerics %}
+                {% for p in site.pages %}
+                    {% if p.layout == "numeric" %}
+                        {% if p.full-numeric %}
+                            {% if p.full-numeric == num %}
+                            <li><a href="{{ p.url }}"><code>{% if p.numeric-name %}{{ p.numeric-name }}{% else %}UNKNOWN{% endif %} ({{ p.numeric }})</code></a></li>
+                            {% break %}
+                            {% endif %}
+                        {% elsif p.numeric == num %}
+                            <li><a href="{{ p.url }}"><code>{% if p.numeric-name %}{{ p.numeric-name }}{% else %}UNKNOWN{% endif %} ({{ p.numeric }})</code></a></li>
+                            {% break %}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            </ul>
+            <hr>
+
+            <h3 id="referenceThisIDinURl">See Also:<a href="/#referneceThisDivinURl" class="link-icon"><i class="fas fa-link"></i></a></h3>
+            <a href="#"><code>&gt; This interesting function();</code></a><br>
+            <a href="#"><code>&gt; This interesting function();</code></a><br>
+    </div>
+    </div>
+</div>

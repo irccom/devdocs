@@ -2,12 +2,12 @@
 layout: short-header-cmd
 ---
 <div class="row">
-    <div class="col-sm-4 col-xs-12 sidebar">
+    <div class="col-sm-3 col-xs-12 sidebar">
         <div class="breadcrumbs">
             <ul>
-                <li><a href="">IRC Technology</a> &gt;</li>
-                <li><a href="">Commands</a> &gt;</li>
-                <li><b>{{ page.command }}</b></li>
+                <li><a href="{{ site.baseurl | relative_url }}">IRC Technology</a> &gt;</li>
+                <li><a href="{{ '/refs/commands' | relative_url }}">Commands</a> &gt;</li>
+                <li class="breadcrumb-block" style="display: block; todo: 'move this to css'"><b>{{ page.command }}</b></li>
             </ul>
         </div>
         {% if page.related-commands %}
@@ -106,7 +106,7 @@ layout: short-header-cmd
             <a href="btn">Example Link Name!</a>
         </div>
     </div>
-    <div class="col-sm-8 col-xs-12 main-content">
+    <div class="col-sm-9 col-xs-12 main-content">
         <div class="content">
             {% if page.experimental %}
             <div class="alert alert-warning experimental">

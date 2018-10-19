@@ -1,0 +1,8 @@
+index-order:
+  - welcome
+
+groups:
+  welcome:
+    name: Welcome Burst
+    description: |
+      These commands are sent after a user successfully connects to the network.
