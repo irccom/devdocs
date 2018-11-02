@@ -1,5 +1,6 @@
 ---
 ---
+
 $brandPrimary: #00687f;
 $brandPrimaryHover: #0a8da3;
 
@@ -16,7 +17,7 @@ header {
 }
 
 .intro-container {
-    background: $brandPrimary;
+    background: linear-gradient(120deg, $brandPrimary, #287384 70.71%);
     .container {
         color: #fff;
     }
@@ -27,9 +28,7 @@ header {
 }
 
 .foundation_home {
-    background-image: url('../../assets/images/foundation_home.png');
-    background-position: center;
-    background-size: cover;
+    
     h1 {
         font-family: 'Noto Serif', serif;
         font-size: 3em;
@@ -175,13 +174,6 @@ ol.breadcrumb {
     }
 }
 
-
-//Full page header
-.full-width-page-header {
-    background-color: $brandPrimary;
-    color: #fff;
-}
-
 //Example of a sub page
 .page-content {
     background: #fff;
@@ -250,7 +242,6 @@ ol.breadcrumb {
 }
 
 .news-container .news-post,
-.project-container .project-post,
 .documentation-latest-container .documentation-post  {
     background: #fff;
     .title a,
@@ -271,6 +262,8 @@ ol.breadcrumb {
 .contribute-container {
     background-color: $brandPrimary;
     color: #fff;
+    border-radius: 0.1em;
+    padding: 0.7em 1em;
     .title {
         border-bottom: 1px solid rgba(255,255,255,0.5);
     }
@@ -287,6 +280,115 @@ ol.breadcrumb {
     }
 }
 
+.contribute-content {
+    margin-top: 0.37em;
+    font-weight: 300;
+    h4 {
+        font-size: 1.4em;
+        margin-bottom: 0.22em;
+        font-weight: 300;
+    }
+    p {
+        line-height: 1.4;
+        margin-bottom: 0.7em;
+    }
+    ul {
+        margin-bottom: 1.2em;
+        li {
+            margin: 0 0 0.3em 0;
+            opacity: 0.8;
+            list-style: none;
+            padding-left: 0.5em;
+            color: #061417;
+            transition: 0.2s color;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .fas {
+                position: absolute;
+                margin-left: -2.35em;
+                margin-top: 0.05em;
+                background: #fff;
+                padding: 0.5em 1.66em 0.4em 0.35em;
+                border-radius: 2em;
+                font-size: 0.8em;
+                color: #4294a8;
+                width: 1.5em;
+                text-align: center;
+            }
+            &:hover {
+                color: #111;
+            }
+        }
+    }
+    .button {
+        background: #4294a8;
+        border: 0.1em #3d8da0 solid;
+        display: block;
+        text-align: center;
+        margin: 0 0.5em;
+        &:hover {
+            background: #358194;
+            border-color: #2b6f80;
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+
+.project-post {
+    background: #f7f7f7;
+    border-radius: 0.1em;
+    padding: 0.8em 1em;
+    + .project-post {
+        margin-top: 1.5em;
+    }
+    h4 {
+        margin-bottom: 0.2em;
+        font-weight: 400;
+        a {
+            color: #0c505f;
+        }
+    }
+    p {
+        line-height: 1.6;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        + p {
+            margin-top: 0.5em;
+        }
+    }
+    .project-links {
+        margin-top: 0.5em;
+        text-align: right;
+        a + a {
+            margin-left: 0.8em;
+        }
+        i {
+            padding-right: 0.3em;
+        }
+    }
+
+    .project-logo {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-around;
+    }
+
+    .inspircd-logo {
+        background: url("/assets/project_logos/inspircd_pattern_light.png"), #2b333d;
+        border-radius: 0.7em;
+        width: 100%;
+        height: 100%;
+        img {
+            padding: 0.5em;
+            max-width: 90%;
+            max-height: 80%;
+        }
+    }
+}
+
 //Reusebale Components
 .main-content .video-container .content{
     background: #f7f7f7;
@@ -296,12 +398,6 @@ ol.breadcrumb {
 // so the link icons don't take precedence over the actual titles
 h1 .fa-link, h2 .fa-link, h3 .fa-link, h4 .fa-link {
     opacity: 0.35;
-}
-
-.h1sub {
-    opacity: 0.65;
-    font-size: 1.2em;
-    margin-top: -15px !important;
 }
 
 header .logo .logospecific {
@@ -323,15 +419,6 @@ header .logo:hover .logospecific {
 }
 
 
-
-footer {
-    background-color: $brandPrimary;
-    color: #fff;
-
-    ul li a {
-        color: #fff;
-    }
-}
 
 @media screen and (max-width: 1198px){
     .foundation_home .call-to-action-block .content p{

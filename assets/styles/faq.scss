@@ -1,0 +1,273 @@
+---
+---
+
+$faqFooterColour: #E5E5E5;
+$faqHeaderColour: #3F8FA4;
+$faqContentColour: #fff;
+$ctaColour:#34866C;
+
+// accordian reusable styles
+$faqTitleBackground: #F9F9F9;
+$faqAnswerBackground: #F8FBFC;
+$faqExpandedQuestionTitleBackground: #C3DCE3;
+
+html {
+    // so "overscroll" looks fine
+    background-color: $faqFooterColour;
+}
+
+.faq-title-container {
+    padding-top: 30px;
+    background: linear-gradient(120deg, #3F8FA4, #4D9CB0 70.71%);
+    height: 440px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+}
+
+.faq-main {
+    background-color: #fff;
+    position: relative;
+    padding-bottom: 5em;
+    .faq-accordian-title-container {
+        a {
+            transition: 1s;
+            &:hover {
+                color: #000;
+                transition: 1s;
+            }
+        }
+        min-height: 180px;
+        background-color: $faqContentColour;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: center;
+        padding-bottom: 30px;
+        h6 {
+            font-weight: 100!important;
+            a {
+                color: $faqHeaderColour;
+                text-decoration: underline;
+            }
+        }
+    }
+    // styles for the content-accordian partial (specific to top-level FAQ page)
+    .content-accordian {
+        min-height: auto;
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: #fff;
+        display: flex;
+        flex-direction: row;
+        .content-accordian-content-menu {
+            font-weight: 100;  
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            padding: 0.74em;
+            h5 {
+                line-height: 140%;
+                cursor: pointer;
+                margin: 0.7em;
+                font-weight: 100!important; 
+            }
+            ol {
+               padding-left: 2em;
+               li {
+                    font-size: 14px;
+                }
+            }
+        }
+        .content-accordian-content {
+            font-weight: 100!important;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 70%;
+            justify-content: space-between;
+            .accordian-dropdown {
+                .title-dropdown {
+                    padding: 1em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: $faqTitleBackground;
+                    &.expanded-answer {
+                        background-color: $faqExpandedQuestionTitleBackground;
+                    }
+                    .controls {
+                        cursor: pointer;
+                        transition: 1s;
+                        &:hover {
+                            transition: 1s;
+                            color: #000;
+                        }
+                    }
+                    .fa-sort-up {
+                        transition: 1s;
+                        color: $faqHeaderColour;
+                    }
+                }
+                .hidden-content {
+                    background-color: $faqAnswerBackground;
+                    padding: 1em;
+                    display: none;
+                    p {
+                        padding-top: 1em;
+                        padding-left: 2em;
+                        font-size: 16px;
+                        &:first-child {
+                            padding-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.faq-main:after {
+    position: absolute;
+    height: 100px;
+    overflow: hidden;
+    background:#fff;
+    border-radius: 50%;
+    content: "";
+    left: 0;
+    bottom: -45px;
+    right: 0;
+    z-index: 2;
+}
+
+.cta-download-container {
+    position: relative;
+    min-height: 520px;
+    width: 100%;
+    background-color: $ctaColour;
+    .cta-download-now {
+        background-color: $ctaColour;
+        min-height: 510px;
+        max-width: 1000px;
+        margin: 0 auto;
+        z-index: -2;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 20px;
+        .cta-download-content {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 70px;
+            padding-bottom: 200px;
+            h1 {
+                color: #fff;
+                text-align: center;
+                font-size: 1.5em;
+            }
+            p {
+                color: #fff;
+                font-size: 16px;
+                line-height: 28px;
+                max-width: 500px;
+            }
+            button {
+                margin: 0 auto;
+                color: $ctaColour;
+                background-color: #fff;
+                width: 200px;
+                height: 50px;
+                font-size: 20px;
+                padding-right: 10px;
+                padding-left: 10px;
+                border: 0;
+                cursor: pointer;
+                border-radius: 10px;
+                &:hover {
+                    background-color: #dadada
+                }
+                &:active {
+                    box-shadow: 3px 3px 30px #000;
+                }
+            }
+        }
+        .cell-phone-image {
+            background: url('../../assets/images/cell.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            width: 50%;
+        }
+    }
+    
+    .top-of-footer {
+        background-color: transparent;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.faq-footer {
+    background-color: $faqFooterColour;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h2 {
+        color: #000;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .top-of-footer {
+        display: none!important;
+    }
+    .cta-download-container, .cta-download-now {
+        min-height: 0!important;
+        padding-bottom: 0!important;
+        button {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .cell-phone-image {
+        display: none!important;
+    }
+    .cta-download-content {
+        width: 60%;
+        margin: 0 auto;
+        padding-bottom: 10px!important;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .faq-main {
+        padding-bottom: 4em;
+        padding-top: 1em;
+    }
+    .faq-title-container {
+        min-height: auto;
+    }
+    .top-of-footer {
+        display: none!important;
+    }
+    .content-accordian {
+        flex-direction: column!important;
+        min-height: 0!important;
+        .content-accordian-content-menu {
+            display: none!important;
+        }
+        .content-accordian-content {
+            width: 100%!important;
+        }
+    }
+    .cta-download-content button {
+        text-align: center!important;
+        display:inline-block!important;
+        width: 90%!important;
+        margin: 0 auto!important;
+    }
+}

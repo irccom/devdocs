@@ -1,50 +1,53 @@
 ---
 layout: short-header
-ntitle: IRC Command Reference
-nsub: Commands that servers accept
+ntitle: Command Reference
+nsub: IRC commands supported by servers
 ---
-<p>
-    This page lists all the IRC Commands we have documentation for.
-</p>
+<div class="row">
+    <div class="col-sm-3 col-xs-12 sidebar">
 
-{% for group in site.data.command-groups.index-order %}
-    {% assign info = site.data.command-groups.groups[group] %}
-    {% if info %}
-        {% assign cmds = "" | split: "" %}
-        {% for p in site.pages %}
-            {% if p.layout == "command" %}{% if p.command-groups contains group %}
-                {% assign cmds = cmds | push: p.command %}
-            {% endif %}{% endif %}
-        {% endfor %}
-        {% assign cmds = cmds | sort %}
-        {% if cmds.size > 0 %}
-            <hr>
-            <h2>{{ info.name }}</h2>
-            {{ info.description | markdownify }}
-
-            {% for cmd in cmds %}
-            <a class="sidebar-page-link" href="{{ cmd | slugify }}"><code>{{ cmd }}</code></a>
+    </div>
+    <div class="col-sm-9 col-xs-12 main-content">
+        {% for group in site.data.command-groups.index-order %}
+        {% assign info = site.data.command-groups.groups[group] %}
+        {% if info %}
+            {% assign cmds = "" | split: "" %}
+            {% for p in site.pages %}
+                {% if p.layout == "command" %}{% if p.command-groups contains group %}
+                    {% assign cmds = cmds | push: p.command %}
+                {% endif %}{% endif %}
             {% endfor %}
+            {% assign cmds = cmds | sort %}
+            {% if cmds.size > 0 %}
+                <hr>
+                <h2>{{ info.name }}</h2>
+                {{ info.description | markdownify }}
+    
+                {% for cmd in cmds %}
+                <a class="sidebar-page-link" href="{{ cmd | slugify }}"><code>{{ cmd }}</code></a>
+                {% endfor %}
+            {% endif %}
         {% endif %}
-    {% endif %}
-{% endfor %}
-
-
-
-
-{% assign cmds = "" | split: "" %}
-{% for p in site.pages %}
-    {% if p.layout == "command" %}{% if p.command-groups %}{% else %}
-        {% assign cmds = cmds | push: p.command %}
-    {% endif %}{% endif %}
-{% endfor %}
-{% assign cmds = cmds | sort %}
-{% if cmds.size > 0 %}
-    <hr>
-    <h2>Others</h2>
-    <p>Commands which don't have any group associated with them.</p>
-
-    {% for cmd in cmds %}
-    <a class="sidebar-page-link" href="{{ cmd | slugify }}"><code>{{ cmd }}</code></a>
     {% endfor %}
-{% endif %}
+    
+    
+    
+    
+    {% assign cmds = "" | split: "" %}
+    {% for p in site.pages %}
+        {% if p.layout == "command" %}{% if p.command-groups %}{% else %}
+            {% assign cmds = cmds | push: p.command %}
+        {% endif %}{% endif %}
+    {% endfor %}
+    {% assign cmds = cmds | sort %}
+    {% if cmds.size > 0 %}
+        <hr>
+        <h2>Others</h2>
+        <p>Commands which don't have any group associated with them.</p>
+    
+        {% for cmd in cmds %}
+        <a class="sidebar-page-link" href="{{ cmd | slugify }}"><code>{{ cmd }}</code></a>
+        {% endfor %}
+    {% endif %}
+    </div>
+</div>

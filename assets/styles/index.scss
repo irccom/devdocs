@@ -1,10 +1,64 @@
 ---
 ---
+
+$comHeaderBG: #3F8FA4;
+$comHeaderColour: #78d5e4;
+$foundationHeaderBG: #00687f;
+$foundationHeaderColour: #9be3f3;
+$socialHeaderBG: #203342;
+$socialHeaderColour: #74a8cb;
+
+header, header .header-dropdown-menu, footer, .full-width-page-header {
+    background-color: $comHeaderBG;
+}
+header .logo-part, header .desktop-nav a:hover {
+    color: $comHeaderColour;
+}
+.full-width-page-header {
+    color: #fff;
+}
+body.index {
+    header, header .header-dropdown-menu, footer, .full-width-page-header {
+        background-color: $socialHeaderBG;
+    }
+    header .logo-part, header .desktop-nav a:hover {
+        color: $socialHeaderColour;
+    }
+    .full-width-page-header {
+        color: #fff;
+    }
+}
+body.foundation {
+    header, header .header-dropdown-menu, footer, .full-width-page-header {
+        background-color: $foundationHeaderBG;
+    }
+    header .logo-part, header .desktop-nav a:hover {
+        color: $foundationHeaderColour;
+    }
+    .full-width-page-header {
+        color: #fff;
+    }
+}
+
 html {
     box-sizing: border-box;
 }
+
 *, *:before, *:after {
     box-sizing: inherit;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header, footer {
+    flex: 0 0 auto;
+}
+#center-content {
+    flex: 1 1 auto;
+    height: 100%;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
@@ -25,9 +79,7 @@ body {
 
 //Main content
 h1,h2,h3,h4,h5 {
-    font-family: 'Noto Serif', serif;
     cursor: default;
-    margin: 0 0 20px 0;
     font-weight: 900;
 }
 
@@ -82,114 +134,157 @@ img {
 }
 
 
+.full-width-page-header {
+    h1 {
+        font-weight: 300;
+    }
+    .h1sub {
+        font-size: 1.2em;
+        font-weight: 300;
+        opacity: 0.8;
+        margin-top: 0.2em;
+        margin-bottom: -0.2em;
+    }
+}
+
 
 //Header
 header {
-    position: absolute;
-    width: 100%;
+    position: fixed;
     z-index: 10;
-    padding: 20px 0;
-    left: 0;
+    width: 100%;
     top: 0;
-    &.fixed {
-        position: fixed;
-    }
-    ul {
-        padding: 0;
-        margin: 0;
-    }
 
-    a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    a.logo {
-        float: left;
-        font-weight: 900;
-        font-size: 2em;
-        font-family: 'Noto Serif', serif;
-        img {
-            display: inline-block;
-            width: 40px;
-            margin-bottom: -7px;
-        }
-        .logo-text {
-            display: inline-block;
-            line-height: 40px;
-        }
-        .sub-title {
-            float: left;
-            padding-left: 48px;
-            width: 100%;
-            margin-top: -5px;
-            font-size: 0.4em;
-            line-height: normal;
-        }
-        &:hover {
-            text-decoration: none;
+    .container {
+        display: flex;
+        align-items: center;
+        
+        a.logo {
+            flex: 0 0 auto;
+            font-size: 1.8em;
+            font-weight: 500;
             color: #fff;
-        }
-    }
-
-    .mobile-nav-button {
-        display: none;
-    }
-
-    nav {
-        float: right;
-        width: auto;
-        line-height: 48px;
-
-        a {
-            display: inline-block;
-            // margin: 0 0 10px 0; //(dan) this makes the navheader uneven when scrolling down. is it intended only for the in-menu links displayed on hover?
-            line-height: 48px;
-            margin-left: 10px;
-            font-size: 0.85em;
-            &:hover {
-                color: #81acce;
+            text-decoration: none;
+            white-space: nowrap;
+            .logo-img {
+                height: 1.5em;
+                position: relative;
+                top: 0.4em;
             }
-            &.get-app {
-                border: 1px solid #fff;
-                padding: 5px 10px;
-                border-radius: 4px;
-                line-height: 20px;
-                transition: all 0.1s;
-            }
-            &.get-app:hover {
-                background: #fff;
-                color: #81acce;
+            .logo-text {
+                display: inline-block;
+                padding: 0.6em 0;
             }
         }
+        .desktop-nav {
+            width: 100%;
+            flex: 1 1 auto;
+            text-align: right;
 
-        //(dan) specifically the first menu title, because the margin throws off the nav's height
-        > ul > li {
-            margin: 0;
-        }
-
-        ul {
-            display: inline-block;
-            position: relative;
-            list-style: none;
-
-            ul {
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: none;
+            a {
+                transition: color 0.2s;
+                color: #fff;
+                text-decoration: none;
             }
 
-            &:hover {
-                ul {
-                    width: 200px;
+            > a, > div.dropdown-toggle-custom {
+                color: #fff; // for the dropdown toggle div
+                display: inline-block;
+                font-size: 1.1em;
+                padding: 0.5em 0.4em;
+                user-select: none;
+                cursor: pointer;
+                &:last-child {
+                    padding-right: 0;
+                }
+                .header-dropdown-menu {
+                    display: none;
+                    &.dropped {
+                        display: block;
+                    }
+                    position: absolute;
+                    text-align: left;
+                    padding: 0 1em;
+                    margin-left: -1em;
+                    border-radius: 0 0 0.25rem 0.25rem;
+                    a {
+                        display: block;
+                        padding: 0.25em 0;
+                        &:first-child {
+                            padding-top: 0.5em;
+                        }
+                        &:last-child {
+                            padding-bottom: 0.5em;
+                        }
+                    }
                 }
             }
+            > .dropdown-toggle-custom:hover .header-dropdown-menu {
+                display: block;
+            }
+        }
+
+        .mobile-nav-button {
+            display: none;
+            color: #fff;
+            text-align: right;
+            width: 100%;
+            flex: 1 1 auto;
+            font-size: 1.4em;
+            padding: 0.3em 0 0.3em 0.3em;
+            cursor: pointer;
         }
     }
 
-    &.active {
-        position: fixed;
+    #header-mobile-nav {
+        visibility: hidden;
+        display: block;
+        position: absolute;
+        left: 100vw;
+        transition: left 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(20, 20, 20, 0.85);
+        backdrop-filter: blur(0.35rem); // not supported in anything else yet, whoo!
+        -webkit-backdrop-filter: blur(0.35rem); // not supported in anything else yet, whoo!
+
+        .close-sidebar {
+            text-align: right;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.7em;
+            padding: 0.7em 0.575em;
+            cursor: pointer;
+        }
+        .link-container {
+            font-size: 1.4em;
+            padding: 0 15px;
+            a {
+                color: rgba(255, 255, 255, 0.8);
+                display: block;
+                text-align: center;
+                padding: 0.25em 0;
+            }
+            hr {
+                border: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+
+    @media (max-width: 35rem) {
+        .mobile-nav-button {
+            display: inline-block !important;
+        }
+        .desktop-nav {
+            display: none;
+        }
+        #header-mobile-nav {
+            visibility: visible;
+            &.shown {
+                left: 0;
+            }
+        }
     }
 }
 
@@ -200,7 +295,6 @@ header {
     max-height: none;
     position: relative;
     align-items: center;
-    justify-content: center;
     text-align: center;
     overflow: hidden;
     margin: 0 0 50px 0;
@@ -242,7 +336,6 @@ header {
     .container {
         z-index: 10;
     }
-
 
     .call-to-action-block {
         display: block;
@@ -372,23 +465,6 @@ header {
         padding: 10px 20px 8px 20px;
     }
 
-    //Gradient
-    &::after {
-        content: '';
-        position: absolute;
-        z-index: 1;
-        width: 1920px;
-        top: 50%;
-        left: 50%;
-        height: 1520px;
-        margin-left: -999px;
-        margin-top: -500px;
-        background-size: cover;
-        background-position: center center;
-        background-image: url('../../assets/images/introContainerGradient.png');
-        opacity: 0.1;
-    }
-
     &.has-call-to-action-blocks {
         margin-bottom: 100px;
     }
@@ -397,6 +473,7 @@ header {
         margin-top: 100px;
     }
 }
+
 
 //Into Call to action blocks
 .intro-call-to-action-container {
@@ -517,6 +594,7 @@ header {
         }
     }
 }
+
 
 // Documentation
 .documentation {
@@ -896,18 +974,6 @@ header {
             clear: both;
         }
 
-        h3 a {
-            float: right;
-            color: #000;
-            text-decoration: none;
-            font-size: 0.8em;
-            margin-right: 10px;
-            transition: all 0.3s;
-            &:hover{
-                color: #007bff;
-            }
-        }
-
         .supported-table {
             width: 100%;
             background: #f1f1f1;
@@ -1080,6 +1146,7 @@ header {
     }
 }
 
+
 // For your team section
 .for-your-team {
     width: 100%;
@@ -1127,6 +1194,7 @@ header {
     }
 }
 
+
 //Buttons - Links etc ( These are for non 'button' buttons - I.E only styled to look like a button link, non form submitting )
 .button {
     width: auto;
@@ -1144,45 +1212,15 @@ header {
     //Background colours for hover are within the theme files
 }
 
+
 footer {
-    width: 100%;
-    padding: 60px 0 20px 0;
     text-align: center;
+    color: #fff;
+    padding: 1em 0;
 
-    .footer-logo {
-        float: left;
-        font-weight: 900;
-        font-size: 2em;
-        width: 100%;
-        margin: 0 0 10px 0;
-        img {
-            display: inline;
-            width: 40px;
-            margin: 0;
-        }
-        span {
-            display: inline-block;
-            line-height: normal;
-       }
+    .logo-img {
+        height: 4em;
     }
-
-    ul {
-        width: 100%;
-        padding: 0;
-        li {
-            display: inline-block;
-            list-style: none;
-            margin: 0 20px 5px 0;
-        }
-    }
-
-    p.copyright {
-        width: 100%;
-        margin: 40px 0 0 0;
-        font-size: 0.8em;
-        opacity: 0.6;
-    }
-
 }
 
 .comptability-table-wrapper {
@@ -1190,28 +1228,176 @@ footer {
     width: 100%;
 }
 
+
 /* Responsve Code */
 /* Breakpoint: 990px */
 @media screen and (max-width: 990px){
-
-    header {
-      padding: 10px 0;
-    }
-    header .desktop-nav {
-        display: none;
-    }
-    header .mobile-nav-button {
-        display: block;
-        float: right;
-        color: #fff;
-        font-size: 2em;
-        line-height: 65px;
+    // //Header + Nav Menu (Mobile)
+    // header {
+    //   padding: 10px 0;
+    // }
+    // header nav a.close-mobile-nav {
+    //     padding-top: 15px;
+    //     padding-right: 10px;
+    //     color: #fff;
+    //     display: block!important;
+    //     font-weight: bold;
+    //     border-radius: 4px;
+    //     font-size: 35px;
+    //     line-height: 20px;
+    //     text-align: right;
+    //     transition: all 0.1s;
+    //     text-align: right;
+    // }
+    // header nav a.close-mobile-nav:hover {
+    //     text-decoration: none;
+    //     color:#818181;
+    //     background-color: transparent;
+    // }
+    // header .desktop-nav {
+    //     display: none;
+    //     transition: 0.3s;
+    // }
+    // header .open-mobile-nav {
+    //     display: inline-block;
+    //     float: right;
+    //     color: #fff;
+    //     transition: 0.3s;
+    //     margin: 15px;
+    //     cursor: pointer;
+    // }
+    // header .open-mobile-nav i {
+    //     pointer-events: fill;
+    // }
+    // header .open-mobile-nav:hover {
+    //     color: #818181;
+    //     transition: 0.3s;
+    // }
+    // header nav a.get-app {
+    //     border: none;
+    //     padding-bottom: 0;
+    //     padding-top: 0;
+    //     padding-left: 10px;
+    //     line-height: 48px;
+    //     min-height: 48px;
+    //     margin-top: 30px;
+    // }
+    // header nav a.get-app:hover {
+    //     border: none;
+    //     background-color: initial;
+    //     color: initial;
+    //     color: #818181;
+    // }
+    // header .sidenav-menu {
+    //     height: 110vh;
+    //     border-left: 2px solid #29778E;
+    //     width: 250px;
+    //     position: fixed;
+    //     background-color: #206C82;
+    //     z-index: 12 ;
+    //     top: 0;
+    //     right: 0;
+    //     overflow-x: hidden;
+    //     padding-top: 12px;
+    //     padding-bottom: 20px;
+    //     transition: 0.3s;
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: flex-start;
+    // }
+    // header .sidenav-menu a {
+    //     border-top: 1px solid #fff;
+    //     text-decoration: none;
+    //     font-size: 25px;
+    //     color: #fff;
+    //     font-weight: 300;
+    //     display: block;
+    //     transition: 0.3s;
+    //     padding-left: 10px;
+    //     padding-right: 10px;
+    //     display: flex!important;
+    //     max-width: 10em;
+    //     margin-left: 0;
+    //     width: 100%;    
+    //     justify-content: space-between;
+    //     flex-direction: row;
+    // }
+    // header .sidenav-menu a:first-child, header .sidenav-menu a:nth-child(2) {
+    //     border-top: none;
+    // }
+    // header .sidenav-menu .contact {
+    //     border-bottom: 1px solid #fff;
+    // }
+    // header .sidenav-menu .search-social {
+    //     position: absolute;
+    //     padding-top: 10px;
+    //     bottom: 15vh;
+    //     border-top: 1px solid #fff;
+    //     display: block;
+    //     width: 100%;
+    // }
+    // header .sidenav-menu .search-social input {
+    //     border-radius: 0;
+    //     border-top: 1px solid rgb(206, 212, 218);
+    //     border-left: 1px solid rgb(206, 212, 218);
+    //     border-bottom: 1px solid rgb(206, 212, 218);
+    // }
+    // header .sidenav-menu .search-social .white-button {
+    //     background-color: #fff;
+    //     color: #818181;
+    //     border: none;
+    //     border-radius: 0;
+    //     border-top: 1px solid rgb(206, 212, 218);
+    //     border-right: 1px solid rgb(206, 212, 218);
+    //     border-bottom: 1px solid rgb(206, 212, 218);
+    // }
+    // header .sidenav-menu .search-social .white-button:hover {
+    //     color: black;
+    // }
+    // header .sidenav-menu .search-social .input-group {
+    //     padding-left: 10px;
+    //     padding-right: 10px;
+    // }
+    // header .sidenav-menu .search-social .links {
+    //     margin-top: 10px;
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-between;
+    //     border-top: 1px solid #fff;
+    //     color: #fff;
+    //     padding: 15px;
+    // }
+    // header .sidenav-menu .search-social .links i {
+    //     cursor: pointer;
+    //     font-size: 20px;
+    // }
+    // header .sidenav-menu .search-social .links i:hover {
+    //     color: #818181;
+    // }
+    // header .sidenav-menu .hide-on-mobile {
+    //     display: none!important;
+    // }
+    // header .sidenav-menu .hide-on-desktop {
+    //     display: inline-block;
+    // }
+    // header .sidenav-menu a:hover {
+    //     color: #818181;
+    //     background-color: #17a2b8;
+    // }
+    // header .open-mobile-nav i {
+    //     display: inline-block;
+    // }
+    // header .get-app:hover {
+    //     color: #818181;
+    //     background-color: none;
+    // }
+    .collapse {
+        height: 100px;
     }
 
     .intro-container.margin-top {
       padding-top: 100px;
     }
-
     .button {
         font-size: 15px;
     }

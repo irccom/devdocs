@@ -1,15 +1,7 @@
 ---
 ---
+
 // Internal page colour scheme is grey: #dadada
-
-// Global
-header.fixed {
-    background: #dadada;
-}
-
-footer {
-    background: #dadada;
-}
 
 // Contact page
 .contact_page_banner {
@@ -46,5 +38,69 @@ footer {
                 background: none;
             }
         }
+    }
+}
+
+// Frequently Asked Questions
+.faq-sidebar {
+    font-weight: 300;
+    margin-top: 0.37em;
+    h4 {
+        font-size: 1.4em;
+        font-weight: 300;
+        margin-bottom: 0.2em;
+        a {
+            color: #111;
+        }
+        &:not(:first-child) {
+            margin-top: 1.05em;
+        }
+    }
+    // h5 {
+    //     font-size: 1.2em;
+    //     margin-top: 1em;
+    //     margin-bottom: 0.35em;
+    //     font-weight: 300;
+    // }
+    p {
+        line-height: 1.4;
+        margin: 0;
+        + p {
+            margin-top: 0.5em;
+        }
+    }
+    a {
+        display: block;
+        color: #173a60;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.faq-content {
+    h2, h3 {
+        font-weight: 300;
+    }
+    h3 {
+        font-size: 1.65em;
+        margin-top: 0.7em;
+        color: #3072ba;
+        a {
+            color: #3072ba;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    h2 a {
+        color: #111;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .faqlinker {
+        position: absolute;
+        margin-top: -6rem;
     }
 }

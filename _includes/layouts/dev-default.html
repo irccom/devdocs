@@ -3,58 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>{{ page.title }}</title>
+    <title>IRC Foundation Documentation</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/assets/styles/index.css">
     <link rel="stylesheet" href="/assets/styles/foundation.css">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
 </head>
-<body>
-    <!-- views/partials/header.ejs -->
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <a href="/" class="logo">
-                        <img src="/assets/irc_logos/irc_white.svg" />
-                        <span class="logo-text">IRC</span>
-                        <!-- We need to populate this text via the current route  <span class="sub-title">&nbsp;</span> -->
-                    </a>
 
-                    <nav class="desktop-nav">
-                        <a href="/" class="get-app">Download IRC Chat</a>
-                        <a href="/foundation">Foundation</a>
-                        <a href="/contact">Contact</a>
-                    </nav>
-                    <div class="mobile-nav-button">
-                        <i class="fas fa-bars"></i>
-                    </div>
+<body class="foundation">
+
+<header>
+    <div class="container">
+        <a href="/" class="logo">
+            <img class="logo-img" src="/assets/irc_logos/irc_white.svg">
+            <span class="logo-text">IRC<span class="logo-part"> Foundation</span></span>
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="/foundation/sponsorships">Sponsorships</a>
+            <a href="/foundation/docs">Documentation</a>
+            <div href="#" onclick="document.getElementById('header-about-dropdown-menu').classList.toggle('dropped'); document.getElementById('header-about-dropdown-menu-caret').classList.toggle('fa-caret-down'); document.getElementById('header-about-dropdown-menu-caret').classList.toggle('fa-caret-up')" class="dropdown-toggle-custom">
+                About <i id="header-about-dropdown-menu-caret" class="fas fa-caret-down"></i>
+                <div id="header-about-dropdown-menu" class="header-dropdown-menu">
+                    <a href="/contact">Contact</a>
+                    <a href="/faq">FAQ</a>
+                    <a href="/letter">Letter</a>
                 </div>
             </div>
-        </div>
-    </header>
+        </nav>
 
-    <!-- Include JQuery -->
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous">
-    </script>
-    <script type="text/javascript">
-        $(window).scroll(function() {
-        if ($(this).scrollTop() > 130) {
-            if($(window).width() > 575) {
-                $('header').addClass('fixed');
-            }
-        }else{
-                $('header').removeClass('fixed');
-        }
-        });
-    </script>
+        <div class="mobile-nav-button" onclick="document.getElementById('header-mobile-nav').classList.toggle('shown')">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+
+    <nav id="header-mobile-nav">
+        <div class="close-sidebar" onclick="document.getElementById('header-mobile-nav').classList.toggle('shown')"><i class="fas fa-times"></i></div>
+        <div class="link-container">
+            <a href="/foundation/sponsorships">Funding</a>
+            <a href="/foundation/docs">Documentation</a>
+            <hr>
+            <a href="/contact">Contact</a>
+            <a href="/faq">FAQ</a>
+            <a href="/letter">Letter</a>
+        </div>
+    </nav>
+</header>
+
+<div id="center-content">
+
+<div class="content">
 
 
     {{ content }}
@@ -75,6 +78,11 @@
             </div>
         </div>
     </footer>
+</div>
 
+<footer>
+    <a href="/"><img class="logo-img" src="/assets/irc_logos/irc_white.svg"></a>
+    <p>&copy; 2018 IRC.com</p>
+</footer>
 </body>
 </html>
