@@ -1,0 +1,148 @@
+---
+layout: short-header
+ntitle: Numeric Reference
+nsub: IRC numerics sent by servers
+---
+<div class="row">
+    <div class="col-sm-3 col-xs-12 sidebar">
+        <div class="docs-list-sidebar">
+            <h4><a href="#groups">Groups</a></h4>
+            {% for group in site.data.numeric-groups.index-order %}
+                {% assign info = site.data.numeric-groups.groups[group] %}
+                {% if info %}
+                    {% assign nums = "" | split: "" %}
+                    {% for p in site.pages %}
+                        {% if p.layout == "numeric" %}{% if p.numeric-groups contains group %}
+                            {% assign nums = nums | push: p.numeric %}
+                        {% endif %}{% endif %}
+                    {% endfor %}
+                    {% assign nums = nums | sort %}
+                    {% if nums.size > 0 %}
+                    <p><a href="#{{ group | slugify }}">{{ info.name }}</a></p>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            {% assign nums = "" | split: "" %}
+            {% for p in site.pages %}
+                {% if p.layout == "numeric" %}{% if p.numeric-groups %}{% else %}
+                    {% assign nums = nums | push: p.numeric %}
+                {% endif %}{% endif %}
+            {% endfor %}
+            {% assign nums = nums | sort %}
+            {% if nums.size > 0 %}
+                <p><a href="#others">Others</a></p>
+            {% endif %}
+
+            <h4><a href="#full-list">Full List</a></h4>
+        </div>
+    </div>
+    <div class="col-sm-9 col-xs-12 main-content">
+        <div class="docs-list-content content">
+            <h2><div class="docs-list-linker" id="groups"></div><a href="#groups">Groups</a></h2>
+            {% for group in site.data.numeric-groups.index-order %}
+                {% assign info = site.data.numeric-groups.groups[group] %}
+                {% if info %}
+                    {% assign nums = "" | split: "" %}
+                    {% for p in site.pages %}
+                        {% if p.layout == "numeric" %}{% if p.numeric-groups contains group %}
+                            {% assign nums = nums | push: p.numeric %}
+                        {% endif %}{% endif %}
+                    {% endfor %}
+                    {% assign nums = nums | sort %}
+                    {% if nums.size > 0 %}
+                        <h3><div class="docs-list-linker" id="{{ group | slugify }}"></div><a href="#{{ group | slugify }}">{{ info.name }}</a></h3>
+                        {{ info.description | markdownify }}
+
+                        <table class="docs-listing">
+                            <colgroup>
+                                <col class="numeric">
+                                <col class="name">
+                                <col class="desc">
+                            </colgroup>
+                            {% for num in nums %}
+                            <tr{% if info %}{% else %} class="disabled"{% endif %}>
+                                {% assign num_id = num | slugify %}
+                                {% assign info = site.data.numeric-info[num_id] %}
+                                <td><tt>{% if info %}<a href="{{ num_id }}.html">{{ num }}</a>{% else %}<span class="notexisting">{{ num }}</span>{% endif %}</tt></td>
+                                <td>
+                                    <tt>{% if info %}<a href="{{ num_id }}.html">{{ info.name }}</a>{% endif %}</tt>
+                                </td>
+                                <td>
+                                    {{ info.desc | markdownify }}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+            {% assign nums = "" | split: "" %}
+            {% for p in site.pages %}
+                {% if p.layout == "numeric" %}{% if p.numeric-groups %}{% else %}
+                    {% assign nums = nums | push: p.numeric %}
+                {% endif %}{% endif %}
+            {% endfor %}
+            {% assign nums = nums | sort %}
+            {% if nums.size > 0 %}
+                <h3><div class="docs-list-linker" id="others"></div><a href="#others">Others</a></h3>
+                <p>Numerics which don't fall into any of our existing groups.</p>
+            
+                <table class="docs-listing">
+                    <colgroup>
+                        <col class="numeric">
+                        <col class="name">
+                        <col class="desc">
+                    </colgroup>
+                    {% for num in nums %}
+                    <tr{% if info %}{% else %} class="disabled"{% endif %}>
+                        {% assign num_id = num | slugify %}
+                        {% assign info = site.data.numeric-info[num_id] %}
+                        <td><tt>{% if info %}<a href="{{ num_id }}.html">{{ num }}</a>{% else %}<span class="notexisting">{{ num }}</span>{% endif %}</tt></td>
+                        <td>
+                            <tt>{% if info %}<a href="{{ num_id }}.html">{{ info.name }}</a>{% endif %}</tt>
+                        </td>
+                        <td>
+                            {{ info.desc | markdownify }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            {% endif %}
+
+            <hr>
+            <h2><div class="docs-list-linker" id="full-list"></div><a href="#full-list">Full Numeric List</a></h2>
+            <p>All the numerics we have documentation for.</p>
+
+            {% assign nums = "" | split: "" %}
+            {% for p in site.pages %}
+                {% if p.layout == "numeric" %}
+                    {% assign nums = nums | push: p.numeric %}
+                {% endif %}
+            {% endfor %}
+            {% assign nums = nums | sort %}
+            {% if nums.size > 0 %}
+                <table class="docs-listing">
+                    <colgroup>
+                        <col class="numeric">
+                        <col class="name">
+                        <col class="desc">
+                    </colgroup>
+                    {% for num in nums %}
+                    <tr{% if info %}{% else %} class="disabled"{% endif %}>
+                        {% assign num_id = num | slugify %}
+                        {% assign info = site.data.numeric-info[num_id] %}
+                        <td><tt>{% if info %}<a href="{{ num_id }}.html">{{ num }}</a>{% else %}<span class="notexisting">{{ num }}</span>{% endif %}</tt></td>
+                        <td>
+                            <tt>{% if info %}<a href="{{ num_id }}.html">{{ info.name }}</a>{% endif %}</tt>
+                        </td>
+                        <td>
+                            {{ info.desc | markdownify }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            {% endif %}
+        </div>
+    </div>
+</div>

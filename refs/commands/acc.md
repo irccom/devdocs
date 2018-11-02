@@ -2,7 +2,6 @@
 title: "ACC IRC Command"
 ntitle: "ACC"
 nsub: "Register and validate new user accounts"
-index-desc: "The *IRC `ACC` command* lets users register and validate new accounts"
 layout: command
 experimental: true
 
@@ -21,6 +20,9 @@ examples: |
 
 supported-by:
     oragono: true
+
+contributors:
+    - doaks
 ---
 The `ACC` command allows users to register and validate new user accounts. It's defined [here](https://github.com/ircv3/ircv3-specifications/pull/276).
 
