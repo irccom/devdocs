@@ -77,7 +77,7 @@ nsub: IRC numerics sent by servers
                 {% endif %}
             {% endfor %}
 
-            {% assign nums = "" | split: "" %}
+            <!--{% assign nums = "" | split: "" %}
             {% for p in site.pages %}
                 {% if p.layout == "numeric" %}{% if p.numeric-groups %}{% else %}
                     {% assign nums = nums | push: p.numeric %}
@@ -108,7 +108,7 @@ nsub: IRC numerics sent by servers
                     </tr>
                     {% endfor %}
                 </table>
-            {% endif %}
+            {% endif %}-->
 
             <hr>
             <h2><div class="docs-list-linker" id="full-list"></div><a href="#full-list">Full Numeric List</a></h2>

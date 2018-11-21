@@ -73,7 +73,7 @@ nsub: IRC commands supported by servers
                 {% endif %}
             {% endfor %}
 
-            {% assign cmds = "" | split: "" %}
+            <!--{% assign cmds = "" | split: "" %}
             {% for p in site.pages %}
                 {% if p.layout == "command" %}{% if p.command-groups %}{% else %}
                     {% assign cmds = cmds | push: p.command %}
@@ -100,7 +100,7 @@ nsub: IRC commands supported by servers
                     </tr>
                     {% endfor %}
                 </table>
-            {% endif %}
+            {% endif %}-->
 
             <hr>
             <h2><div class="docs-list-linker" id="full-list"></div><a href="#full-list">Full Command List</a></h2>

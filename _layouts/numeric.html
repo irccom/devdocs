@@ -59,7 +59,7 @@ layout: short-header-num
         </div>
     </div>
     <div class="col-sm-9 col-xs-12 main-content">
-        <div class="content">
+        <div class="content docs">
             {% if page.experimental %}
             <div class="alert alert-warning experimental">
                 <div class="icon">
@@ -79,17 +79,12 @@ layout: short-header-num
 
             <hr>
 
-            {% if page.format %}
-            <h3 id="format">Format<a href="#format" class="link-icon"><i class="fas fa-link"></i></a></h3>
-<pre class="format"><code>{{ page.format | escape }}</code></pre>
-
-            {% if page.format-text %}{{ page.format-text | markdownify }}{% endif %}
-            <hr>
-            {% endif %}
-
-            {% if page.examples %}
+            {% if page.examples and 0 < page.examples.size %}
             <h3 id="examples">Examples<a href="#examples" class="link-icon"><i class="fas fa-link"></i></a></h3>
-<pre class="example"><code>{{ page.examples | escape }}</code></pre>
+            {% for e in page.examples %}
+<pre class="example"><code>{{ e.content | escape }}</code></pre>
+{% if e.desc %}<p>{{ e.desc }}</p>{% endif %}
+            {% endfor %}
             <hr>
             {% endif %}
 

@@ -14,9 +14,11 @@ numerics:
     - "920"
     - "927"
 
-examples: |
-    ACC REGISTER dan mailto:dan@example.com passphrase :testpassphrase123
-    ACC VERIFY dan 3qw4tq4te4gf34
+examples:
+    - desc: Typical REGISTER and VERIFY subcommands
+      content: |
+        ACC REGISTER dan mailto:dan@example.com passphrase :testpassphrase123
+        ACC VERIFY dan 3qw4tq4te4gf34
 
 supported-by:
     oragono: true
