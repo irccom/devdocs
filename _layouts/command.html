@@ -78,18 +78,15 @@ layout: short-header-cmd
             <hr>
 
             {% if page.examples and 0 < page.examples.size %}
-            <h3 id="examples">Examples<a href="#examples" class="link-icon"><i class="fas fa-link"></i></a></h3>
+            <h3><div id="examples" class="header-link-expander"></div><a href="#examples" class="internal-link">Examples<i class="fas fa-link"></i></a></h3>
             {% for e in page.examples %}
 <pre class="example"><code>{{ e.content | escape }}</code></pre>
-{% if e.desc %}<p>{{ e.desc }}</p>{% endif %}
+{% if e.desc %}<div class="example-desc">{{ e.desc | markdownify }}</div>{% endif %}
             {% endfor %}
             <hr>
             {% endif %}
 
-            <h3 id="compatibility">Compatibility<a href="#compatibility" class="link-icon"><i class="fas fa-link"></i></a></h3>
-            <div class="alert alert-warning">
-                Your IRC client may or may not have in-built support for this command.
-            </div>
+            <h3><div id="compatibility" class="header-link-expander"></div><a href="#compatibility" class="internal-link">Compatibility<i class="fas fa-link"></i></a></h3>
             <div class="comptability-table-wrapper">
                 <table class="supported-table">
                     <thead>
@@ -116,7 +113,7 @@ layout: short-header-cmd
             </div>
             <hr>
 
-            <h3 id="numerics">Related Numerics<a href="/#numerics" class="link-icon"><i class="fas fa-link"></i></a></h3>
+            <h3><div id="numerics" class="header-link-expander"></div><a href="#numerics" class="internal-link">Related Numerics<i class="fas fa-link"></i></a></h3>
             <ul>
             {% for num in page.numerics %}
                 {% for p in site.pages %}
@@ -134,11 +131,6 @@ layout: short-header-cmd
                 {% endfor %}
             {% endfor %}
             </ul>
-            <hr>
-
-            <h3 id="referenceThisIDinURl">See Also:<a href="/#referneceThisDivinURl" class="link-icon"><i class="fas fa-link"></i></a></h3>
-            <a href="#"><code>&gt; This interesting function();</code></a><br>
-            <a href="#"><code>&gt; This interesting function();</code></a><br>
     </div>
     </div>
 </div>

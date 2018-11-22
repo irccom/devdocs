@@ -945,6 +945,7 @@ header {
             &.example, &.format {
                 // min-height: 100px; //(dan): no reason for this to be the case, particularly if the example _is_ very small. appears to be padding for no reason if the example is e.g. one or two lines
                 padding: 20px 0 20px 30px; //(dan): necessary to indent and display properly
+                margin: 0.1em 0 1em;
             }
             // make format use just the standard colours
             &.format {

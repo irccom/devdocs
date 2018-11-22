@@ -89,6 +89,7 @@ header {
     h3 {
         font-size: 1.65em;
         margin-top: 0.7em;
+        margin-bottom: 0.3em;
         color: #3072ba;
         a {
             color: #3072ba;
@@ -483,6 +484,7 @@ ol.breadcrumb {
     h3 {
         font-size: 1.65em;
         margin-top: 0.7em;
+        margin-bottom: 0.3em;
         color: #3072ba;
         a {
             color: #3072ba;
@@ -499,15 +501,34 @@ ol.breadcrumb {
     }
 }
 
+.example-desc {
+    margin-top: -0.5em;
+}
+
 //Reusebale Components
 .main-content .video-container .content{
     background: #f7f7f7;
 }
 
 
-// so the link icons don't take precedence over the actual titles
-h1 .fa-link, h2 .fa-link, h3 .fa-link, h4 .fa-link {
-    opacity: 0.35;
+h1, h2, h3, h4 {
+    .internal-link {
+        color: #3072ba;
+        display: block;
+        .fa-link {
+            opacity: 0;
+            float: right;
+        }
+    }
+    &:hover .internal-link .fa-link {
+        opacity: 0.35; // so the link icons don't take precedence over the actual titles
+    }
+    .header-link-expander {
+        position: relative;
+        top: -6rem;
+        width: 0;
+        height: 1px;
+    }
 }
 
 header .logo .logospecific {

@@ -72,18 +72,15 @@ layout: short-header-num
             <hr>
 
             {% if page.examples and 0 < page.examples.size %}
-            <h3 id="examples">Examples<a href="#examples" class="link-icon"><i class="fas fa-link"></i></a></h3>
+            <h3><div id="examples" class="header-link-expander"></div><a href="#examples" class="internal-link">Examples<i class="fas fa-link"></i></a></h3>
             {% for e in page.examples %}
 <pre class="example"><code>{{ e.content | escape }}</code></pre>
-{% if e.desc %}<p>{{ e.desc }}</p>{% endif %}
+{% if e.desc %}<div class="example-desc">{{ e.desc | markdownify }}</div>{% endif %}
             {% endfor %}
             <hr>
             {% endif %}
 
-            <h3 id="compatibility">Compatibility<a href="#compatibility" class="link-icon"><i class="fas fa-link"></i></a></h3>
-            <div class="alert alert-warning">
-                Your IRC client may or may not support this numeric.
-            </div>
+            <h3><div id="compatibility" class="header-link-expander"></div><a href="#compatibility" class="internal-link">Compatibility<i class="fas fa-link"></i></a></h3>
             <div class="comptability-table-wrapper">
                 <table class="supported-table">
                     <thead>
