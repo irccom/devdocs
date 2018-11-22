@@ -61,7 +61,7 @@ nsub: IRC commands supported by servers
                             {% for cmd in cmds %}
                             <tr{% if info %}{% else %} class="disabled"{% endif %}>
                                 {% assign cmd_id = cmd | slugify %}
-                                {% assign info = site.data.command-info[cmd_id] %}
+                                {% assign info = site.data.commands.info[cmd_id] %}
                                 <td><tt>{% if info %}<a href="{{ cmd_id }}.html">{{ cmd }}</a>{% else %}<span class="notexisting">{{ cmd }}</span>{% endif %}</tt></td>
                                 <td>
                                     {{ info.desc | markdownify }}
@@ -122,7 +122,7 @@ nsub: IRC commands supported by servers
                     {% for cmd in cmds %}
                     <tr{% if info %}{% else %} class="disabled"{% endif %}>
                         {% assign cmd_id = cmd | slugify %}
-                        {% assign info = site.data.command-info[cmd_id] %}
+                        {% assign info = site.data.commands.info[cmd_id] %}
                         <td><tt>{% if info %}<a href="{{ cmd_id }}.html">{{ cmd }}</a>{% else %}<span class="notexisting">{{ cmd }}</span>{% endif %}</tt></td>
                         <td>
                             {{ info.desc | markdownify }}

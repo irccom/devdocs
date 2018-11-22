@@ -1,2 +1,3 @@
-ready:
-  - "ACC"
+info:
+  acc:
+    desc: Lets users register and validate new accounts

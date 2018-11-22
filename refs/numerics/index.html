@@ -62,7 +62,7 @@ nsub: IRC numerics sent by servers
                             {% for num in nums %}
                             <tr{% if info %}{% else %} class="disabled"{% endif %}>
                                 {% assign num_id = num | slugify %}
-                                {% assign info = site.data.numeric-info[num_id] %}
+                                {% assign info = site.data.numerics.info[num_id] %}
                                 <td><tt>{% if info %}<a href="{{ num_id }}.html">{{ num }}</a>{% else %}<span class="notexisting">{{ num }}</span>{% endif %}</tt></td>
                                 <td>
                                     <tt>{% if info %}<a href="{{ num_id }}.html">{{ info.name }}</a>{% endif %}</tt>
@@ -97,7 +97,7 @@ nsub: IRC numerics sent by servers
                     {% for num in nums %}
                     <tr{% if info %}{% else %} class="disabled"{% endif %}>
                         {% assign num_id = num | slugify %}
-                        {% assign info = site.data.numeric-info[num_id] %}
+                        {% assign info = site.data.numerics.info[num_id] %}
                         <td><tt>{% if info %}<a href="{{ num_id }}.html">{{ num }}</a>{% else %}<span class="notexisting">{{ num }}</span>{% endif %}</tt></td>
                         <td>
                             <tt>{% if info %}<a href="{{ num_id }}.html">{{ info.name }}</a>{% endif %}</tt>
@@ -131,7 +131,7 @@ nsub: IRC numerics sent by servers
                     {% for num in nums %}
                     <tr{% if info %}{% else %} class="disabled"{% endif %}>
                         {% assign num_id = num | slugify %}
-                        {% assign info = site.data.numeric-info[num_id] %}
+                        {% assign info = site.data.numerics.info[num_id] %}
                         <td><tt>{% if info %}<a href="{{ num_id }}.html">{{ num }}</a>{% else %}<span class="notexisting">{{ num }}</span>{% endif %}</tt></td>
                         <td>
                             <tt>{% if info %}<a href="{{ num_id }}.html">{{ info.name }}</a>{% endif %}</tt>

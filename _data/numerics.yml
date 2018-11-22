@@ -1,5 +1,16 @@
-ready:
-  - "001"
+info:
+  "001":
+    name: RPL_WELCOME
+    desc: Introduces users to the network
+  "002":
+    name: RPL_YOURHOST
+    desc: Tells users about the server they're connecting to
+  "003":
+    name: RPL_CREATED
+    desc: Tells users when the server was started
+  "004":
+    name: RPL_MYINFO
+    desc: Gives the users mode letter information
 
 names:
   "001": RPL_WELCOME

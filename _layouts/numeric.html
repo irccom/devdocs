@@ -38,7 +38,7 @@ layout: short-header-num
             {% for num in nums %}
                 {% if num == page.numeric %}
                     <li><code class="nocolor">{{ site.data.numerics.names[num] }} ({{ num }})</code></li>
-                {% elsif site.data.numerics.ready[num] %}
+                {% elsif site.data.numerics.info[num] %}
                     <li><a class="sidebar-page-link" href="{{ num | slugify }}.html"><code class="nocolor">{{ site.data.numerics.names[num] }} ({{ num }})</code></a></li>
                 {% else %}
                     <li><code class="nocolor grey">{{ site.data.numerics.names[num] }} ({{ num }})</code></li>

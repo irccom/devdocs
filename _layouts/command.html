@@ -38,7 +38,7 @@ layout: short-header-cmd
             {% for cmd in cmds %}
                 {% if cmd == page.command %}
                     <li><code class="nocolor">{{ cmd }}</code></li>
-                {% elsif site.data.commands.ready[num] %}
+                {% elsif site.data.commands.info[num] %}
                     <li><a class="sidebar-page-link" href="{{ cmd | slugify }}.html"><code class="nocolor">{{ cmd }}</code></a></li>
                 {% else %}
                     <li><code class="nocolor grey">{{ cmd }}</code></li>
