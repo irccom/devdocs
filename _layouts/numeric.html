@@ -7,7 +7,7 @@ layout: short-header-num
             <ul>
                 <li><a href="{{ site.baseurl | relative_url }}">IRC Technology</a> &gt;</li>
                 <li><a href="{{ '/refs/numerics' | relative_url }}">Numerics</a> &gt;</li>
-                <li class="breadcrumb-block" style="display: block; todo: 'move this to css'"><b><tt>{{ site.data.numerics.names[page.numeric] }} ({{ page.numeric }})</tt></b></li>
+                <li class="breadcrumb-block" style="display: block; todo: 'move this to css'"><code class="nocolor">{{ site.data.numerics.names[page.numeric] }} ({{ page.numeric }})</code></li>
             </ul>
         </div>
         {% if page.related-numerics %}
@@ -15,7 +15,7 @@ layout: short-header-num
         <div class="dropdown-list-container active">
             <p class="title">Related numerics:</p>
             {% for num in page.related-numerics %}
-                <li><a class="sidebar-page-link" href="{{ num | slugify }}.html"><code>{{ site.data.numerics.names[num] }} ({{ num }})</code></a></li>
+                <li><a class="sidebar-page-link" href="{{ num | slugify }}.html"><code class="nocolor">{{ site.data.numerics.names[num] }} ({{ num }})</code></a></li>
             {% endfor %}
         </div>
         {% endif %}
@@ -37,26 +37,18 @@ layout: short-header-num
             <ul>
             {% for num in nums %}
                 {% if num == page.numeric %}
-                    <li><tt>{{ site.data.numerics.names[num] }} ({{ num }})</tt></li>
+                    <li><code class="nocolor">{{ site.data.numerics.names[num] }} ({{ num }})</code></li>
+                {% elsif site.data.numerics.ready[num] %}
+                    <li><a class="sidebar-page-link" href="{{ num | slugify }}.html"><code class="nocolor">{{ site.data.numerics.names[num] }} ({{ num }})</code></a></li>
                 {% else %}
-                    <li><a class="sidebar-page-link" href="{{ num | slugify }}.html"><code>{{ site.data.numerics.names[num] }} ({{ num }})</code></a></li>
+                    <li><code class="nocolor grey">{{ site.data.numerics.names[num] }} ({{ num }})</code></li>
                 {% endif %}
             {% endfor %}
-        </ul>
+            </ul>
         </div>
         {% endif %}
         {% endif %}
         {% endfor %}
-        <hr>
-        <div class="dropdown-list-container">
-            <p class="title">Nickname:</p>
-            <ul></ul>
-        </div>
-        <hr>
-        <div class="dropdown-list-container">
-            <p class="title">Authentication:</p>
-            <ul></ul>
-        </div>
     </div>
     <div class="col-sm-9 col-xs-12 main-content">
         <div class="content docs">

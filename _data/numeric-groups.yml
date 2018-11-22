@@ -6,3 +6,7 @@ groups:
     name: Welcome Burst
     description: |
       These commands are sent after a user successfully connects to the network.
+  nickname:
+    name: Nickname
+  accounts:
+    name: Account

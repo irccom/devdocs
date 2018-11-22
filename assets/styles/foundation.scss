@@ -529,6 +529,19 @@ header .logo:hover .logospecific {
 }
 
 
+code.nocolor {
+    color: inherit;
+    &.grey {
+        color: #888;
+    }
+}
+
+.page-content .main-content .content hr {
+    background: $brandPrimaryHover;
+    margin: 2.5em 0;
+    border-radius: 0.5em;
+}
+
 
 @media screen and (max-width: 1198px){
     .foundation_home .call-to-action-block .content p{

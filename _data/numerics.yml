@@ -1,3 +1,6 @@
+ready:
+  - "001"
+
 names:
   "001": RPL_WELCOME
   "002": RPL_YOURHOST

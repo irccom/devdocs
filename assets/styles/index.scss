@@ -931,10 +931,9 @@ header {
             padding: 5px 10px;
         }
         pre {
-            // height: 150px; //(dan): same as below with .example's forced min-height. if this should be a max-height with an overflow-y: scroll though then I can see it
-            max-height: 150px; //(dan): do what I think the height above was trying to do in a better way
-            overflow-y: scroll; //(dan): ^
-            overflow-x: scroll;
+            max-height: 150px;
+            overflow-y: auto;
+            overflow-x: auto; //(dan): auto so scrollbars don't exist all the time
             border-radius: 2px;
             min-height: 0px;
             line-height: 1.4em;
