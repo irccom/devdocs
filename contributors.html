@@ -1,0 +1,52 @@
+---
+title: Developer Docs Contributors
+layout: short-header
+ntitle: Contributors
+nsub: The authors and maintainers of our developer documentation
+---
+<div class="row">
+    <div class="col-sm-3 col-xs-12 sidebar">
+        <div class="docs-list-sidebar">
+            <h4><a href="#maintainers">Maintainers</a></h4>
+            <h4><a href="#contributors">Contributors</a></h4>
+        </div>
+    </div>
+    <div class="col-sm-9 col-xs-12 main-content">
+        <div class="docs-list-content content">
+            <h2><div class="docs-list-linker" id="maintainers"></div><a href="#maintainers">Maintainers</a></h2>
+            {% for c in site.data.contributors.people %}{% if c[1].maintainer %}
+                <h3><div class="docs-list-linker" id="{{ c[0] | slugify }}"></div><a href="#{{ c[0] | slugify }}">{{ c[1].name }}</a></h3>
+                {% if c[1].tagline or c[1].orgs %}
+                    <div class="contributors-tags">
+                        {% if c[1].tagline %}
+                            {{ c[1].tagline }}
+                        {% endif %}
+                        {% if c[1].tagline and c[1].orgs %}<span class="contributors-slash">/</span>{% endif %}
+                        {% for org in c[1].orgs %}
+                            {% if forloop.first %}{% else %}<span class="contributors-slash">/</span>{% endif %}
+                            <a href="{{ site.data.contributors.orgs[org].link }}">{{ site.data.contributors.orgs[org].name }}</a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                <div class="contributors-links">
+                    {% if c[1].twitter %}
+                        <a href="https://twitter.com/{{ c[1].twitter }}"><i class="fab fa-twitter"></i> Twitter</a>
+                    {% endif %}
+                    {% if c[1].github %}
+                        <a href="https://github.com/{{ c[1].github }}"><i class="fab fa-github"></i> GitHub</a>
+                    {% endif %}
+                    {% if c[1].email %}
+                        <a href="mailto:{{ c[1].email }}"><i class="fas fa-envelope"></i> Email</a>
+                    {% endif %}
+                    {% if c[1].nick %}
+                        <a class="irc-nick" href=""><i class="fas fa-hashtag"></i> {{ c[1].nick }}</a>
+                    {% endif %}
+                </div>
+            {% endif %}{% endfor %}
+
+            <hr>
+
+            <h2><div class="docs-list-linker" id="contributors"></div><a href="#contributors">Contributors</a></h2>
+        </div>
+    </div>
+</div>

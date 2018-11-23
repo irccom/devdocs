@@ -5,7 +5,7 @@ layout: short-header-cmd
     <div class="col-sm-3 col-xs-12 sidebar">
         <div class="breadcrumbs">
             <ul>
-                <li><a href="{{ site.baseurl | relative_url }}">IRC Technology</a> &gt;</li>
+                <li><a href="{{ '/refs' | relative_url }}">IRC Technology</a> &gt;</li>
                 <li><a href="{{ '/refs/commands' | relative_url }}">Commands</a> &gt;</li>
                 <li class="breadcrumb-block" style="display: block; todo: 'move this to css'"><b><code class="nocolor">{{ page.command }}</code></b></li>
             </ul>
@@ -131,6 +131,19 @@ layout: short-header-cmd
                 {% endfor %}
             {% endfor %}
             </ul>
+
+            <hr>
+            {% if page.contributors %}
+            <div class="contributors">
+                Contributors to this page:
+                {% for c in page.contributors %}
+                    <a href="{{ '/contributors' | relative_url }}#{{ c | slugify }}">{{ site.data.contributors.people[c].name }}</a>{% if forloop.last %}{% else %},{% endif %}
+                {% endfor %}
+            </div>
+            {% endif %}
+            <p>
+                You can edit and contribute changes to this page on GitHub <a href="{{ site.ghrepo }}{{ page.path }}">here</a>.
+            </p>
     </div>
     </div>
 </div>

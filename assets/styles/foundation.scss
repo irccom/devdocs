@@ -517,6 +517,31 @@ ol.breadcrumb {
     margin-top: -0.5em;
 }
 
+.contributors-tags {
+    font-size: 1.2em;
+    margin-top: -0.2em;
+    font-weight: 300;
+}
+.contributors-tags, .contributors-links {
+    padding-bottom: 0.3em;
+    .contributors-slash {
+        opacity: 0.3;
+    }
+    a + a {
+        padding-left: 0.75em;
+    }
+    .irc-nick {
+        color: #333;
+        .fas {
+            color: #bbb;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+        cursor: default;
+    }
+}
+
 //Reusebale Components
 .main-content .video-container .content{
     background: #f7f7f7;

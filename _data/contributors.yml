@@ -1,3 +1,36 @@
-doaks:
-  - name: Daniel Oaks
+people:
+  doaks:
+    name: Daniel Oaks
     github: DanielOaks
+    twitter: Daniel_Oaks
+    email: daniel@danieloaks.net
+    tagline: Lead protocol docs maintainer
+    nick: dan-
+    orgs:
+      - irccom
+      - ircdocs
+      - oragono
+    maintainer: true
+
+  prawnsalad:
+    name: Darren
+    github: prawnsalad
+    nick: prawnsalad
+    orgs:
+      - irccom
+      - kiwiirc
+    maintainer: true
+
+orgs:
+  irccom:
+    name: IRC.com
+    link: https://irc.com/
+  kiwiirc:
+    name: Kiwi IRC
+    link: https://kiwiirc.com/
+  ircdocs:
+    name: ircdocs
+    link: https://ircdocs.horse/
+  oragono:
+    name: Oragono
+    link: https://oragono.io/
