@@ -10,7 +10,7 @@ info:
     desc: Tells users when the server was started
   "004":
     name: RPL_MYINFO
-    desc: Gives the users mode letter information
+    desc: Gives users mode letter information
 
 names:
   "001": RPL_WELCOME

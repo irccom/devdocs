@@ -501,6 +501,18 @@ ol.breadcrumb {
     }
 }
 
+.page-content .main-content .content {
+    li, p {
+        code, tt {
+            font-size: 0.9em;
+        }
+    }
+    p a code {
+        margin: 0;
+        display: inline;
+    }
+}
+
 .example-desc {
     margin-top: -0.5em;
 }
