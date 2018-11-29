@@ -1,11 +1,16 @@
 index-order:
   - welcome
+  - motd
 
 groups:
   welcome:
     name: Welcome Burst
     description: |
-      These commands are sent after a user successfully connects to the network.
+      These numerics are sent after a user successfully connects to the network.
+  motd:
+    name: Message of the Day
+    description: |
+      These numerics send the current Message of the Day (MOTD) to users.
   nickname:
     name: Nickname
   accounts:
