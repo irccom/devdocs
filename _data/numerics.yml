@@ -11,6 +11,18 @@ info:
   "004":
     name: RPL_MYINFO
     desc: Gives users mode letter information
+  "372":
+    name: RPL_MOTD
+    desc: Shows users the server's Message of the Day
+  "375":
+    name: RPL_MOTDSTART
+    desc: Introduces the server's Message of the Day
+  "376":
+    name: RPL_ENDOFMOTD
+    desc: Finishes the server's Message of the Day
+  "422":
+    name: ERR_NOMOTD
+    desc: Indicates that no Message of the Day exists
 
 names:
   "001": RPL_WELCOME
