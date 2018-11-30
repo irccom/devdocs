@@ -1,6 +1,7 @@
 index-order:
   - welcome
   - motd
+  - oper
 
 groups:
   welcome:
@@ -11,6 +12,10 @@ groups:
     name: Message of the Day
     description: |
       These numerics send the current Message of the Day (MOTD) to users.
+  oper:
+    name: Operator
+    description: |
+      These numerics are sent specifically to IRC operators and those opering-up.
   nickname:
     name: Nickname
   accounts:

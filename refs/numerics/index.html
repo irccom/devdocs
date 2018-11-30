@@ -30,10 +30,10 @@ nsub: IRC numerics sent by servers
             {% endfor %}
             {% assign nums = nums | sort %}
             {% if nums.size > 0 %}
-                <p><a href="#others">Others</a></p>
+                <!-- <p><a href="#others">Others</a></p> -->
             {% endif %}
 
-            <h4><a href="#full-list">Full List</a></h4>
+            <!-- <h4><a href="#full-list">Full List</a></h4> -->
         </div>
     </div>
     <div class="col-sm-9 col-xs-12 main-content">
@@ -62,13 +62,13 @@ nsub: IRC numerics sent by servers
                             {% for num in nums %}
                             <tr{% if info %}{% else %} class="disabled"{% endif %}>
                                 {% assign num_id = num | slugify %}
-                                {% assign info = site.data.numerics.info[num_id] %}
-                                <td><tt>{% if info %}<a href="{{ num_id }}.html">{{ num }}</a>{% else %}<span class="notexisting">{{ num }}</span>{% endif %}</tt></td>
+                                {% assign ninfo = site.data.numerics.info[num_id] %}
+                                <td><tt>{% if ninfo %}<a href="{{ num_id }}.html">{{ num }}</a>{% else %}<span class="notexisting">{{ num }}</span>{% endif %}</tt></td>
                                 <td>
-                                    <tt>{% if info %}<a href="{{ num_id }}.html">{{ info.name }}</a>{% endif %}</tt>
+                                    <tt>{% if ninfo %}<a href="{{ num_id }}.html">{{ site.data.numerics.names[num_id] }}</a>{% else %}<span class="notexisting">{{ site.data.numerics.names[num_id] }}</span>{% endif %}</tt>
                                 </td>
                                 <td>
-                                    {{ info.desc | markdownify }}
+                                    {{ ninfo.desc | markdownify }}
                                 </td>
                             </tr>
                             {% endfor %}
@@ -77,7 +77,7 @@ nsub: IRC numerics sent by servers
                 {% endif %}
             {% endfor %}
 
-            <!--{% assign nums = "" | split: "" %}
+            <!--{% if false %}{% assign nums = "" | split: "" %}
             {% for p in site.pages %}
                 {% if p.layout == "numeric" %}{% if p.numeric-groups %}{% else %}
                     {% assign nums = nums | push: p.numeric %}
@@ -108,9 +108,9 @@ nsub: IRC numerics sent by servers
                     </tr>
                     {% endfor %}
                 </table>
-            {% endif %}-->
+            {% endif %}{% endif %}-->
 
-            <hr>
+            <!--{% if false %} <hr>
             <h2><div class="docs-list-linker" id="full-list"></div><a href="#full-list">Full Numeric List</a></h2>
             <p>All the numerics we have documentation for.</p>
 
@@ -142,7 +142,7 @@ nsub: IRC numerics sent by servers
                     </tr>
                     {% endfor %}
                 </table>
-            {% endif %}
+            {% endif %} {% endif %}-->
         </div>
     </div>
 </div>

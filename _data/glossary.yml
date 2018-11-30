@@ -1,23 +1,40 @@
-terms:
+# people who have contributed to the glossary definitions written here
+contributors:
+  - doaks
+
+# general IRC terms
+irc-terms:
   "Operator":
     description: |
-      This term can refer to either a <a href="#server-operator">Server Operator</a> or a <a href="#channel-operator">Channel Operator</a>. Knowing those two terms helps figure out which is being used with context.
+      This term can refer to either an <a href="#irc-operator">IRC Operator</a> or a <a href="#channel-operator">Channel Operator</a>. Knowing those two terms helps figure out which is being used with context.
 
   "Oper":
     description: |
-      Short for <a href="#operator">Operator</a>, but typically means <a href="#server-operator">Server Operator</a> on its own because of the <a href="../commands/oper"><tt>OPER</tt></a> command.
+      Short for <a href="#operator">Operator</a>, but typically means an <a href="#irc-operator">IRC Operator</a> on its own because of the <a href="../commands/oper"><tt>OPER</tt></a> command.
 
-  "Server Operator":
-    preferred: true
+  "IRC Operator":
     description: |
-      User who administrates one or more servers on an IRC network.
+      User who administrates one or more servers on an IRC network. May also be referred to as a "Network Operator" or "Server Operator".
+  
+  "Server Operator":
+    description: |
+      Another name for an <a href="#irc-operator">IRC Operator</a>, but typically refers to a user who's in charge of one specific server on the network.
+
+  "Network Operator":
+    description: |
+      Another name for an <a href="#irc-operator">IRC Operator</a>, but typically refers to a user who does administrates across the network, on multiple servers. Sometimes also called a NetAdmin or "Network Admin".
 
   "Channel Operator":
-    preferred: true
     description: |
       User who administrates a <a href="#channel">channel</a>.
 
   "Channel":
-    preferred: true
     description: |
       Room where one or more users can talk with each other.
+  
+  "Oper-up":
+    description: |
+      When a regular user authenticates and becomes an <a href="#irc-operator">IRC Operator</a>, they have 'opered-up'. Sometimes also called "opering", or "opering-up".
+
+# terms used in irc software development
+ircdev-terms:

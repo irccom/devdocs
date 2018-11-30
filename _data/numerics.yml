@@ -1,28 +1,28 @@
 info:
   "001":
-    name: RPL_WELCOME
     desc: Introduces users to the network
   "002":
-    name: RPL_YOURHOST
     desc: Tells users about the server they're connecting to
   "003":
-    name: RPL_CREATED
     desc: Tells users when the server was started
   "004":
-    name: RPL_MYINFO
     desc: Gives users mode letter information
   "372":
-    name: RPL_MOTD
     desc: Shows users the server's Message of the Day
   "375":
-    name: RPL_MOTDSTART
     desc: Introduces the server's Message of the Day
   "376":
-    name: RPL_ENDOFMOTD
     desc: Finishes the server's Message of the Day
+  "381":
+    desc: Lets users know they have opered-up successfully
   "422":
-    name: ERR_NOMOTD
     desc: Indicates that no Message of the Day exists
+  "481":
+    desc: Indicates an attempted action can only be performed by opers
+  "491":
+    desc: Indicates an oper-up attempt was unsuccessful
+  "723":
+    desc: Indicates an attempted action can only be performed by specific opers
 
 names:
   "001": RPL_WELCOME
