@@ -4,11 +4,6 @@
 $brandPrimary: #203342;
 $brandPrimaryHover: #365165;
 
-
-header {
-    background-color: $brandPrimary;
-}
-
 .intro-container {
     background: $brandPrimary;
     .intro-container-content {
@@ -299,7 +294,6 @@ header .logo:hover .logospecific {
 
 
 footer {
-    background-color: $brandPrimary;
     color: #fff;
 
     ul li a {

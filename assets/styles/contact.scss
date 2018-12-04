@@ -1,0 +1,145 @@
+---
+---
+
+.contact-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    min-height: 300px;
+    .content-title-container {
+        max-width: 550px;
+        margin: 0 auto;
+        h1, h6 {
+            font-weight: 300;
+        }
+        h1 {
+            text-align: center;
+        }
+        h6 {
+            padding-top: 10px;
+            line-height: 145%;
+            max-width: 550px;
+            margin: 0 auto;
+            padding-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            max-width: 485px;
+            width: 90%;
+        }
+        .response-time-blurb {
+            font-size: 12px;
+            text-align: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+    .content-form-container {
+        max-width: 550px;
+        width: 90%;
+        margin: 0 auto;
+        form {
+            border: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+        div {
+            margin-bottom: 60px;
+        }
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+            appearance: none;
+            /* remove default arrow */
+            background: url("../../assets/images/caret-down-solid.svg") (96% / 5%) no-repeat;
+            /* add custom arrow */
+            &::-ms-expand {
+            display: none;
+            /* remove default arrow in IE 10 and 11 */
+            }
+        }
+        .multiple-text-inputs {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            input {
+                &:nth-child(1), &:nth-child(2) {
+                    margin-right: 20px;
+                }
+            }
+        }
+        input {
+            &[type="text"], &[type="email"] {
+                border: 0;
+                border-bottom: 1px solid black;
+                border-radius: 0;
+                font-weight: 300;
+                font-size: 16px !important;
+            }
+        }
+        textarea, select {
+            border: 0;
+            border-bottom: 1px solid black;
+            border-radius: 0;
+            font-weight: 300;
+            font-size: 16px !important;
+        }
+        label h6 {
+            font-weight: 300;
+        }
+        textarea {
+            width: 100%;
+            height: 100%;
+            min-height: 70px;
+        }
+        input[type="submit"] {
+            background-color: #fff;
+            border: 1px solid black;
+            cursor: pointer;
+            width: 150px;
+            height: 30px;
+        }
+        }
+    }
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width: 0\0) {
+    select {
+        background: none\9;
+        padding: 5px\9;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .content-form-container {
+        max-width: 100% !important;
+        form {
+        display: flex;
+        flex-direction: column !important;
+        }
+    }
+    .multiple-text-inputs {
+        display: flex;
+        flex-direction: column !important;
+    }
+    .content-form-container form div, .multiple-text-inputs input {
+        margin-bottom: 30px;
+    }
+    .contact-container .content-form-container form input[type="submit"] {
+        margin: 0 auto;
+    }
+}
+
+.home-footer {
+min-height: 300px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+h1 {
+    font-weight: 300;
+    text-align: center;
+}
+}

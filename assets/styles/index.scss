@@ -9,7 +9,7 @@ $socialHeaderBG: #203342;
 $socialHeaderColour: #74a8cb;
 
 header, header .header-dropdown-menu, footer, .full-width-page-header {
-    background-color: $comHeaderBG;
+    background-color: #2a3135;
 }
 header .logo-part, header .desktop-nav a:hover {
     color: $comHeaderColour;
@@ -18,9 +18,6 @@ header .logo-part, header .desktop-nav a:hover {
     color: #fff;
 }
 body.index {
-    header, header .header-dropdown-menu, footer, .full-width-page-header {
-        background-color: $socialHeaderBG;
-    }
     header .logo-part, header .desktop-nav a:hover {
         color: $socialHeaderColour;
     }
@@ -29,9 +26,6 @@ body.index {
     }
 }
 body.foundation {
-    header, header .header-dropdown-menu, footer, .full-width-page-header {
-        background-color: $foundationHeaderBG;
-    }
     header .logo-part, header .desktop-nav a:hover {
         color: $foundationHeaderColour;
     }
@@ -158,7 +152,7 @@ header {
     .container {
         display: flex;
         align-items: center;
-        
+
         a.logo {
             flex: 0 0 auto;
             font-size: 1.8em;
@@ -184,6 +178,7 @@ header {
             a {
                 transition: color 0.2s;
                 color: #fff;
+                font-weight: 100;
                 text-decoration: none;
             }
 
@@ -193,6 +188,7 @@ header {
                 font-size: 1.1em;
                 padding: 0.5em 0.4em;
                 user-select: none;
+                font-weight: 100;
                 cursor: pointer;
                 &:last-child {
                     padding-right: 0;
@@ -217,6 +213,10 @@ header {
                             padding-bottom: 0.5em;
                         }
                     }
+                }
+                i {
+                    font-size: 1.2em;
+                    margin-left: 10px;
                 }
             }
             > .dropdown-toggle-custom:hover .header-dropdown-menu {
@@ -254,6 +254,7 @@ header {
             color: rgba(255, 255, 255, 0.8);
             font-size: 1.7em;
             padding: 0.7em 0.575em;
+            margin-right: 15px;
             cursor: pointer;
         }
         .link-container {
@@ -931,9 +932,10 @@ header {
             padding: 5px 10px;
         }
         pre {
-            max-height: 150px;
-            overflow-y: auto;
-            overflow-x: auto; //(dan): auto so scrollbars don't exist all the time
+            // height: 150px; //(dan): same as below with .example's forced min-height. if this should be a max-height with an overflow-y: scroll though then I can see it
+            max-height: 150px; //(dan): do what I think the height above was trying to do in a better way
+            overflow-y: scroll; //(dan): ^
+            overflow-x: scroll;
             border-radius: 2px;
             min-height: 0px;
             line-height: 1.4em;
@@ -945,7 +947,6 @@ header {
             &.example, &.format {
                 // min-height: 100px; //(dan): no reason for this to be the case, particularly if the example _is_ very small. appears to be padding for no reason if the example is e.g. one or two lines
                 padding: 20px 0 20px 30px; //(dan): necessary to indent and display properly
-                margin: 0.1em 0 1em;
             }
             // make format use just the standard colours
             &.format {
@@ -1216,10 +1217,14 @@ header {
 footer {
     text-align: center;
     color: #fff;
-    padding: 1em 0;
+    padding: 1.5em 0 1em 0;
 
     .logo-img {
-        height: 4em;
+        height: 2.3em;
+    }
+
+    p {
+        margin-bottom: 0;
     }
 }
 
@@ -1318,7 +1323,7 @@ footer {
     //     display: flex!important;
     //     max-width: 10em;
     //     margin-left: 0;
-    //     width: 100%;    
+    //     width: 100%;
     //     justify-content: space-between;
     //     flex-direction: row;
     // }

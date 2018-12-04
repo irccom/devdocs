@@ -31,7 +31,96 @@ h1, h2, h3, h4, h5 {
     font-family: inherit;
 }
 
-//Header
+//Home (Stage 1) header
+.home-header-s1 {
+    padding: 1em;
+    padding-top: 160px;
+    width: 100%;
+    min-height: 700px;
+    height: 90vh;
+    background: linear-gradient(120deg, #1F3241, #455E6E 70.71%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .header-max-width {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        .header-content {
+            margin: 0 auto;
+            color: #fff;
+            text-align: center;
+            h3 {
+                font-weight: 200;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                text-transform: uppercase;
+            }
+            .intro-par {
+                font-weight: 200;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                line-height: 24px;
+                font-size: 16px;
+                a {
+                    color: #fff;
+                    text-decoration: underline;
+                    transition: 0.5s;
+                    &:hover {
+                        text-decoration: none;
+                        color: lightgray;
+                        transition: 0.5s;
+                    }
+                }
+            }
+            div {
+                margin-bottom: 40px;
+            }
+            div p {
+                font-weight: 200;
+                text-align: center;
+                margin-top: 0;
+                margin-bottom: 0;
+                line-height: 24px;
+            }
+            div:nth-last-child(2) {
+                margin-bottom: 10px;
+            }
+            div a.view-irc-docs {
+                margin: 0;
+                display: inline-block;
+                text-align: center;
+                padding: 1em 1.5em;
+                color: #fff;
+                border: 1px solid #fff;
+                font-size: 1em;
+                transition: 0.3s;
+                line-height: normal;
+                border-radius: 0.2em;
+                &:hover {
+                    text-decoration: underline;
+                    transition: 0.3s;
+                }
+            }
+            div h6 a {
+                color: #fff;
+                font-weight: 200;
+                font-size: 12px;
+                text-decoration: underline;
+                transition: 0.5s;
+                &:hover {
+                    text-decoration: none;
+                    color: lightgray;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+}
+
+//Home (Stage 2) header
 .home-header {
     padding: 1em;
     width: 100%;
@@ -71,7 +160,6 @@ h1, h2, h3, h4, h5 {
             }
             a.launch-chat {
                 margin: 0;
-                font-weight: 300;
                 background-color: $headerButtonColour;
                 cursor: pointer;
                 display: inline-block;
@@ -328,7 +416,7 @@ h1, h2, h3, h4, h5 {
                             transition: 0.5s;
                             &:active {
                                 box-shadow: inset 0 0 10px #000;
-                            }                            
+                            }
                             &:hover {
                                 color: lightgray;
                                 transition: 0.5s;
@@ -360,7 +448,7 @@ h1, h2, h3, h4, h5 {
                 h1 {
                     font-weight: 300;
                     padding: 0;
-                    margin: 0;   
+                    margin: 0;
                 }
             }
             .app-example-mobile-view {
