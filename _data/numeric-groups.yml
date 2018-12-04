@@ -2,6 +2,7 @@ index-order:
   - welcome
   - motd
   - oper
+  - whois
 
 groups:
   welcome:
@@ -16,6 +17,10 @@ groups:
     name: Operator
     description: |
       These numerics are sent specifically to IRC operators and those opering-up.
+  whois:
+    name: Whois
+    description: |
+      These numerics are sent in response to the WHOIS and/or WHOWAS commands.
   nickname:
     name: Nickname
   accounts:

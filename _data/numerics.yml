@@ -7,6 +7,10 @@ info:
     desc: Tells users when the server was started
   "004":
     desc: Gives users mode letter information
+  "276":
+    desc: Gives the user's TLS client certificate fingerprint
+  "311":
+    desc: Shows the nick, username, hostname, and realname of the given user
   "372":
     desc: Shows users the server's Message of the Day
   "375":

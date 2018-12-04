@@ -30,6 +30,13 @@ Here's the rough breakdown of what's included here:
 - Guides
 
 
+### Future
+Some stuff I want to describe very explicitly in future include:
+
+- Hostname masking/cloaking
+- Virtual Hosts
+
+
 ## Other References
 Here are some other IRC references that devs may find useful:
 
