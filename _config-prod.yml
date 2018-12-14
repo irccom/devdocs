@@ -12,6 +12,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - vendor
 
 compress_html:
   clippings: []
@@ -31,4 +32,6 @@ permalink: none
 highlighter: rouge
 markdown: kramdown
 
+pregit: true  # pre-process to add git file times and commit ids
+ghcommit: "https://github.com/irccom/devdocs/commit/"
 ghrepo: "https://github.com/irccom/devdocs/blob/master/"

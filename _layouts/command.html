@@ -144,6 +144,9 @@ layout: short-header-cmd
             <p>
                 You can edit and contribute changes to this page on GitHub <a href="{{ site.ghrepo }}{{ page.path }}">here</a>.
             </p>
+            {% if site.pregit %}<p>
+                Latest change: <a href="{{ site.ghcommit }}{{ page.commit-id }}">{{ page.commit-date | date_to_long_string }}</a>.
+            </p>{% endif %}
     </div>
     </div>
 </div>

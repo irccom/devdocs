@@ -12,6 +12,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - vendor
 
 compress_html:
   clippings: []
@@ -31,4 +32,5 @@ permalink: none
 highlighter: rouge
 markdown: kramdown
 
+ghcommit: "https://github.com/irccom/devdocs/commit/"
 ghrepo: "https://github.com/irccom/devdocs/blob/master/"

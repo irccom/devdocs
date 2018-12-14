@@ -2,21 +2,36 @@
 ---
 [
     {% assign cmds = "" | split: "" %}
-    {% for p in site.pages %}
+    {% assign nums = "" | split: "" %}
+    {% for p in site.pages %}{% if p.notstarted %}{% else %}
         {% if p.layout == "command" %}
             {% assign cmds = cmds | push: p %}
+        {% elsif p.layout == "numeric" %}
+            {% assign nums = nums | push: p %}
         {% endif %}
-    {% endfor %}
+    {% endif %}{% endfor %}
     {% for cmd in cmds %}
     {
         "relative_url": {{ cmd.url | jsonify }},
-        "title": {{ cmd.title | jsonify }},{% if cmd.index-desc %}
-        "desc": {{ cmd.index-desc | jsonify }},{% endif %}
+        "title": {{ cmd.title | jsonify }},{% assign cmd_id = cmd.command | slugify %}{% assign info = site.data.commands.info[cmd_id] %}{% if info %}
+        "desc": {{ info.desc | jsonify }},{% endif %}
         "tags": [
             "command"{% if 0 < cmd.command-groups.size %},{% endif %}
             {% for group in cmd.command-groups %}{{ group | jsonify }}{% if forloop.last == false %},{% endif %}{% endfor %}
         ],
-        "content": {{ cmd.content | jsonify }}
+        "content": {{ cmd.rawmd | jsonify }}
+    }{% if forloop.last == false %},{% endif %}
+    {% endfor %},
+    {% for num in nums %}
+    {
+        "relative_url": {{ num.url | jsonify }},
+        "title": {{ num.title | jsonify }},{% assign num_id = num.numeric | slugify %}{% assign info = site.data.numerics.info[num_id] %}{% if info %}
+        "desc": {{ info.desc | jsonify }},{% endif %}
+        "tags": [
+            "numeric"{% if 0 < num.command-groups.size %},{% endif %}
+            {% for group in num.command-groups %}{{ group | jsonify }}{% if forloop.last == false %},{% endif %}{% endfor %}
+        ],
+        "content": {{ num.rawmd | jsonify }}
     }{% if forloop.last == false %},{% endif %}
     {% endfor %}
 ]
