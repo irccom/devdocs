@@ -1,11 +1,8 @@
 ---
 ---
 
-$comHeaderBG: #3F8FA4;
 $comHeaderColour: #78d5e4;
-$foundationHeaderBG: #00687f;
 $foundationHeaderColour: #9be3f3;
-$socialHeaderBG: #203342;
 $socialHeaderColour: #74a8cb;
 
 header, header .header-dropdown-menu, footer, .full-width-page-header {
@@ -16,6 +13,7 @@ header .logo-part, header .desktop-nav a:hover {
 }
 .full-width-page-header {
     color: #fff;
+    background: #314157;
 }
 body.index {
     header .logo-part, header .desktop-nav a:hover {
@@ -53,6 +51,7 @@ header, footer {
 #center-content {
     flex: 1 1 auto;
     height: 100%;
+    position: relative;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
@@ -190,6 +189,9 @@ header {
                 user-select: none;
                 font-weight: 100;
                 cursor: pointer;
+                font-size: 0.8em;
+                letter-spacing: 1px;
+                text-transform: uppercase;
                 &:last-child {
                     padding-right: 0;
                 }
@@ -291,9 +293,6 @@ header {
 
 .intro-container {
     display: flex;
-    height: auto;
-    min-height: 80vh;
-    max-height: none;
     position: relative;
     align-items: center;
     text-align: center;
@@ -320,6 +319,8 @@ header {
         h1 {
             margin: 0 0 30px 0;
             font-weight: 100;
+            padding-left: 5px;
+            padding-right: 5px;
             text-transform: uppercase;
         }
         p {
@@ -406,6 +407,7 @@ header {
             input[type="text"]{
                 width: 100%;
                 line-height: 40px;
+                height: 40px;
                 padding: 0 20px;
             }
             &:after {
@@ -873,11 +875,12 @@ header {
             &.active {
                 .title:after{
                     content: "\f0de";
-                    top: 14px;
+                    top: 4px;
                 }
                 ul {
+                    list-style: none;
                     display: block;
-                    padding-left: 20px;
+                    padding-left: 0;
                 }
             }
         }
@@ -1415,7 +1418,7 @@ footer {
 
     /* Docs */
     .full-width-page-header h1 {
-        font-size: 2.2em;
+        font-size: 2em;
     }
     .comptability-table-wrapper {
         overflow-x: scroll;
@@ -1503,6 +1506,10 @@ footer {
 }
 
 @media screen and (max-width: 575px) {
+    .intro-container .intro-container-content h1 {
+        font-size: 2.2em;
+    }
+
     .screenshot-container .screenshot {
         max-width: 180px;
     }

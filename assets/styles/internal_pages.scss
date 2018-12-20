@@ -4,11 +4,10 @@
 // Internal page colour scheme is grey: #dadada
 .title-container {
     background: linear-gradient(120deg, #1F3241, #455E6E 70.71%);
-    height: 340px;
     padding-bottom: 40px;
     padding-top: 70px;
     display: flex;
-    margin-top: 78px;
+    margin-top: 72px;
     justify-content: center;
     flex-direction: column;
     color: #fff;
@@ -28,6 +27,24 @@
         padding-left: 10px;
         padding-right: 10px;
         max-width: 485px;
+    }
+}
+
+.full-height {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@media screen and (max-width: 850px) {
+    .title-container {
+        padding-left: 20px;
+        padding-right: 20px;
+        h1 {
+            font-size: 2em;
+        }
     }
 }
 
@@ -69,16 +86,16 @@
     }
 }
 
-//Newsletter sign up
+// Newsletter sign up
 .newsletter-container {
     min-height: 350px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #1B2833;
     color: #fff;
     div {
-        min-width: 500px;
         margin: 0 auto;
         h4 {
             font-weight: 100;
@@ -131,19 +148,27 @@
 
 @media screen and (max-width: 850px) {
     .newsletter-container div {
-        min-width: 200px !important;
+        min-width: 300px !important;
         form {
-        width: 90%;
-        margin: 0 auto !important;
-        margin-top: 30px !important;
-        input {
-            &:first-child {
-            padding-right: 5px;
-            }
-            &:nth-child(2) {
-            min-width: 120px !important;
+            margin-bottom: 30px;
+            margin-top: 30px!important;
+            width: 90%;
+            margin: 0 auto!important;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            border-bottom: 0;
+            input {
+                display: block;
+                padding: 5px;
+                margin: 5px auto;
+                border-bottom: 1px solid #fff;
+                width: 90%;
             }
         }
+        h6, h4 {
+            width: 200px !important;
+            margin: 0 auto;
         }
     }
 }
@@ -163,12 +188,6 @@
             margin-top: 1.05em;
         }
     }
-    // h5 {
-    //     font-size: 1.2em;
-    //     margin-top: 1em;
-    //     margin-bottom: 0.35em;
-    //     font-weight: 300;
-    // }
     p {
         line-height: 1.4;
         margin: 0;

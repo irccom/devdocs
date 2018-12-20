@@ -1,9 +1,6 @@
 ---
 ---
 
-$heroImageDarker: #1F3241;
-$heroImageLighter: #455E6E;
-
 $headerButtonColour: #8AC60F;
 
 $iconColour: #CCE0F1;
@@ -20,7 +17,6 @@ $boxShadow: #A9A9A9;
 $actionButton: #88A6CF;
 
 $newsletterBackground: #1B2833;
-$newsletterFormBackground: #696969;
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -36,14 +32,14 @@ h1, h2, h3, h4, h5 {
     padding: 1em;
     padding-top: 160px;
     width: 100%;
-    min-height: 700px;
-    height: 90vh;
+    min-height: 90vh;
+    height: 100%;
     background: linear-gradient(120deg, #1F3241, #455E6E 70.71%);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     .header-max-width {
-        max-width: 600px;
+        width: 600px;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
@@ -125,7 +121,8 @@ h1, h2, h3, h4, h5 {
     padding: 1em;
     width: 100%;
     position: relative;
-    min-height: 600px;
+    min-height: 90vh;
+    height: 100%;
     background: linear-gradient(120deg, #1F3241, #455E6E 70.71%);
     display: flex;
     flex-direction: column;
@@ -139,7 +136,7 @@ h1, h2, h3, h4, h5 {
         z-index: 4;
         .header-content {
             width: 50%;
-            min-width: 450px;
+            min-width: 300px;
             color: #fff;
             h2 {
                 font-weight: 300;
@@ -212,6 +209,9 @@ h1, h2, h3, h4, h5 {
 }
 
 @media screen and (max-width: 1300px) {
+    .header-max-width {
+        width: 500px!important;
+    }
     .header-desktop-image {
         border-width: 13px!important;
         bottom: -13px!important;
@@ -246,6 +246,9 @@ h1, h2, h3, h4, h5 {
 }
 
 @media screen and (max-width: 850px) {
+    .header-max-width {
+        width: 200px!important;
+    }
     .header-desktop-image {
         right: -230px!important;
     }
@@ -534,7 +537,7 @@ h1, h2, h3, h4, h5 {
     background-color: $newsletterBackground;
     color: #fff;
     div {
-        min-width: 400px;
+        min-width: 250px;
         margin: 0 auto;
         h1, h6 {
             font-weight: 300;
