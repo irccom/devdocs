@@ -30,10 +30,10 @@ nsub: IRC commands supported by servers
             {% endfor %}
             {% assign cmds = cmds | sort %}
             {% if cmds.size > 0 %}
-                <p><a href="#others">Others</a></p>
+                <!-- <p><a href="#others">Others</a></p> -->
             {% endif %}
 
-            <h4><a href="#full-list">Full List</a></h4>
+            <!-- <h4><a href="#full-list">Full List</a></h4> -->
         </div>
     </div>
     <div class="col-sm-9 col-xs-12 main-content">
@@ -73,7 +73,7 @@ nsub: IRC commands supported by servers
                 {% endif %}
             {% endfor %}
 
-            <!--{% assign cmds = "" | split: "" %}
+            <!--{% if false %}{% assign cmds = "" | split: "" %}
             {% for p in site.pages %}
                 {% if p.layout == "command" %}{% if p.command-groups %}{% else %}
                     {% assign cmds = cmds | push: p.command %}
@@ -100,9 +100,9 @@ nsub: IRC commands supported by servers
                     </tr>
                     {% endfor %}
                 </table>
-            {% endif %}-->
+            {% endif %}{% endif %}-->
 
-            <hr>
+            <!--{% if false %}<hr>
             <h2><div class="docs-list-linker" id="full-list"></div><a href="#full-list">Full Command List</a></h2>
             <p>All the commands we have documentation for, listed alphabetically.</p>
 
@@ -131,6 +131,7 @@ nsub: IRC commands supported by servers
                     {% endfor %}
                 </table>
             {% endif %}
+            {% endif %}-->
         </div>
     </div>
 </div>

@@ -6,5 +6,5 @@ notstarted: true
 
 command: USER
 command-groups:
-    - connection
+    - welcome
 ---

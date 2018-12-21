@@ -1,14 +1,32 @@
 index-order:
-  - connection
-  - account
+  - welcome
+  - motd
+  - services
+  - help
+  - channels
 
 groups:
-  account:
-    name: User Accounts
+  welcome:
+    name: Welcome
     description: |
-      These commands lets a user register, authenticate to, and manage their account.
+      These commands let a user connect to (and disconnect from) an IRC network.
+  
+  motd:
+    name: Message of the Day
+    description: |
+      These commands are related to the Message of the Day shown to connecting users.
 
-  connection:
-    name: Connection
+  services:
+    name: Services
     description: |
-      These commands are used when connecting to and disconnecting from IRC.
+      These commands allow users to talk to external network-provided services.
+
+  help:
+    name: Help
+    description: |
+      These commands let users get information about how to use commands and subcommands.
+
+  channels:
+    name: Channels
+    description: |
+      These commands let users join, leave, and administer channels.

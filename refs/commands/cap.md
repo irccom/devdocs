@@ -6,5 +6,5 @@ notstarted: true
 
 command: CAP
 command-groups:
-    - connection
+    - welcome
 ---

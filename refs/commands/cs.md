@@ -1,10 +1,10 @@
 ---
-title: "SAMODE IRC Command"
-ntitle: "SAMODE"
+title: "CS IRC Command"
+ntitle: "CS"
 layout: command
 notstarted: true
 
-command: SAMODE
+command: CS
 command-groups:
     - services
 ---

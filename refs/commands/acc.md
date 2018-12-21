@@ -4,12 +4,13 @@ ntitle: "ACC"
 nsub: "Register and validate new user accounts"
 layout: command
 experimental: true
+notstarted: true
 
 command: ACC
 related-commands:
     - AUTHENTICATE
 command-groups:
-    - account
+    - account-test
 numerics:
     - "920"
     - "927"

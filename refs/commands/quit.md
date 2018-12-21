@@ -6,5 +6,5 @@ notstarted: true
 
 command: QUIT
 command-groups:
-    - connection
+    - welcome
 ---

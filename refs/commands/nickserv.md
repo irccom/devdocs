@@ -8,4 +8,6 @@ notstarted: true
 command: NICKSERV
 command-groups:
     - account
+    - services
+    - help
 ---

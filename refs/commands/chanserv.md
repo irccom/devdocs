@@ -1,11 +1,12 @@
 ---
-title: "SAPART IRC Command"
-ntitle: "SAPART"
+title: "CHANSERV IRC Command"
+ntitle: "CHANSERV"
 layout: command
 notstarted: true
 
-command: SAPART
+command: CHANSERV
 command-groups:
     - channels
     - services
+    - help
 ---

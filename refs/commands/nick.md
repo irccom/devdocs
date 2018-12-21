@@ -6,5 +6,5 @@ notstarted: true
 
 command: NICK
 command-groups:
-    - connection
+    - welcome
 ---

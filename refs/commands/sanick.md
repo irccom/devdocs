@@ -5,4 +5,6 @@ layout: command
 notstarted: true
 
 command: SANICK
+command-groups:
+    - services
 ---

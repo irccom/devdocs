@@ -9,5 +9,6 @@ related-commands:
     - NICKSERV
 command-groups:
     - account
+    - services
 ---
 Short alias for the [`NICKSERV` command](nickserv).

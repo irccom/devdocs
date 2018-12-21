@@ -9,5 +9,5 @@ related-commands:
     - ACC
 command-groups:
     - account
-    - connection
+    - welcome
 ---

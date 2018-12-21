@@ -5,4 +5,6 @@ layout: command
 notstarted: true
 
 command: TOPIC
+command-groups:
+    - channels
 ---

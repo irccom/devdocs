@@ -5,4 +5,7 @@ layout: command
 notstarted: true
 
 command: SAJOIN
+command-groups:
+    - channels
+    - services
 ---
