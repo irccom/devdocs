@@ -16,12 +16,14 @@ nsub: Definitions for commonly-used IRC and IRC development terms
         <hr>
         <div class="docs-list-sidebar">
             <h4><a href="#irc">IRC Terms</a></h4>
-            <!-- <h4><a href="#dev">Development Terms</a></h4> -->
+            <h4><a href="#dev">Development Terms</a></h4>
         </div>
     </div>
     <div class="col-sm-9 col-xs-12 main-content">
         <div class="content docs">
-                <h2><div id="irc" class="header-link-expander"></div><a href="#irc" class="internal-link">IRC Terms<i class="fas fa-link"></i></a></h2>
+            <h2><div id="irc" class="header-link-expander"></div><a href="#irc" class="internal-link">IRC Terms<i class="fas fa-link"></i></a></h2>
+
+            <p>You can expect to see these terms on this site, while browsing other IRC documentation, and while discussing IRC generally.</p>
 
             {% assign terms = "" | split: "" %}
             {% for t in site.data.glossary.irc-terms %}
@@ -35,9 +37,23 @@ nsub: Definitions for commonly-used IRC and IRC development terms
                 {{ tinfo.description | markdownify }}
             {% endfor %}
 
-            <!-- <hr>
+            <hr>
 
-            <h2><div id="dev" class="header-link-expander"></div><a href="#dev" class="internal-link">Development Terms<i class="fas fa-link"></i></a></h2> -->
+            <h2><div id="dev" class="header-link-expander"></div><a href="#dev" class="internal-link">Development Terms<i class="fas fa-link"></i></a></h2>
+
+            <p>These terms are more specifically terms you'd hear while discussing IRC development, or specific areas of IRC dev. In addition, the terms here may be ones which we coin (with some precedence) to keep our own docs consistent.</p>
+
+            {% assign terms = "" | split: "" %}
+            {% for t in site.data.glossary.irc-dev-terms %}
+                {% assign terms = terms | push: t[0] %}
+            {% endfor %}
+            {% assign terms = terms | sort %}
+
+            {% for term in terms %}
+                {% assign tinfo = site.data.glossary.irc-dev-terms[term] %}
+                <h3><div id="{{ term | slugify }}" class="header-link-expander"></div><a href="#{{ term | slugify }}" class="internal-link">{{ term }}<i class="fas fa-link"></i></a></h3>
+                {{ tinfo.description | markdownify }}
+            {% endfor %}
 
             <hr>
             {% if site.data.glossary.contributors %}

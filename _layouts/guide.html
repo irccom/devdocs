@@ -42,7 +42,7 @@ layout: short-header
         <hr>
             <p class="title">Related Guides:</p>
             {% for guide in page.related-guides %}
-            <a class="sidebar-page-link" href="{{ guide[0] | slugify }}.html">{{ guide[1] }}</a>
+            <a class="sidebar-page-link" href="{{ guide[0] | slugify }}">{{ guide[1] }}</a>
             {% endfor %}
         {% endif %}
         <hr>

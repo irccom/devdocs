@@ -15,7 +15,7 @@ layout: short-header-num
         <div class="dropdown-list-container active">
             <p class="title">Related numerics:</p>
             {% for num in page.related-numerics %}
-                <li><a class="sidebar-page-link" href="{{ num | slugify }}.html"><code class="nocolor">{{ site.data.numerics.names[num] }} ({{ num }})</code></a></li>
+                <li><a class="sidebar-page-link" href="{{ num | slugify }}"><code class="nocolor">{{ site.data.numerics.names[num] }} ({{ num }})</code></a></li>
             {% endfor %}
         </div>
         {% endif %}
@@ -37,9 +37,9 @@ layout: short-header-num
             <ul>
             {% for num in nums %}
                 {% if num == page.numeric %}
-                    <li><code class="nocolor">{{ site.data.numerics.names[num] }} ({{ num }})</code></li>
+                    <li><b><code class="nocolor">{{ site.data.numerics.names[num] }} ({{ num }})</code></b></li>
                 {% elsif site.data.numerics.info[num] %}
-                    <li><a class="sidebar-page-link" href="{{ num | slugify }}.html"><code class="nocolor">{{ site.data.numerics.names[num] }} ({{ num }})</code></a></li>
+                    <li><a class="sidebar-page-link" href="{{ num | slugify }}"><code class="nocolor">{{ site.data.numerics.names[num] }} ({{ num }})</code></a></li>
                 {% else %}
                     <li><code class="nocolor grey">{{ site.data.numerics.names[num] }} ({{ num }})</code></li>
                 {% endif %}
@@ -64,7 +64,7 @@ layout: short-header-num
             {% endif %}
 
             {% if page.notstarted %}
-            <p>This command is not documented</p>
+            <p>This numeric is not documented</p>
             {% endif %}
 
             {{ content }}

@@ -35,6 +35,26 @@ irc-terms:
   "Oper-up":
     description: |
       When a regular user authenticates and becomes an <a href="#irc-operator">IRC Operator</a>, they have 'opered-up'. Sometimes also called "opering", or "opering-up".
+  
+  "Connection registration":
+    description: |
+      This describes the period from when a user connects, to when the `RPL_WELCOME` `(001)` numeric and burst is sent to them. In other words, it begins when they connect and finishes when they are fully connected to the server and can use all regular commands.
+
+      It should be noted that 'registration' here **does not** refer to IRC account registration (such as through NickServ or SASL). Here, 'registration' means the user setting up their connection and connection details (such as nickname, username, and capabilities) with the server.
+
+      During the connection registration period, most commands cannot be used, and certain commands act differently.
+
+  "Connection registration burst":
+    description: |
+      This 'burst' is sent by the server to a client when that client successfully connects to the network (when they finish connection registration). The connection registration burst includes the `001–005` numerics, a `LUSERS` response, the `RPL_UMODEIS` response if modes are set, any other numerics and responses deemed necessary by the server, and finishes with an `MOTD` response.
+
+  # "Friends":
+  #   description: |
+  #     Server software sometimes has to send messages to all clients that a given user is in channels with. This group of users can be called that client's 'friends'.
+  #     For example, if the `dan` and `jeff` clients are joined to `#chan1`, and `dan` and `tiff` are joined to `#chan2`, then in protocol terms the `jeff` and `tiff` clients are the `dan` client's 'friends'.
 
 # terms used in irc software development
-ircdev-terms:
+irc-dev-terms:
+  "Silent":
+    description: |
+      In command documentation, we use the term 'silent' to mean that the command, if successful, sends no response to the user. For example, the `NICK` command, if used during connection registration, is silent as the command itself sends no response when successful.

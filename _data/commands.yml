@@ -1,3 +1,13 @@
 info:
   acc:
     desc: Lets users register and validate new accounts
+  nick:
+    desc: Lets users set and change their nickname
+  user:
+    desc: Lets users set their username and realname
+  pass:
+    desc: Lets users supply a connection password
+  motd:
+    desc: Lets users see the current Message of the Day
+  addmotd:
+    desc: Lets opers add text to the Message of the Day
