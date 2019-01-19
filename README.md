@@ -35,6 +35,8 @@ Some stuff I want to describe very explicitly in future include:
 
 - Hostname masking/cloaking
 - Virtual Hosts
+- `refs/modes/c/invite-only` and etc, `modes/c` for chan and `modes/u` for user modes, check the `join` command ref for links
+- `refs/isupport/chanlimit` and etc
 
 
 ## Other References

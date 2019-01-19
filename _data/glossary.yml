@@ -47,6 +47,18 @@ irc-terms:
   "Connection registration burst":
     description: |
       This 'burst' is sent by the server to a client when that client successfully connects to the network (when they finish connection registration). The connection registration burst includes the `001–005` numerics, a `LUSERS` response, the `RPL_UMODEIS` response if modes are set, any other numerics and responses deemed necessary by the server, and finishes with an `MOTD` response.
+  
+  "Rank":
+    description: |
+      This refers to how privileged you are in a given channel. For example, having a rank of channel op means that you get the rank prefix `@`. This may also be called prefix, status, and a few other terms depending on who you talk to, but we prefer this term.
+
+  "Halfop":
+    description: |
+      Short for 'half-operator', this is a rank halfway between an unprivlidged user and a <a href="#channel-operator">channel operator</a>, with a mix of privlidges that differs depending on the server software in use.
+
+  # "Prefix":
+  #   description: |
+  #     This can mean either the character before someone's name in a channel (e.g. `@`/`+`), or the first part of the IRC message framing (prefixed by a colon).
 
   # "Friends":
   #   description: |
@@ -57,4 +69,4 @@ irc-terms:
 irc-dev-terms:
   "Silent":
     description: |
-      In command documentation, we use the term 'silent' to mean that the command, if successful, sends no response to the user. For example, the `NICK` command, if used during connection registration, is silent as the command itself sends no response when successful.
+      In command documentation, we use the term 'silent' to mean that the command, if successful, sends no response to the user. For example, the `NICK` command, when used during connection registration, is silent as the command itself sends no response when successful.

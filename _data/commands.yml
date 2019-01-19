@@ -11,3 +11,11 @@ info:
     desc: Lets users see the current Message of the Day
   addmotd:
     desc: Lets opers add text to the Message of the Day
+  join:
+    desc: Lets users join a channel
+  part:
+    desc: Lets users leave a channel
+  kick:
+    desc: Lets users remove someone else from a channel
+  topic:
+    desc: Lets users set or view a channel's topic
