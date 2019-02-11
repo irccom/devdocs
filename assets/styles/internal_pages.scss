@@ -30,20 +30,45 @@
     }
 }
 
-.full-height {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.s1-contact-container {
+    color: #fff;
+    padding: 1em;
+    padding-top: 160px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #1F3241, #455E6E 70.71%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: default;
+    h1, h6 {
+        font-weight: 300;
+        text-align: center;
+    }
+    h6 {
+        padding-top: 10px;
+        line-height: 145%;
+        width: 550px;
+        margin: 0 auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 485px;
+    }
 }
 
 @media screen and (max-width: 850px) {
+    .s1-contact-container h6 {
+        width: 200px;
+    }
     .title-container {
         padding-left: 20px;
         padding-right: 20px;
         h1 {
-            font-size: 2em;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 0;
         }
     }
 }
@@ -174,7 +199,7 @@
 }
 
 // Frequently Asked Questions
-.faq-sidebar {
+.faq-sidebar, .plugin-sidebar {
     font-weight: 300;
     margin-top: 0.37em;
     h4 {
@@ -204,7 +229,7 @@
     }
 }
 
-.faq-content {
+.faq-content, .plugin-content {
     h2, h3 {
         font-weight: 300;
     }

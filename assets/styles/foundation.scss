@@ -54,7 +54,7 @@ header {
 
     .cta-box-content {
         display: block;
-        background: #314157;
+        background: #304656;
         color: #fff;
         padding-bottom: 17px;
         margin: 1.25em 0;
@@ -795,7 +795,9 @@ code.nocolor {
     .docs-homepage-container
     .intro-container
     .subtitle {
-        margin-top: 0!important;
+        margin-top: 10px!important;
+        margin-bottom: 20px !important;
+        line-height: 1.5em;
     }
     .docs-homepage-container {
         height: 100%;

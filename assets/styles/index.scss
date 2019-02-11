@@ -51,7 +51,6 @@ header, footer {
 #center-content {
     flex: 1 1 auto;
     height: 100%;
-    position: relative;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
@@ -409,6 +408,11 @@ header {
                 line-height: 40px;
                 height: 40px;
                 padding: 0 20px;
+                @media screen and (max-width: 850px) {
+                    font-size: 0.7em;
+                    text-align: left;
+                    padding: 0 10px;
+                }
             }
             &:after {
                 content: "\f002";
@@ -1506,10 +1510,10 @@ footer {
 }
 
 @media screen and (max-width: 575px) {
-    .intro-container .intro-container-content h1 {
-        font-size: 2.2em;
+    body.foundation .full-width-page-header {
+        margin-top: 40px;
+        text-align: center;
     }
-
     .screenshot-container .screenshot {
         max-width: 180px;
     }
@@ -1535,7 +1539,7 @@ footer {
     }
     /* Foundation Docs home */
     .intro-container .intro-container-content h1 {
-        font-size: 2em;
+        font-size: 1.5em;
         line-height: normal;
         margin: 0;
     }
