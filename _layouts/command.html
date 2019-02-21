@@ -7,7 +7,7 @@ layout: short-header-cmd
             <ul>
                 <li><a href="{{ '/refs' | relative_url }}">IRC Technology</a> &gt;</li>
                 <li><a href="{{ '/refs/commands' | relative_url }}">Commands</a> &gt;</li>
-                <li class="breadcrumb-block" style="display: block; todo: 'move this to css'"><b><code class="nocolor">{{ page.command }}</code></b></li>
+                <li class="breadcrumb-block" style="display: block; todo: 'move this to css'"><code class="nocolor">{{ page.command }}</code></li>
             </ul>
         </div>
         {% if page.related-commands %}
@@ -38,7 +38,7 @@ layout: short-header-cmd
             {% for cmd in cmds %}
                 {% assign lcmd = cmd | downcase %}
                 {% if cmd == page.command %}
-                    <li><b><code class="nocolor">{{ cmd }}</code></b></li>
+                    <li><code class="nocolor">{{ cmd }}</code></li>
                 {% elsif site.data.commands.info[lcmd] %}
                     <li><a class="sidebar-page-link" href="{{ cmd | slugify }}"><code class="nocolor">{{ cmd }}</code></a></li>
                 {% else %}

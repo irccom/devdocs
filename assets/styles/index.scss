@@ -818,9 +818,9 @@ header {
         min-height: 100%;
 
         p.title{
-            font-weight: 600;
-            margin: 0;
-            font-size: 1.2em;
+            font-size: 1.25em;
+            font-weight: 400;
+            margin: 0 0 3px 0;
         }
 
         .breadcrumbs {
@@ -832,7 +832,7 @@ header {
                     margin: 0 0 5px 0;
                     display: inline-block;
                     list-style: none;
-                    font-weight: 600;
+                    font-weight: 400;
                     a {
                         font-weight: normal;
                         // text-decoration: underline; //(dan): I think the underline here looks very distracting. also, no other link in the sidebar has it (removing the underline makes it match the other links here style-wise)
@@ -860,7 +860,6 @@ header {
             .title {
                 width: 100%;
                 display: block;
-                margin: 0 0 10px 0;
                 padding-right: 30px;
                 position: relative;
                 cursor: pointer;
@@ -880,6 +879,8 @@ header {
                 .title:after{
                     content: "\f0de";
                     top: 4px;
+                    font-weight: 600;
+                    display: none;
                 }
                 ul {
                     list-style: none;
@@ -941,8 +942,8 @@ header {
         pre {
             // height: 150px; //(dan): same as below with .example's forced min-height. if this should be a max-height with an overflow-y: scroll though then I can see it
             max-height: 150px; //(dan): do what I think the height above was trying to do in a better way
-            overflow-y: scroll; //(dan): ^
-            overflow-x: scroll;
+            overflow-y: auto; //(dan): ^
+            overflow-x: auto;
             border-radius: 2px;
             min-height: 0px;
             line-height: 1.4em;

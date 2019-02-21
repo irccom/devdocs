@@ -371,7 +371,7 @@ ol.breadcrumb {
             background: #f1f1f1;
         }
         pre {
-            background-color: $brandPrimary;
+            background-color: #2d4159;
             //(dan): make pre.code because multi-line <code> displays isn't possible otherwise, and I really want that sorta styling
             &.code {
                 background: #f1f1f1;
@@ -631,13 +631,16 @@ ol.breadcrumb {
 }
 
 .docs {
+    p {
+        line-height: 1.8;
+    }
     h2, h3 {
         font-weight: 300;
     }
     h3 {
         font-size: 1.65em;
         margin-top: 0.7em;
-        margin-bottom: 0.3em;
+        margin-bottom: 0.5em;
         color: #3072ba;
         a {
             color: #3072ba;
@@ -661,6 +664,10 @@ ol.breadcrumb {
     li, p {
         code, tt {
             font-size: 0.9em;
+            color: #333;
+            background: none;
+            padding: 0 1px 0 2px;
+            margin: 0;
         }
     }
     p a code {
@@ -714,7 +721,7 @@ pre.format {
 .foundation {
     h1, h2, h3, h4 {
         .internal-link {
-            color: #3072ba;
+            color: #373d44;
             display: block;
             .fa-link {
                 opacity: 0;
@@ -760,9 +767,10 @@ code.nocolor {
 }
 
 .page-content .main-content .content hr {
-    background: $brandPrimaryHover;
-    margin: 2.5em 0;
     border-radius: 0.5em;
+    background: none;
+    border: none;
+    margin: 2em 0 0.5em;
 }
 
 
