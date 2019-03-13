@@ -712,6 +712,48 @@ pre.format {
 }
 
 
+// compat list
+.compatibility-list {
+    display: flex;
+    flex-wrap: wrap;
+    background: #f1f1f1;
+    border-radius: 0.2em;
+    text-align: center;
+    padding: 0 1em 1em;
+    .item {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1px;
+        .name {
+            white-space: nowrap;
+            padding: 0.7em 1.2em;
+            margin-top: 0.2em;
+            font-weight: 500;
+        }
+        .status {
+            padding: 0.5em 0.2em;
+            background: #bdbfc2;
+            color: #fff;
+            transition: background-color 0.08s;
+            &.supported {
+                background: #5ea92f;
+            }
+            &.not-supported {
+                background: #a92f2f;
+            }
+        }
+        &:hover .status {
+            &.supported {
+                background: #519824;
+            }
+            &.not-supported {
+                background: #902020;
+            }
+        }
+    }
+}
+
+
 //Reusebale Components
 .main-content .video-container .content{
     background: #f7f7f7;

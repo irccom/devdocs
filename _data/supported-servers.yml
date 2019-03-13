@@ -3,11 +3,20 @@ shortlist:
     name: Unreal
   - id: inspircd
     name: InspIRCd
-  - id: ircd-seven
-    name: ircd-seven
   - id: charybdis
     name: Charybdis
-  - id: undernetircd
-    name: UndernetIRCd
+  - id: ircd-seven
+    name: ircd-seven
+
   - id: bahamut
     name: Bahamut
+  - id: ratbox
+    name: ircd-ratbox
+  - id: ngircd
+    name: ngIRCd
+  - id: ircu
+    name: ircu
+  - id: ircd-hybrid
+    name: ircd-hybrid
+  - id: ircd
+    name: IRCd
