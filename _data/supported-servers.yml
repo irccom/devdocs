@@ -1,22 +1,74 @@
 shortlist:
   - id: unreal
     name: Unreal
+    url: https://www.unrealircd.org
+    desc: |
+      The most widely-deployed IRC server software today, Unreal implements many new
+      features and also participates in the [IRCv3 Working Group](https://ircv3.net/).
+
   - id: inspircd
     name: InspIRCd
+    url: https://www.inspircd.org
+    desc: |
+      One of the most modular and flexible IRC servers, InspIRCd is heavily involved in the
+      [IRCv3 Working Group](https://ircv3.net/). 
+
   - id: charybdis
     name: Charybdis
+    url: https://github.com/charybdis-ircd/charybdis
+    desc: |
+      Charybdis is a modern, well-used IRC server, implementing many of the
+      [IRCv3](https://ircv3.net/) features and specifications.
+
   - id: ircd-seven
     name: ircd-seven
+    url: https://github.com/freenode/ircd-seven
+    desc: |
+      Being the server software of choice for [freenode](https://freenode.net/), ircd-seven
+      is a reliable server software that implements a few [IRCv3](https://ircv3.net/)
+      features.
+
 
   - id: bahamut
     name: Bahamut
+    url: https://www.dal.net/?page=Bahamut
+    desc: |
+      Being written by and for [DALnet](https://www.dal.net/), Bahamut is a very stable IRC
+      server that doesn't follow [IRCv3](https://ircv3.net/).
+
   - id: ratbox
     name: ircd-ratbox
+    url: https://www.ratbox.org
+    desc: |
+      Being well-used on [EFnet](http://www.efnet.org/), ircd-ratbox is a stable and fast
+      IRC server that doesn't follow [IRCv3](https://ircv3.net/).
+
   - id: ngircd
     name: ngIRCd
+    url: https://ngircd.barton.de
+    desc: |
+      ngIRCd is a lightweight IRC server designed primarily for use in small or private
+      networks.
+
   - id: ircu
-    name: ircu
+    name: ircu2
+    url: http://coder-com.undernet.org
+    desc: |
+      Developed by and for the Undernet community, ircu2 is relatively well-used and does
+      not follow [IRCv3](https://ircv3.net/).
+
   - id: ircd-hybrid
     name: ircd-hybrid
+    url: http://www.ircd-hybrid.org
+    desc: |
+      One of the most widely-used servers for a time, ircd-hybrid helped introduce the very
+      well-used TimeStamp server protocol and implements a few [IRCv3](https://ircv3.net/)
+      features.
+
   - id: ircd
     name: IRCd
+    url: http://www.irc.org/servers.html
+    desc: |
+      The original IRC server, IRCd spawned a number of the servers listed here. Not
+      maintained today and having spawned the (in)famous RFC2812, we list the compatibility
+      of this server mostly for context and interest.

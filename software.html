@@ -1,0 +1,25 @@
+---
+title: IRC Software
+layout: short-header
+ntitle: Software
+nsub: Some of the software that we consider while writing these docs
+---
+<div class="row">
+    <div class="col-sm-3 col-xs-12 sidebar">
+        <div class="docs-list-sidebar">
+            <h4><a href="#servers">Servers</a></h4>
+        </div>
+    </div>
+    <div class="col-sm-9 col-xs-12 main-content">
+        <div class="docs-list-content content">
+            <h2><div class="docs-list-linker" id="servers"></div><a href="#maintainers">Servers</a></h2>
+            {% for server in site.data.supported-servers.shortlist %}
+                <h3><div class="docs-list-linker" id="{{ server.id | slugify }}"></div><a href="#{{ server.id | slugify }}">{{ server.name }}</a></h3>
+                {% if server.desc %}
+                    {{ server.desc | markdownify }}
+                {% endif %}
+                <a href="{{ server.url }}">External link</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

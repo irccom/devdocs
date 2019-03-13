@@ -83,7 +83,7 @@ layout: short-header-num
             <h3><div id="compatibility" class="header-link-expander"></div><a href="#compatibility" class="internal-link">Compatibility<i class="fas fa-link"></i></a></h3>
             <div class="compatibility-list">
                 {% for server in site.data.supported-servers.shortlist %}
-                <div class="item">
+                <a href="{{ '/software' | relative_url }}#{{ server.id | slugify }}" class="item">
                     <div class="name">{{ server.name }}</div>
                     {% if page.used-by[server.id] or page.used-by-default %}
                     <div class="status supported">
@@ -94,7 +94,7 @@ layout: short-header-num
                         <td class="not-supported"><i class="fas fa-times"></i></td>
                     </div>
                     {% endif %}
-                </div>
+                </a>
                 {% endfor %}
             </div>
             <hr>

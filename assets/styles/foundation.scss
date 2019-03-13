@@ -724,11 +724,13 @@ pre.format {
         display: flex;
         flex-direction: column;
         margin-right: 1px;
+        text-decoration: none;
         .name {
             white-space: nowrap;
             padding: 0.7em 1.2em;
             margin-top: 0.2em;
             font-weight: 500;
+            color: #111;
         }
         .status {
             padding: 0.5em 0.2em;
