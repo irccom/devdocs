@@ -26,7 +26,7 @@ examples:
         S <-   :irc.example.com NOTICE dan :*** Wrote () to file: ircd.motd
 
 supported-by:
-    "unreal": true
+    unreal: true
 
 contributors:
     - doaks

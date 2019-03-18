@@ -25,8 +25,7 @@ shortlist:
     url: https://github.com/freenode/ircd-seven
     desc: |
       Being the server software of choice for [freenode](https://freenode.net/), ircd-seven
-      is a reliable server software that implements a few [IRCv3](https://ircv3.net/)
-      features.
+      is a reliable server software that implements some newer standards.
 
 
   - id: bahamut
@@ -34,14 +33,14 @@ shortlist:
     url: https://www.dal.net/?page=Bahamut
     desc: |
       Being written by and for [DALnet](https://www.dal.net/), Bahamut is a very stable IRC
-      server that doesn't follow [IRCv3](https://ircv3.net/).
+      server that doesn't follow newer standards.
 
   - id: ratbox
     name: ircd-ratbox
     url: https://www.ratbox.org
     desc: |
       Being well-used on [EFnet](http://www.efnet.org/), ircd-ratbox is a stable and fast
-      IRC server that doesn't follow [IRCv3](https://ircv3.net/).
+      IRC server that doesn't follow newer standards.
 
   - id: ngircd
     name: ngIRCd
@@ -55,15 +54,14 @@ shortlist:
     url: http://coder-com.undernet.org
     desc: |
       Developed by and for the Undernet community, ircu2 is relatively well-used and does
-      not follow [IRCv3](https://ircv3.net/).
+      not follow newer standards.
 
-  - id: ircd-hybrid
+  - id: hybrid
     name: ircd-hybrid
     url: http://www.ircd-hybrid.org
     desc: |
       One of the most widely-used servers for a time, ircd-hybrid helped introduce the very
-      well-used TimeStamp server protocol and implements a few [IRCv3](https://ircv3.net/)
-      features.
+      widespread TimeStamp server protocol and folows some newer standards.
 
   - id: ircd
     name: IRCd
@@ -71,4 +69,4 @@ shortlist:
     desc: |
       The original IRC server, IRCd spawned a number of the servers listed here. Not
       maintained today and having spawned the (in)famous RFC2812, we list the compatibility
-      of this server mostly for context and interest.
+      of this server mostly for context and historical interest.
