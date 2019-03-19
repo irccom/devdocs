@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>IRC Foundation Documentation</title>
+    <title>IRC Foundation Developer Documentation</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -20,52 +20,44 @@
 <header>
     <div class="container">
         <a href="/" class="logo">
-            <img class="logo-img" src="/assets/irc_logos/irc_white.svg">
+            <img class="logo-img" src="/assets/irc_logos/irc_white.svg" alt="IRC Foundation Logo">
             <span class="logo-text">IRC<span class="logo-part"> Foundation</span></span>
         </a>
 
         <nav class="desktop-nav">
+            <a href="/timeline">Timeline</a>
+            <a href="/lets-take-irc-further">Founding Letter</a>
+            <a href="/faq">FAQ</a>
+            <a href="/">Documentation</a>
             <a href="/foundation/sponsorships">Sponsorships</a>
-            <a href="/foundation/docs">Documentation</a>
-            <div href="#" onclick="document.getElementById('header-about-dropdown-menu').classList.toggle('dropped'); document.getElementById('header-about-dropdown-menu-caret').classList.toggle('fa-caret-down'); document.getElementById('header-about-dropdown-menu-caret').classList.toggle('fa-caret-up')" class="dropdown-toggle-custom">
-                About <i id="header-about-dropdown-menu-caret" class="fas fa-caret-down"></i>
-                <div id="header-about-dropdown-menu" class="header-dropdown-menu">
-                    <a href="/contact">Contact</a>
-                    <a href="/faq">FAQ</a>
-                    <a href="/letter">Letter</a>
-                </div>
-            </div>
         </nav>
 
-        <div class="mobile-nav-button" onclick="document.getElementById('header-mobile-nav').classList.toggle('shown')">
-            <i class="fas fa-bars"></i>
+        <div class="mobile-nav-button" role="button" aria-label="Open mobile nav menu button" onclick="document.getElementById('header-mobile-nav').classList.toggle('shown')">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-    </div>
 
-    <nav id="header-mobile-nav">
-        <div class="close-sidebar" onclick="document.getElementById('header-mobile-nav').classList.toggle('shown')"><i class="fas fa-times"></i></div>
-        <div class="link-container">
-            <a href="/foundation/sponsorships">Funding</a>
-            <a href="/foundation/docs">Documentation</a>
-            <hr>
-            <a href="/contact">Contact</a>
-            <a href="/faq">FAQ</a>
-            <a href="/letter">Letter</a>
-        </div>
-    </nav>
+        <nav id="header-mobile-nav">
+            <div class="close-sidebar" role="button" aria-label="Close mobile nav menu button" onclick="document.getElementById('header-mobile-nav').classList.toggle('shown')"><i class="fas fa-times"></i></div>
+            <div class="link-container">
+                <a href="/timeline">Timeline</a>
+                <a href="/lets-take-irc-further">Founding Letter</a>
+                <a href="/faq">FAQ</a>
+                <a href="/">Documentation</a>
+                <a href="/foundation/sponsorships">Sponsorships</a>
+            </div>
+        </nav>
+    </div>
 </header>
 
 <div id="center-content">
-
-<div class="content">
-
 
     {{ content }}
 
 </div>
 
 <footer>
-    <a href="/"><img class="logo-img" src="/assets/irc_logos/irc_white.svg"></a>
+    <a href="/"><img class="logo-img" src="/assets/irc_logos/irc_white.svg" alt="IRC Foundation Logo"></a>
     <p>&copy; 2018 IRC.com</p>
 </footer>
 </body>
