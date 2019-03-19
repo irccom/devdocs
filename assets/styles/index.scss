@@ -5,13 +5,13 @@ $comHeaderColour: #78d5e4;
 $foundationHeaderColour: #9be3f3;
 $socialHeaderColour: #74a8cb;
 
-header, header .header-dropdown-menu, footer, .full-width-page-header {
+header, header .header-dropdown-menu, footer, .full-width-page-header, .full-width-search-bar {
     background-color: #2a3135;
 }
 header .logo-part, header .desktop-nav a:hover {
     color: $comHeaderColour;
 }
-.full-width-page-header {
+.full-width-page-header, .full-width-search-bar {
     color: #fff;
     background: #314157;
 }
@@ -19,7 +19,7 @@ body.index {
     header .logo-part, header .desktop-nav a:hover {
         color: $socialHeaderColour;
     }
-    .full-width-page-header {
+    .full-width-page-header, .full-width-search-bar {
         color: #fff;
     }
 }
@@ -27,7 +27,7 @@ body.foundation {
     header .logo-part, header .desktop-nav a:hover {
         color: $foundationHeaderColour;
     }
-    .full-width-page-header {
+    .full-width-page-header, .full-width-search-bar {
         color: #fff;
     }
 }
@@ -802,6 +802,37 @@ header {
     padding: 0 0 40px 0;
     p{
         margin: 0;
+    }
+}
+.full-width-search-bar {
+    width: 100%;
+    height: 135px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 0 10px 0;
+    p {
+        margin: 0;
+    }
+    input {
+        padding: 0.2em 0.5em;
+        border: 1px solid #c6dff9;
+        color: #121212;
+        background: #e7eef5;
+        height: 2.3em;
+        width: 100%;
+        max-width: 42em;
+        border-radius: 0.2em;
+    }
+    .fa-search {
+        font-size: 1.4em;
+        position: absolute;
+        color: #2a3135;
+        opacity: 0.8;
+        cursor: pointer;
+        padding: 0.3em 0.5em;
+        margin-left: -2em;
+        background: #e7eef5;
     }
 }
 

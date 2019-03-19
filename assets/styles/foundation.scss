@@ -496,6 +496,15 @@ ol.breadcrumb {
             text-decoration: none;
             color: #fff;
         }
+        &.disabled {
+            background: #949899;
+            border-color: #868b8c;
+            cursor: default;
+            &:hover {
+                background: #949899;
+                border-color: #868b8c;
+            }
+        }
     }
 }
 
@@ -711,7 +720,6 @@ pre.format {
     }
 }
 
-
 // compat list
 .compatibility-list {
     display: flex;
@@ -751,6 +759,43 @@ pre.format {
             &.not-supported {
                 background: #902020;
             }
+        }
+    }
+}
+
+.foundation-search-no-results {
+    padding: 1em 0;
+}
+.foundation-search-results {
+    > a {
+        display: block;
+        color: #333;
+        margin: 0 -15px;
+        padding: 0.8em 15px 0.5em;
+        transition: background 150ms;
+        &:first-child {
+            padding-top: 1em;
+        }
+        &:last-child {
+            padding-bottom: 1em;
+        }
+        &:hover {
+            text-decoration: none;
+            background: #d9e9fd;
+        }
+        &:nth-child(2n) {
+            background: #eaf3ff;
+            &:hover {
+                background: #d9e9fd;
+            }
+        }
+        h2 {
+            font-size: 1.4em;
+            cursor: pointer;
+            color: #007bff;
+        }
+        p:last-child {
+            margin-bottom: 0;
         }
     }
 }

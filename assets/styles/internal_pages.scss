@@ -233,9 +233,15 @@
     h2, h3 {
         font-weight: 300;
     }
+    h2:not(:first-child) {
+        margin-top: 1.8em;
+    }
+    h2 + h3 {
+        margin-top: 0.7em;
+    }
     h3 {
         font-size: 1.65em;
-        margin-top: 0.7em;
+        margin-top: 1.6em;
         color: #3072ba;
         a {
             color: #3072ba;
