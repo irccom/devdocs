@@ -13,6 +13,7 @@ exclude:
   - Gemfile.lock
   - README.md
   - vendor
+  - CONTRIBUTING.md
 
 compress_html:
   clippings: []
