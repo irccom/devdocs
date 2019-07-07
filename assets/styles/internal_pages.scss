@@ -261,3 +261,31 @@
         margin-top: -6rem;
     }
 }
+
+// Blog updates
+.blog-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        min-height: 300px;
+        width: 80%;
+        margin: 0 auto;
+        max-width: 900px;
+        h2, h3, h4 {
+            font-weight: 100;
+            margin-top: 1em;
+        }
+        p {
+            font-weight: 100;
+            margin-top: 1.5em;
+        }
+        ul {
+            font-weight: 100;
+            margin-top: 0.3em;
+        } 
+    }
+}

@@ -2,7 +2,8 @@
 mode: prod
 
 # baseurl for prod is where they'll be stored
-baseurl: '/foundation/docs'
+baseurl: '/devdocs'
+# baseurl: '/foundation/docs'
 
 # Files/Folders to exclude from the final output
 exclude:
