@@ -2,7 +2,6 @@
 ---
 
 $comHeaderColour: #78d5e4;
-$foundationHeaderColour: #9be3f3;
 $socialHeaderColour: #74a8cb;
 
 header, header .header-dropdown-menu, footer, .full-width-page-header, .full-width-search-bar {
@@ -18,14 +17,6 @@ header .logo-part, header .desktop-nav a:hover {
 body.index {
     header .logo-part, header .desktop-nav a:hover {
         color: $socialHeaderColour;
-    }
-    .full-width-page-header, .full-width-search-bar {
-        color: #fff;
-    }
-}
-body.foundation {
-    header .logo-part, header .desktop-nav a:hover {
-        color: $foundationHeaderColour;
     }
     .full-width-page-header, .full-width-search-bar {
         color: #fff;
@@ -454,7 +445,7 @@ header {
         }
     }
 
-    .foundation-information-block {
+    .dev-information-block {
         display: block;
         margin: 80px auto 0 auto;
         border: 1px solid #fff;
@@ -1508,7 +1499,7 @@ footer {
         margin: 20px 0;
     }
 
-    /* Foundation Docs Homepage */
+    /* Docs Homepage */
     .box-content-container .box-content p.title {
         font-size: 1em;
         padding: 15px 10px 5px 10px;
@@ -1567,7 +1558,7 @@ footer {
 }
 
 @media screen and (max-width: 575px) {
-    body.foundation .full-width-page-header {
+    body.dev .full-width-page-header {
         margin-top: 40px;
         text-align: center;
     }
@@ -1594,7 +1585,7 @@ footer {
     .for-your-team-block {
         margin-bottom: 60px;
     }
-    /* Foundation Docs home */
+    /* Docs home */
     .intro-container .intro-container-content h1 {
         font-size: 1.5em;
         line-height: normal;

@@ -91,7 +91,7 @@ header {
     }
 }
 
-.foundation_home {
+.dev_home {
     h1 {
         font-family: 'Noto Serif', serif;
         font-size: 3em;
@@ -103,7 +103,7 @@ header {
     h2 {
         text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
     }
-    .call-to-action-block .foundation-index-wrap {
+    .call-to-action-block .dev-index-wrap {
         max-width: 20em;
         margin: 0 auto;
     }
@@ -763,10 +763,10 @@ pre.format {
     }
 }
 
-.foundation-search-no-results {
+.dev-search-no-results {
     padding: 1em 0;
 }
-.foundation-search-results {
+.dev-search-results {
     > a {
         display: block;
         color: #333;
@@ -807,7 +807,7 @@ pre.format {
 }
 
 // custom header linking
-.foundation {
+.dev {
     h1, h2, h3, h4 {
         .internal-link {
             color: #373d44;
@@ -864,25 +864,25 @@ code.nocolor {
 
 
 @media screen and (max-width: 1198px) {
-    .foundation_home .call-to-action-block .content p{
+    .dev_home .call-to-action-block .content p{
         line-height: normal;
         font-size: 14px;
     }
 }
 
 @media screen and (max-width: 995px) {
-    .foundation_home .call-to-action-block .title h2 {
+    .dev_home .call-to-action-block .title h2 {
         font-size: 1.2em;
         line-height: normal;
     }
-    .foundation_home .call-to-action-block .title h2 i {
+    .dev_home .call-to-action-block .title h2 i {
         display: block;
         margin: 0 auto 5px auto;
         float: none;
         clear: both;
     }
 
-    .foundation_home .call-to-action-block .content {
+    .dev_home .call-to-action-block .content {
         padding-left: 0;
         padding-right: 0;
     }
