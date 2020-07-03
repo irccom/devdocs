@@ -1,12 +1,13 @@
 ---
 layout: short-header-num
 ---
+<div class="container page-content">
 <div class="row">
-    <div class="col-sm-3 col-xs-12 sidebar">
+    <div class="col-3 sidebar">
         <div class="breadcrumbs">
             <ul>
-                <li><a href="{{ '/refs' | relative_url }}">IRC Technology</a> &gt;</li>
-                <li><a href="{{ '/refs/numerics' | relative_url }}">Numerics</a> &gt;</li>
+                <li><a href="{{ '/refs' | relative_url }}">References</a></li>
+                <li><a href="{{ '/refs/numerics' | relative_url }}">Numerics</a></li>
                 <li class="breadcrumb-block" style="display: block; todo: 'move this to css'"><code class="nocolor">{{ site.data.numerics.names[page.numeric] }} ({{ page.numeric }})</code></li>
             </ul>
         </div>
@@ -50,7 +51,7 @@ layout: short-header-num
         {% endif %}
         {% endfor %}
     </div>
-    <div class="col-sm-9 col-xs-12 main-content">
+    <div class="col-9 main-content">
         <div class="content docs">
             {% if page.experimental %}
             <div class="alert alert-warning experimental">

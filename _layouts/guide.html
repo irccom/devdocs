@@ -3,11 +3,11 @@ layout: short-header
 ---
 {% assign series = site.data.guides.series[page.series] %}
 <div class="row">
-    <div class="col-sm-3 col-xs-12 sidebar">
+    <div class="col-3 sidebar">
         <div class="breadcrumbs">
             <ul>
-                <li><a href="{{ site.baseurl | relative_url }}">IRC Technology</a> &gt;</li>
-                <li><a href="{{ '/guides' | relative_url }}">Guides</a> &gt;</li>
+                <li><a href="{{ site.baseurl | relative_url }}">References</a></li>
+                <li><a href="{{ '/guides' | relative_url }}">Guides</a></li>
                 {% if series %}
                 <li class="breadcrumb-block" style="display: block; todo: 'move this to css'"><b>{% if series.sidebar-name %}{{ series.sidebar-name }}{% else %}{{ series.name }}{% endif %}</b></li>
                 {% else %}
@@ -73,7 +73,7 @@ layout: short-header
             <a href="btn">Example Link Name!</a>
         </div>
     </div>
-    <div class="col-sm-9 col-xs-12 main-content">
+    <div class="col-9 main-content">
         <div class="content">
             {% if page.wip %}
             <div class="alert alert-warning experimental">

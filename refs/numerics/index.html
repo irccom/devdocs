@@ -5,7 +5,14 @@ ntitle: Numeric Reference
 nsub: IRC numerics sent by servers
 ---
 <div class="row">
-    <div class="col-sm-3 col-xs-12 sidebar">
+    <div class="col-3 sidebar">
+        <div class="breadcrumbs">
+            <ul>
+                <li><a href="{{ '/refs' | relative_url }}">References</a></li>
+                <li class="breadcrumb-block" style="display: block; todo: 'move this to css'">Numerics</li>
+            </ul>
+        </div>
+
         <div class="docs-list-sidebar">
             <h4><a href="#groups">Groups</a></h4>
             {% for group in site.data.numeric-groups.index-order %}
@@ -37,7 +44,7 @@ nsub: IRC numerics sent by servers
             <!-- <h4><a href="#full-list">Full List</a></h4> -->
         </div>
     </div>
-    <div class="col-sm-9 col-xs-12 main-content">
+    <div class="col-9 main-content">
         <div class="docs-list-content content">
             <h2><div class="docs-list-linker" id="groups"></div><a href="#groups">Groups</a></h2>
             {% for group in site.data.numeric-groups.index-order %}

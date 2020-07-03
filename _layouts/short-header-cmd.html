@@ -2,11 +2,11 @@
 layout: default
 ---
 
-<div class="full-width-page-header">
+<div class="full-width-page-header header-title header-title-left header-title-small">
     {% if page.ntitle %}
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-12">
                 <h1>{{ page.ntitle }} Command</h1>
                 {% if page.nsub %}<p class="h1sub">{{ page.nsub }}</p>{% endif %}
             </div>
@@ -15,6 +15,4 @@ layout: default
     {% endif %}
 </div>
 
-<div class="container page-content">
-    {{ content }}
-</div>
+{{ content }}

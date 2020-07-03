@@ -2,11 +2,11 @@
 layout: default
 ---
 
-<div class="full-width-page-header">
+<div class="full-width-page-header header-title header-title-left header-title-small">
     {% if page.ntitle or page.title %}
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-12">
                 <h1>{% if page.ntitle %}{{ page.ntitle }}{% else %}{{ page.title }}{% endif %}</h1>
                 {% if page.nsub %}<p class="h1sub">{{ page.nsub }}</p>{% endif %}
             </div>
