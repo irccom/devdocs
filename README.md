@@ -7,7 +7,7 @@ This documentation takes on a lot of structure from something like the [MDN Web 
 ## Building
 Primarily, these docs are meant to be plugged into the proper IRC.com website. However, when developing that's irritating to do so instead we support building the site in two different modes – `dev` and `prod`.
 
-In `dev` mode, the site will build a basic browsable version that can be viewed through the server that Jekyll sets up. In `prod` mode, what's output is instead the HTML and files that get plugged into the IRC.com site.
+In `dev` mode, the site will build a basic browsable version that can be viewed through the server that Jekyll sets up. In `prod` mode, what's output is instead the HTML and files that gets deployed into the IRC.com site.
 
 **dev**
 ```sh
