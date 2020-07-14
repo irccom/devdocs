@@ -1,5 +1,5 @@
-# Contributing to the IRC Foundation Developer Docs
-Welcome to the Foundation's developer documentation! Thank you very much for taking the time to contribute, it's always good to have more eyes looking at (and editing) these pages.
+# Contributing to the IRC Developer Docs
+Welcome to the developer documentation! Thank you very much for taking the time to contribute, it's always good to have more eyes looking at (and editing) these pages.
 
 This page lists a set of guidelines and advice to simplify contributing to this project, and to (in the case of submitted changes) make it more likely that we'll accept your changes.
 

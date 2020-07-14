@@ -1,13 +1,13 @@
-# IRC Foundation Developer Docs
-This set of documentation is hosted by the IRC Foundation, describing the IRC (Internet Relay Chat) protocol in detail. The docs here are written to give developers a good footing when writing software that uses or interacts with IRC.
+# IRC Developer Docs
+This set of documentation is hosted by IRC.com, describing the IRC (Internet Relay Chat) protocol in detail. The docs here are written to give developers a good footing when writing software that uses or interacts with IRC.
 
 This documentation takes on a lot of structure from something like the [MDN Web Docs](https://developer.mozilla.org/en-US/), which documents web technology instead.
 
 
 ## Building
-Primarily, these docs are meant to be plugged into the proper IRC Foundation website. However, when developing that's irritating to do so instead we support building the site in two different modes – `dev` and `prod`.
+Primarily, these docs are meant to be plugged into the proper IRC.com website. However, when developing that's irritating to do so instead we support building the site in two different modes – `dev` and `prod`.
 
-In `dev` mode, the site will build a basic browsable version that can be viewed through the server that Jekyll sets up. In `prod` mode, what's output is instead the HTML and files that get plugged into the Foundation site.
+In `dev` mode, the site will build a basic browsable version that can be viewed through the server that Jekyll sets up. In `prod` mode, what's output is instead the HTML and files that get plugged into the IRC.com site.
 
 **dev**
 ```sh
@@ -51,4 +51,4 @@ Here are some other IRC references that devs may find useful:
 The project's [license file](./LICENSE) lays this out in detail, but as a non-normative summary we've designed the license so that:
 
 - If anyone modifies or builds on top of the content in this repo, we can pull those changes back into this project under this project's license.
-- If IRC.com / the IRC Foundation or anyone else wants to take any of the content in this repo and pull it into the IETF process (for example, writing a new RFC describing the IRC protocol), they can do that and the content they use will be under the IETF contributor license terms.
+- If anyone wants to take any of the content in this repo and pull it into the IETF process (for example, writing a new RFC describing the IRC protocol), they can do that and the content they use will be under the IETF contributor license terms.
