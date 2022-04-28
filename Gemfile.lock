@@ -13,7 +13,7 @@ GEM
     ffi (1.13.1)
     ffi (1.13.1-x64-mingw32)
     forwardable-extended (2.6.0)
-    git (1.7.0)
+    git (1.11.0)
       rchardet (~> 1.8)
     http_parser.rb (0.6.0)
     i18n (1.8.3)
@@ -71,7 +71,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  git (~> 1.7)
+  git (~> 1.11)
   jekyll (~> 4.1)
   octopress-hooks (~> 2.6)
 
