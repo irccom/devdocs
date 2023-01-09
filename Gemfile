@@ -10,4 +10,4 @@ gem "jekyll", "~> 4.1"
 
 gem "octopress-hooks", "~> 2.6"
 
-gem "git", "~> 1.7"
+gem "git", "~> 1.13"
