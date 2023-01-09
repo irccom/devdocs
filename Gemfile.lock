@@ -1,8 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.7.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.6)
     em-websocket (0.5.1)
@@ -13,7 +13,8 @@ GEM
     ffi (1.13.1)
     ffi (1.13.1-x64-mingw32)
     forwardable-extended (2.6.0)
-    git (1.7.0)
+    git (1.13.0)
+      addressable (~> 2.8)
       rchardet (~> 1.8)
     http_parser.rb (0.6.0)
     i18n (1.8.3)
@@ -71,7 +72,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  git (~> 1.7)
+  git (~> 1.13)
   jekyll (~> 4.1)
   octopress-hooks (~> 2.6)
 
